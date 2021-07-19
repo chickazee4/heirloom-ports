@@ -1,0 +1,1 @@
+use flags -DCMAKE_CXX_FLAGS="-fpermissive -I/usr/include/tirpc" -DCMAKE_C_FLAGS="-I/usr/include/tirpc"

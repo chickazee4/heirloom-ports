@@ -1,0 +1,1 @@
+make sure to specify -DCMAKE_INSTALL_BINDIR=/bin, also need to `make` as superuser
