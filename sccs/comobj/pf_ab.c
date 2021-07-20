@@ -39,10 +39,10 @@
 # include	<defines.h>
 
 void 
-pf_ab(char *s, register struct pfile *pp, int all)
+pf_ab(char *s, struct pfile *pp, int all)
 {
-	register char *p;
-	register int i;
+	char *p;
+	int i;
 	extern char *Datep;
 	char *xp;
 	char stmp[MAXLINE];

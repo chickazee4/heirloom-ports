@@ -42,9 +42,9 @@
 */
 
 void 
-sinit(register struct packet *pkt, register char *file, int openflag)
+sinit(struct packet *pkt, char *file, int openflag)
 {
-	register char *p;
+	char *p;
 
 	zero((char *)pkt, sizeof(*pkt));
 	if (size(file) > FILESIZE)

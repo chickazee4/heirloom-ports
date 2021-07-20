@@ -125,13 +125,13 @@ static off_t	Encodeflag_offset;	/* offset in file where encoded flag is stored *
 
 static int	fgetchk(FILE *,char *,struct packet *,int);
 static void	admin(char *);
-static void	cmt_ba(register struct deltab *, char *);
+static void	cmt_ba(struct deltab *, char *);
 static void	putmrs(struct packet *);
 static char	*adjust(char *);
-static char	*getval(register char *, register char *);
-static int	val_list(register char *);
+static char	*getval(char *, char *);
+static int	val_list(char *);
 static int	pos_ser(char *, char *);
-static int	range(register char *);
+static int	range(char *);
 static void	code(FILE *, char *, int, int, struct packet *);
 extern int	org_ihash;
 extern int	org_chash;
@@ -142,8 +142,8 @@ extern char	*saveid;
 int 
 main(int argc, char *argv[])
 {
-	register int j;
-	register char *p;
+	int j;
+	char *p;
 	char  f;
 	int i, testklt,c;
 	extern int Fcnt;
@@ -519,9 +519,9 @@ admin(char *afile)
 	struct stats stats;	/* see file defines.h */
 	struct stat sbuf;
 	FILE	*iptr = NULL;
-	register int k;
-	register char *cp;
-	register signed char *q;
+	int k;
+	char *cp;
+	signed char *q;
 	char	*in_f;		/* ptr holder for lockflag vals in SCCS file */
 	char	nline[BUFSIZ];
 	char	*p_lval, *tval;
@@ -1263,9 +1263,9 @@ clean_up(void)
 }
 
 static void 
-cmt_ba(register struct deltab *dt, char *str)
+cmt_ba(struct deltab *dt, char *str)
 {
-	register char *p;
+	char *p;
 
 	p = str;
 	*p++ = CTLCHAR;
@@ -1297,7 +1297,7 @@ cmt_ba(register struct deltab *dt, char *str)
 static void 
 putmrs(struct packet *pkt)
 {
-	register char **argv;
+	char **argv;
 	char str[64];
 	extern char **Varg;
 
@@ -1311,8 +1311,8 @@ putmrs(struct packet *pkt)
 static char *
 adjust(char *line)
 {
-	register int k;
-	register int i;
+	int k;
+	int i;
 	char	*t_unlock;
 	char	t_line[BUFSIZ];
 	char	rel[5];
@@ -1349,7 +1349,7 @@ adjust(char *line)
 }
 
 static char *
-getval(register char *sourcep, register char *destp)
+getval(char *sourcep, char *destp)
 {
 	while (*sourcep != ' ' && *sourcep != '\t' && *sourcep != '\0')
 		*destp++ = *sourcep++;
@@ -1358,9 +1358,9 @@ getval(register char *sourcep, register char *destp)
 }
 
 static int 
-val_list(register char *list)
+val_list(char *list)
 {
-	register int i;
+	int i;
 
 	if (list[0] == 'a')
 		return(1);
@@ -1379,8 +1379,8 @@ val_list(register char *list)
 static int 
 pos_ser(char *s1, char *s2)
 {
-	register int offset;
-	register char *p;
+	int offset;
+	char *p;
 	char	num[5];
 
 	p = s1;
@@ -1398,9 +1398,9 @@ pos_ser(char *s1, char *s2)
 }
 
 static int 
-range(register char *line)
+range(char *line)
 {
-	register char *p;
+	char *p;
 	char	rel[BUFSIZ];
 
 	p = line;

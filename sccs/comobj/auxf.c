@@ -50,10 +50,10 @@
 */
 
 char *
-auxf(register char *sfile, int ch)
+auxf(char *sfile, int ch)
 {
 	static char auxfile[FILESIZE];
-	register char *snp;
+	char *snp;
 
 	auxfile[0] = '\0';
 	if(sfile[0] == '\0')

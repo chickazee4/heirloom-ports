@@ -43,7 +43,7 @@
 */
 
 int 
-imatch(register char *prefix, register char *string)
+imatch(char *prefix, char *string)
 {
 	while (*prefix++ == *string++)
 		if (*prefix == 0)

@@ -41,10 +41,10 @@
 static void	ixgsetup(struct apply *ap, struct ixg *ixgp);
 
 void 
-setup(register struct packet *pkt, int serial)
+setup(struct packet *pkt, int serial)
 {
-	register int n;
-	register struct apply *rap;
+	int n;
+	struct apply *rap;
 	int	first_app   =   1;
 
 	pkt->p_apply[serial].a_inline = 1;
@@ -77,8 +77,8 @@ ixgsetup(struct apply *ap, struct ixg *ixgp)
 {
 	int n;
 	int code = 0, reason = 0;
-	register int *ip;
-	register struct ixg *cur;
+	int *ip;
+	struct ixg *cur;
 
 	for (cur = ixgp; cur != NULL; cur = cur->i_next) {
 		switch (cur->i_type) {
@@ -108,7 +108,7 @@ ixgsetup(struct apply *ap, struct ixg *ixgp)
 
 
 void 
-condset(register struct apply *ap, int code, int reason)
+condset(struct apply *ap, int code, int reason)
 {
 	if (code == SX_EMPTY)
 		ap->a_reason |= reason;

@@ -37,7 +37,7 @@
  */
 /*	from OpenSolaris "sccs:lib/mpwlib/strend.c"	*/
 char *
-strend(register char *p)
+strend(char *p)
 {
 	while (*p++)
 		;

@@ -48,7 +48,7 @@
 # include	<macros.h>
 
 FILE *
-fdfopen(register int fd, register int mode)
+fdfopen(int fd, int mode)
 {
 	if (fstat(fd, &Statbuf) < 0)
 		return(NULL);

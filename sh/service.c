@@ -46,7 +46,7 @@
 
 #define	ARGMK	01
 
-static unsigned char *execs(unsigned char *, register unsigned char *[]);
+static unsigned char *execs(unsigned char *, unsigned char *[]);
 static void gsort(unsigned char *[], unsigned char *[]);
 static int split(unsigned char *);
 extern const char	*sysmsg[];
@@ -60,8 +60,8 @@ extern short topfd;
 int 
 initio(struct ionod *iop, int save)
 {
-	register unsigned char	*ion;
-	register int	iof, fd = -1;
+	unsigned char	*ion;
+	int	iof, fd = -1;
 	int		ioufd;
 	short	lastfd;
 	int	newmode;
@@ -141,8 +141,8 @@ simple(unsigned char *s)
 unsigned char *
 getpath(unsigned char *s)
 {
-	register unsigned char	*path, *newpath;
-	register int pathlen;
+	unsigned char	*path, *newpath;
+	int pathlen;
 
 	if (any('/', s))
 	{
@@ -170,9 +170,9 @@ getpath(unsigned char *s)
 }
 
 int 
-pathopen(register const unsigned char *path, register const unsigned char *name)
+pathopen(const unsigned char *path, const unsigned char *name)
 {
-	register int	f;
+	int	f;
 
 	do
 	{
@@ -182,13 +182,13 @@ pathopen(register const unsigned char *path, register const unsigned char *name)
 }
 
 unsigned char *
-catpath(register const unsigned char *path, unsigned const char *name)
+catpath(const unsigned char *path, unsigned const char *name)
 {
 	/*
 	 * leaves result on top of stack
 	 */
-	register unsigned const char	*scanp = path;
-	register unsigned char	*argp = locstak();
+	unsigned const char	*scanp = path;
+	unsigned char	*argp = locstak();
 
 	while (*scanp && *scanp != COLON)
 	{
@@ -216,9 +216,9 @@ catpath(register const unsigned char *path, unsigned const char *name)
 }
 
 unsigned char *
-nextpath(register const unsigned char *path)
+nextpath(const unsigned char *path)
 {
-	register const unsigned char	*scanp = path;
+	const unsigned char	*scanp = path;
 
 	while (*scanp && *scanp != COLON)
 		scanp++;
@@ -235,8 +235,8 @@ static unsigned char	**xecenv;
 void
 execa(unsigned char *at[], int pos)
 {
-	register unsigned char	*path;
-	register unsigned char	**t = at;
+	unsigned char	*path;
+	unsigned char	**t = at;
 	int		cnt;
 
 	if ((flags & noexec) == 0)
@@ -263,9 +263,9 @@ execa(unsigned char *at[], int pos)
 }
 
 static unsigned char *
-execs(unsigned char *ap, register unsigned char *t[])
+execs(unsigned char *ap, unsigned char *t[])
 {
-	register unsigned char	*p, *prefix;
+	unsigned char	*p, *prefix;
 
 	prefix = catpath(ap, t[0]);
 	trim(p = curstak());
@@ -338,9 +338,9 @@ BOOL		nosubst;
 void
 trim(unsigned char *at)
 {
-	register unsigned char	*last;
-	register unsigned char 	*current;
-	register unsigned char	c;
+	unsigned char	*last;
+	unsigned char 	*current;
+	unsigned char	c;
 	int	len;
 	wchar_t	wc;
 
@@ -386,9 +386,9 @@ trim(unsigned char *at)
 void
 trims(unsigned char *at)
 {
-	register unsigned char	*last;
-	register unsigned char 	*current;
-	register unsigned char	c;
+	unsigned char	*last;
+	unsigned char 	*current;
+	unsigned char	c;
 	int	len;
 	wchar_t	wc;
 
@@ -437,7 +437,7 @@ trims(unsigned char *at)
 unsigned char *
 mactrim(unsigned char *s)
 {
-	register unsigned char	*t = macro(s);
+	unsigned char	*t = macro(s);
 
 	trim(t);
 	return (t);
@@ -446,9 +446,9 @@ mactrim(unsigned char *s)
 unsigned char **
 scan(int argn)
 {
-	register struct argnod *argp =
+	struct argnod *argp =
 			(struct argnod *)(Rcheat(gchain) & ~ARGMK);
-	register unsigned char **comargn, **comargm;
+	unsigned char **comargn, **comargm;
 
 	comargn = (unsigned char **)getstak(BYTESPERWORD * argn + BYTESPERWORD);
 	comargm = comargn += argn;
@@ -474,7 +474,7 @@ static void
 gsort(unsigned char *from[], unsigned char *to[])
 {
 	int	k, m, n;
-	register int	i, j;
+	int	i, j;
 
 	if ((n = to - from) <= 1)
 		return;
@@ -487,7 +487,7 @@ gsort(unsigned char *from[], unsigned char *to[])
 		{
 			for (i = j; i >= 0; i -= m)
 			{
-				register unsigned char **fromi;
+				unsigned char **fromi;
 
 				fromi = &from[i];
 				if (cf(fromi[m], fromi[0]) > 0)
@@ -513,9 +513,9 @@ gsort(unsigned char *from[], unsigned char *to[])
 int 
 getarg(struct comnod *ac)
 {
-	register struct argnod	*argp;
-	register int		count = 0;
-	register struct comnod	*c;
+	struct argnod	*argp;
+	int		count = 0;
+	struct comnod	*c;
 
 	if (c = ac)
 	{
@@ -534,12 +534,12 @@ split (		/* blank interpretation routine */
     unsigned char *s
 )
 {
-	register unsigned char	*argp;
-	register int	c;
+	unsigned char	*argp;
+	int	c;
 	int		count = 0;
 	for (;;)
 	{
-		register int length;
+		int length;
 		sigchk();
 		argp = locstak() + BYTESPERWORD;
 		while (c = *s) {
@@ -678,10 +678,10 @@ doacct(void)
  */
 
 int
-compress(register clock_t t)
+compress(clock_t t)
 {
-	register int exp = 0;
-	register int rund = 0;
+	int exp = 0;
+	int rund = 0;
 
 	while (t >= 8192)
 	{

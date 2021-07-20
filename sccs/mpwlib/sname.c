@@ -49,9 +49,9 @@
 char *
 sname(char *s)
 {
-	register char *p;
-	register int n;
-	register int j;
+	char *p;
+	int n;
+	int j;
 
 	n = strlen(s);
 	--n;

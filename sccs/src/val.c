@@ -86,19 +86,19 @@ static struct delent {		/* structure for delta table entry */
 
 static void	process(char *, int, char *[]);
 static void	validate(char *, char *, char *, char *);
-static void	getdel(register struct delent *, register char *);
-static void	read_to(int, register struct packet *);
-static void	report(register int, register char *, register char *);
-static int	invalid(register char *);
-static char	*get_line(register struct packet *);
-static void	s_init(register struct packet *, register char *);
-static int	read_mod(register struct packet *);
+static void	getdel(struct delent *, char *);
+static void	read_to(int, struct packet *);
+static void	report(int, char *, char *);
+static int	invalid(char *);
+static char	*get_line(struct packet *);
+static void	s_init(struct packet *, char *);
+static int	read_mod(struct packet *);
 static void	add_q(struct packet *, int, int, int, int);
-static void	rem_q(register struct packet *, int);
-static void	set_keep(register struct packet *);
-static int	chk_ix(register struct queue *, struct queue *);
-static int	do_delt(register struct packet *, register int, register char *);
-static int	getstats(register struct packet *);
+static void	rem_q(struct packet *, int);
+static void	set_keep(struct packet *);
+static int	chk_ix(struct queue *, struct queue *);
+static int	do_delt(struct packet *, int, char *);
+static int	getstats(struct packet *);
 
 /* This is the main program that determines whether the command line
  * comes from the standard input or read off the original command
@@ -109,7 +109,7 @@ int
 main(int argc, char *argv[])
 {
 	FILE	*iop;
-	register int j;
+	int j;
 	char *lp;
 
 	/*
@@ -171,9 +171,9 @@ main(int argc, char *argv[])
 static void 
 process(char *p_line, int argc, char *argv[])
 {
-	register int	j;
-	register int	line_sw;
-	register char   *p;
+	int	j;
+	int	line_sw;
+	char   *p;
 
 	int	silent;
 	int	num_files;
@@ -328,7 +328,7 @@ process(char *p_line, int argc, char *argv[])
 static void 
 validate(char *c_path, char *c_sid, char *c_type, char *c_name)
 {
-	register char	*l;
+	char	*l;
 	int	goods,goodt,goodn,hadmflag;
 
 	infile_err = goods = goodt = goodn = hadmflag = 0;
@@ -430,7 +430,7 @@ validate(char *c_path, char *c_sid, char *c_type, char *c_name)
 */
 
 static void 
-getdel(register struct delent *delp, register char *lp)
+getdel(struct delent *delp, char *lp)
 {
 	NONBLANK(lp);
 	delp->type = *lp++;
@@ -463,9 +463,9 @@ getdel(register struct delent *delp, register char *lp)
 */
 
 static void 
-read_to(int ch, register struct packet *pkt)
+read_to(int ch, struct packet *pkt)
 {
-	register char *n;
+	char *n;
 	while (((n = get_line(pkt)) != NULL) &&
 			!(*n++ == CTLCHAR && *n == ch))
 		;
@@ -479,7 +479,7 @@ read_to(int ch, register struct packet *pkt)
 */
 
 static void 
-report(register int code, register char *inp_line, register char *file)
+report(int code, char *inp_line, char *file)
 {
 	char	percent;
 	percent = '%';		/* '%' for -m and/or -y messages */
@@ -530,10 +530,10 @@ report(register int code, register char *inp_line, register char *file)
 */
 
 static int 
-invalid(register char *i_sid)
+invalid(char *i_sid)
 {
-	register int count;
-	register int digits;
+	int count;
+	int digits;
 	count = digits = 0;
 	if (*i_sid == '0' || *i_sid == '.')
 		return (1);
@@ -565,14 +565,14 @@ invalid(register char *i_sid)
 */
 
 static char *
-get_line(register struct packet *pkt)
+get_line(struct packet *pkt)
 {
 	char	buf[DEF_LINE_SIZE];
 	int	eof;
-	register size_t read = 0;
-	register size_t used = 0;
-	register signed char *p;
-	register unsigned char *u_p;
+	size_t read = 0;
+	size_t used = 0;
+	signed char *p;
+	unsigned char *u_p;
 
 	/* read until EOF or newline encountered */
 	do {
@@ -625,7 +625,7 @@ get_line(register struct packet *pkt)
 */
 
 static void 
-s_init(register struct packet *pkt, register char *file)
+s_init(struct packet *pkt, char *file)
 {
 
 	zero((char*) pkt, sizeof(*pkt));
@@ -635,12 +635,12 @@ s_init(register struct packet *pkt, register char *file)
 }
 
 static int 
-read_mod(register struct packet *pkt)
+read_mod(struct packet *pkt)
 {
-	register char *p;
+	char *p;
 	int ser;
 	int iord;
-	register struct apply *ap;
+	struct apply *ap;
 
 	while (get_line(pkt) != NULL) {
 		p = pkt->p_line;
@@ -676,7 +676,7 @@ read_mod(register struct packet *pkt)
 static void 
 add_q(struct packet *pkt, int ser, int keep, int iord, int user)
 {
-	register struct queue *cur, *prev, *q;
+	struct queue *cur, *prev, *q;
 
 	for (cur = (struct queue *) (&pkt->p_q); (cur = (prev = cur)->q_next) != NULL; )
 		if (cur->q_sernum <= ser)
@@ -698,9 +698,9 @@ add_q(struct packet *pkt, int ser, int keep, int iord, int user)
 }
 
 static void 
-rem_q(register struct packet *pkt, int ser)
+rem_q(struct packet *pkt, int ser)
 {
-	register struct queue *cur, *prev;
+	struct queue *cur, *prev;
 
 	for (cur = (struct queue *) (&pkt->p_q); (cur = (prev = cur)->q_next) != NULL; )
 		if (cur->q_sernum == ser)
@@ -718,10 +718,10 @@ rem_q(register struct packet *pkt, int ser)
 }
 
 static void 
-set_keep(register struct packet *pkt)
+set_keep(struct packet *pkt)
 {
-	register struct queue *q;
-	register struct sid *sp;
+	struct queue *q;
+	struct sid *sp;
 
 	for (q = pkt->p_q; q; q = q->q_next )
 		if (q->q_keep != 0) {
@@ -741,10 +741,10 @@ set_keep(register struct packet *pkt)
 # define apply(qp)	((qp->q_iord == INS && qp->q_keep == YES) || \
 			 (qp->q_iord == DEL && qp->q_keep == NO))
 static int 
-chk_ix(register struct queue *new, struct queue *head)
+chk_ix(struct queue *new, struct queue *head)
 {
-	register int retval;
-	register struct queue *cur;
+	int retval;
+	struct queue *cur;
 	int firstins, lastdel;
 
 	if (!apply(new))
@@ -784,7 +784,7 @@ chk_ix(register struct queue *new, struct queue *head)
 */
 
 static int 
-do_delt(register struct packet *pkt, register int goods, register char *d_sid)
+do_delt(struct packet *pkt, int goods, char *d_sid)
 {
 	char *l;
 
@@ -828,9 +828,9 @@ do_delt(register struct packet *pkt, register int goods, register char *d_sid)
 /* This function reads the stats line from the sccsfile */
 
 static int 
-getstats(register struct packet *pkt)
+getstats(struct packet *pkt)
 {
-	register char *p = get_line(pkt);
+	char *p = get_line(pkt);
 	if ( p == NULL || *p++ != CTLCHAR || *p != STATS)
 		return(0);
 	return(1);

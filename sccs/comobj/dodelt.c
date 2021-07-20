@@ -51,15 +51,15 @@ int	First_cmt;
 int	CDid_mrs;		/* for chghist to check MRs */
 
 struct idel *
-dodelt(register struct packet *pkt, struct stats *statp, struct sid *sidp, int type)
+dodelt(struct packet *pkt, struct stats *statp, struct sid *sidp, int type)
 {
 	extern  char	had[26];
 	char *c;
 	struct deltab dt;
-	register struct idel *rdp = NULL;
+	struct idel *rdp = NULL;
 	int n, founddel;
 	void	fredck(struct packet *), escdodelt(struct packet *);
-	register char *p;
+	char *p;
 
 	pkt->p_idel = 0;
 	founddel = 0;
@@ -144,7 +144,7 @@ dodelt(register struct packet *pkt, struct stats *statp, struct sid *sidp, int t
 }
 
 static char 
-getadel(register struct packet *pkt, register struct deltab *dt)
+getadel(struct packet *pkt, struct deltab *dt)
 {
 	if (getline(pkt) == NULL)
 		fmterr(pkt);

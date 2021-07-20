@@ -84,9 +84,9 @@ static void exfile(int);
 int 
 main(int c, char *v[], char *e[])
 {
-	register int	rflag = ttyflg;
+	int	rflag = ttyflg;
 	int		rsflag = 1;	/* local restricted flag */
-	register unsigned char *flagc = flagadr;
+	unsigned char *flagc = flagadr;
 	struct namnod	*n;
 
 	init_sigval();
@@ -183,10 +183,10 @@ main(int c, char *v[], char *e[])
 		dolc--;
 
 	if ((flags & privflg) == 0) {
-		register uid_t euid;
-		register gid_t egid;
-		register uid_t ruid;
-		register gid_t rgid;
+		uid_t euid;
+		gid_t egid;
+		uid_t ruid;
+		gid_t rgid;
 
 		/*
 		 * Determine all of the user's id #'s for this process and
@@ -350,7 +350,7 @@ static void
 exfile(prof)
 BOOL	prof;
 {
-	time_t	mailtime = 0;	/* Must not be a register variable */
+	time_t	mailtime = 0;	/* Must not be a variable */
 	time_t 	curtime = 0;
 	long	timeout = 0;
 
@@ -440,7 +440,7 @@ BOOL	prof;
 		flags &= ~waiting;
 
 		{
-			register struct trenod *t;
+			struct trenod *t;
 			t = cmd(NL, MTFLG);
 			if (t == NULL && flags & ttyflg)
 				freejobs();
@@ -470,7 +470,7 @@ settmp(void)
 }
 
 void
-Ldup(register int fa, register int fb)
+Ldup(int fa, int fb)
 {
 #ifdef RES
 
@@ -497,8 +497,8 @@ Ldup(register int fa, register int fb)
 void
 chkmail(void)
 {
-	register unsigned char 	*s = mailp;
-	register unsigned char	*save;
+	unsigned char 	*s = mailp;
+	unsigned char	*save;
 
 	long	*ptr = mod_time;
 	unsigned char	*start;
@@ -553,8 +553,8 @@ chkmail(void)
 void
 setmail(unsigned char *mailpath)
 {
-	register unsigned char	*s = mailpath;
-	register int 	cnt = 1;
+	unsigned char	*s = mailpath;
+	int 	cnt = 1;
 
 	long	*ptr;
 

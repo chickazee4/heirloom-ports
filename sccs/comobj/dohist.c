@@ -53,7 +53,7 @@ dohist(char *file)
 {
 	char line[BUFSIZ];
 	int doprmt;
-	register char *p;
+	char *p;
 	FILE	*in;
 	extern char *Comments;
 
@@ -95,8 +95,8 @@ static char *
 getresp(char *repstr, char *result)
 {
 	char line[BUFSIZ];
-	register int done, sz;
-	register char *p;
+	int done, sz;
+	char *p;
 	extern char	had_standinp;
 
 	result[0] = 0;
@@ -199,9 +199,9 @@ int
 valmrs(struct packet *pkt, char *pgm)
 {
 	extern char *Sflags[];
-	register int i;
+	int i;
 	int st;
-	register char *p;
+	char *p;
 
 	Varg[0] = pgm;
 	Varg[1] = auxf(pkt->p_file,'g');
@@ -231,7 +231,7 @@ valmrs(struct packet *pkt, char *pgm)
 void 
 mrfixup(void)
 {
-	register char **argv, *p, c;
+	char **argv, *p, c;
 	char *ap;
 	unsigned int len;
 
@@ -267,11 +267,11 @@ mrfixup(void)
 # define STBUFSZ	500
 
 char *
-stalloc(register unsigned int n)
+stalloc(unsigned int n)
 {
 	static char stbuf[STBUFSZ];
 	static int stind = 0;
-	register char *p;
+	char *p;
 
 	p = &stbuf[stind];
 	if (&p[n] >= &stbuf[STBUFSZ-1])
@@ -282,9 +282,9 @@ stalloc(register unsigned int n)
 
 
 char *
-savecmt(register char *p)
+savecmt(char *p)
 {
-	register char	*p1, *p2;
+	char	*p1, *p2;
 	int	ssize, nlcnt;
 
 	nlcnt = 0;

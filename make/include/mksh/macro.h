@@ -38,10 +38,10 @@
 
 #include <mksh/defs.h>
 
-extern void	expand_macro(register Source source, register String destination, wchar_t *current_string, Boolean cmd);
-extern void	expand_value(Name value, register String destination, Boolean cmd);
-extern Name	getvar(register Name name);
+extern void	expand_macro(Source source, String destination, wchar_t *current_string, Boolean cmd);
+extern void	expand_value(Name value, String destination, Boolean cmd);
+extern Name	getvar(Name name);
 
-extern Property	setvar_daemon(register Name name, register Name value, Boolean append, Daemon daemon, Boolean strip_trailing_spaces, short debug_level);
+extern Property	setvar_daemon(Name name, Name value, Boolean append, Daemon daemon, Boolean strip_trailing_spaces, short debug_level);
 
 #endif

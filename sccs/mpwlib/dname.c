@@ -51,8 +51,8 @@
 
 char *dname(char *p)
 {
-	register char *c;
-	register int s;
+	char *c;
+	int s;
 
 	s = size(p);
 	for(c = p+s-2; c > p; c--)

@@ -93,9 +93,9 @@ long	flagval[]  =
 int 
 options(int argc, unsigned char **argv)
 {
-	register unsigned char *cp;
-	register unsigned char **argp = argv;
-	register unsigned char *flagc;
+	unsigned char *cp;
+	unsigned char **argp = argv;
+	unsigned char *flagc;
 	unsigned char	*flagp;
 	int		len;
 	wchar_t		wc;
@@ -209,8 +209,8 @@ options(int argc, unsigned char **argv)
 void 
 setargs(unsigned char *argi[])
 {
-	register unsigned char **argp = argi;	/* count args */
-	register int argn = 0;
+	unsigned char **argp = argi;	/* count args */
+	int argn = 0;
 
 	while (*argp++ != (unsigned char *)ENDARGS)
 		argn++;
@@ -226,8 +226,8 @@ setargs(unsigned char *argi[])
 static void
 freedolh(void)
 {
-	register unsigned char **argp;
-	register struct dolnod *argblk;
+	unsigned char **argp;
+	struct dolnod *argblk;
 
 	if (argblk = dolh)
 	{
@@ -244,9 +244,9 @@ freedolh(void)
 struct dolnod *
 freeargs(struct dolnod *blk)
 {
-	register unsigned char **argp;
-	register struct dolnod *argr = 0;
-	register struct dolnod *argblk;
+	unsigned char **argp;
+	struct dolnod *argr = 0;
+	struct dolnod *argblk;
 	int cnt;
 
 	if (argblk = blk)
@@ -278,9 +278,9 @@ freeargs(struct dolnod *blk)
 static struct dolnod *
 copyargs(unsigned char *from[], int n)
 {
-	register struct dolnod *np = (struct dolnod *)alloc(sizeof(struct dolnod));
-	register unsigned char **fp = from;
-	register unsigned char **pp;
+	struct dolnod *np = (struct dolnod *)alloc(sizeof(struct dolnod));
+	unsigned char **fp = from;
+	unsigned char **pp;
 
 	np -> dolnxt = 0;
 	np->doluse = 1;	/* use count */
@@ -297,9 +297,9 @@ copyargs(unsigned char *from[], int n)
 struct dolnod *
 clean_args(struct dolnod *blk)
 {
-	register unsigned char **argp;
-	register struct dolnod *argr = 0;
-	register struct dolnod *argblk;
+	unsigned char **argp;
+	struct dolnod *argr = 0;
+	struct dolnod *argblk;
 
 	if (argblk = blk)
 	{

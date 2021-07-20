@@ -48,7 +48,7 @@
 int 
 xmsg(const char *file, const char *func)
 {
-	register char *str;
+	char *str;
 	char d[FILESIZE];
 	extern char SccsError[];
 

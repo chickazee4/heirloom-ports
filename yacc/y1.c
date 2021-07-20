@@ -218,7 +218,7 @@ static void
 others(void)
 {
 	extern int gen_lines;
-	register int c, i, j;
+	int c, i, j;
 	int tmpline;
 
 	/* This  routine has been "stolen" from the driver */
@@ -477,9 +477,9 @@ aryfil(int *v, int n, int c)
 /* set a to the union of a and b */
 /* return 1 if b is not a subset of a, 0 otherwise */
 static int
-setunion(register int *a, register int *b)
+setunion(int *a, int *b)
 {
-	register int i, x, sub;
+	int i, x, sub;
 
 	sub = 0;
 	SETLOOP(i) {
@@ -493,7 +493,7 @@ setunion(register int *a, register int *b)
 static void 
 prlook(LOOKSETS *p)
 {
-	register int j, *pp;
+	int j, *pp;
 	pp = p->lset;
 	if (pp == 0)
 		fprintf(foutput, "\tNULL");
@@ -516,9 +516,9 @@ prlook(LOOKSETS *p)
 static void 
 cpres(void)
 {
-	register int **ptrpy;
+	int **ptrpy;
 	int **pyield;
-	register int c, j, i;
+	int c, j, i;
 
 	/*
 	 * 2/29/88 -
@@ -559,7 +559,7 @@ static int indebug = 0;
 static void 
 cpfir(void)
 {
-	register int *p, **s, i, **t, ch, changes;
+	int *p, **s, i, **t, ch, changes;
 
 	zzcwp = nnonter;
 	NTLOOP(i) {
@@ -614,7 +614,7 @@ int
 state(int c)
 {
 	int size1, size2;
-	register int i;
+	int i;
 	ITEM *p1, *p2, *k, *l, *q1, *q2;
 	p1 = pstate[nstate];
 	p2 = pstate[nstate+1];
@@ -664,7 +664,7 @@ state(int c)
 				clset.lset[s] = l->look->lset[s];
 			if (setunion(clset.lset, k->look->lset)) {
 				tystate[i] = MUSTDO;
-				/* register the new set */
+				/* the new set */
 				l->look = flset(&clset);
 			}
 		}
@@ -692,7 +692,7 @@ static int pidebug = 0;
 void 
 putitem(int *ptr, LOOKSETS *lptr)
 {
-	register ITEM *j;
+	ITEM *j;
 
 	if (pidebug && (foutput != NULL))
 		fprintf(foutput,
@@ -720,7 +720,7 @@ cempty(void)
 #define	EMPTY 1
 #define	WHOKNOWS 0
 #define	OK 1
-	register int i, *p;
+	int i, *p;
 
 	/*
 	 * first, use the array pempty to detect productions
@@ -801,8 +801,8 @@ static void
 stagen(void)
 {
 	int i, j;
-	register int c;
-	register WSET *p, *q;
+	int c;
+	WSET *p, *q;
 
 	/* initialize */
 
@@ -846,7 +846,7 @@ stagen(void)
 				}
 			}
 			if (c < NTBASE)
-				state(c);  /* register new state */
+				state(c);  /* new state */
 			else temp1[c-NTBASE] = state(c);
 		}
 		if (gsdebug && (foutput != NULL)) {
@@ -871,11 +871,11 @@ void
 closure(int i)
 {
 	int c, ch, work, k;
-	register WSET *u, *v;
+	WSET *u, *v;
 	int *pi;
 	int **s, **t;
 	ITEM *q;
-	register ITEM *p;
+	ITEM *p;
 	int idx1 = 0;
 
 	++zzclose;
@@ -1001,8 +1001,8 @@ flset(LOOKSETS *p)
 	/* return pointer to a perminent location for the set */
 
 	int j, *w;
-	register int *u, *v;
-	register LOOKSETS *q;
+	int *u, *v;
+	LOOKSETS *q;
 
 	for (q = &lkst[nlset]; q-- > lkst; ) {
 		u = p->lset;

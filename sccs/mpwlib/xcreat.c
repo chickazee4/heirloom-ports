@@ -51,7 +51,7 @@
 int
 xcreat(char *name,mode_t mode)
 {
-	register int fd;
+	int fd;
 	char d[FILESIZE];
 	int creat_attempts = 0, errn;
         extern char SccsError[];

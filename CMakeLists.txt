@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.1)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake)
+
+project(heirloom-ports)
+
+find_package(RPC REQUIRED)
+
+add_subdirectory(libcommon)
+add_subdirectory(cat)
+add_subdirectory(cp)
+add_subdirectory(lex)
+add_subdirectory(ls)
+add_subdirectory(man)
+add_subdirectory(m4)
+add_subdirectory(make)
+add_subdirectory(sccs)
+add_subdirectory(sh)
+add_subdirectory(su)
+add_subdirectory(tar)
+add_subdirectory(yacc)

@@ -40,10 +40,10 @@
 # include	<macros.h>
 
 char *satoi(
-register char *p,
-register int *ip)
+char *p,
+int *ip)
 {
-	register int sum;
+	int sum;
 
 	sum = 0;
 	while (numeric(*p))

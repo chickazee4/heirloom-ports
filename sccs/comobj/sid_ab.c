@@ -40,7 +40,7 @@
 
 
 char *
-sid_ab(register char *p, register struct sid *sp)
+sid_ab(char *p, struct sid *sp)
 {
 	if (*(p = satoi(p,&sp->s_rel)) == '.')
 		p++;

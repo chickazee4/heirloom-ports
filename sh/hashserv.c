@@ -52,10 +52,10 @@ static struct entry	relcmd;
 static int	argpath(struct argnod *);
 
 short 
-pathlook(unsigned char *com, int flg, register struct argnod *arg)
+pathlook(unsigned char *com, int flg, struct argnod *arg)
 {
-	register unsigned char	*name = com;
-	register ENTRY	*h;
+	unsigned char	*name = com;
+	ENTRY	*h;
 
 	ENTRY		hentry;
 	int		count = 0;
@@ -216,8 +216,8 @@ hashpr(void)
 void
 set_dotpath(void)
 {
-	register unsigned char	*path;
-	register int	cnt = 1;
+	unsigned char	*path;
+	int	cnt = 1;
 
 	dotpath = 10000;
 	path = getpath("");
@@ -313,9 +313,9 @@ hash_cmd(unsigned char *name)
  * Return 0 if found, 1 if not.
  */
 int 
-what_is_path(register unsigned char *name)
+what_is_path(unsigned char *name)
 {
-	register ENTRY	*h;
+	ENTRY	*h;
 	int		cnt;
 	short	hashval;
 
@@ -391,10 +391,10 @@ what_is_path(register unsigned char *name)
 
 
 int 
-findpath(register unsigned char *name, int oldpath)
+findpath(unsigned char *name, int oldpath)
 {
-	register unsigned char 	*path;
-	register int	count = 1;
+	unsigned char 	*path;
+	int	count = 1;
 
 	unsigned char	*p;
 	int	ok = 1;
@@ -449,7 +449,7 @@ findpath(register unsigned char *name, int oldpath)
  */
 
 int
-chk_access(register unsigned char *name, mode_t mode, int regflag)
+chk_access(unsigned char *name, mode_t mode, int regflag)
 {	
 	static int flag;
 	static uid_t euid; 
@@ -483,9 +483,9 @@ chk_access(register unsigned char *name, mode_t mode, int regflag)
 
 
 void
-pr_path(register unsigned char *name, int count)
+pr_path(unsigned char *name, int count)
 {
-	register unsigned char	*path;
+	unsigned char	*path;
 
 	path = getpath(name);
 
@@ -498,10 +498,10 @@ pr_path(register unsigned char *name, int count)
 
 
 static int
-argpath(register struct argnod *arg)
+argpath(struct argnod *arg)
 {
-	register unsigned char 	*s;
-	register unsigned char	*start;
+	unsigned char 	*s;
+	unsigned char	*start;
 
 	while (arg)
 	{

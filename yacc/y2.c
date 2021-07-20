@@ -695,7 +695,7 @@ static const char yyident[] USED = \"yacc: %s\"\n", rel);
 		if (ntypes && !(levprd[nprod] & ACTFLAG) &&
 				nontrst[*prdptr[nprod]-NTBASE].tvalue) {
 			/* no explicit action, LHS has value */
-			register int tempty;
+			int tempty;
 			tempty = prdptr[nprod][1];
 			if (tempty < 0)
 				error("must return a value, since LHS has a type");
@@ -738,7 +738,7 @@ finact(void)
 
 static wchar_t *
 cstash(s)
-register wchar_t *s;
+wchar_t *s;
 {
 	wchar_t *temp;
 	static int used = 0;
@@ -770,11 +770,11 @@ register wchar_t *s;
 }
 
 static int
-defin(int t, register wchar_t *s)
+defin(int t, wchar_t *s)
 {
 	/* define s to be a terminal if t=0 or a nonterminal if t=1 */
 
-	register int val = 0;
+	int val = 0;
 
 	if (t) {
 		if (++nnonter >= nnontersz)
@@ -875,8 +875,8 @@ defout(void)
 {
 	/* write out the defines (at the end of the declaration section) */
 
-	register int i, c;
-	register wchar_t *cp;
+	int i, c;
+	wchar_t *cp;
 
 	for (i = ndefout; i <= ntokens; ++i) {
 
@@ -912,9 +912,9 @@ defout(void)
 static int
 gettok(void)
 {
-	register int i, base;
+	int i, base;
 	static int peekline; /* number of '\n' seen in lookahead */
-	register int c, match, reserve;
+	int c, match, reserve;
 begin:
 	reserve = 0;
 	lineno += peekline;
@@ -1083,7 +1083,7 @@ static int
 fdtype(int t)
 {
 	/* determine the type of a symbol */
-	register int v;
+	int v;
 	if (t >= NTBASE)
 		v = nontrst[t-NTBASE].tvalue;
 	else
@@ -1096,7 +1096,7 @@ fdtype(int t)
 }
 
 static int
-chfind(int t, register wchar_t *s)
+chfind(int t, wchar_t *s)
 {
 	int i;
 
@@ -1203,7 +1203,7 @@ static int
 skipcom(void)
 {
 	/* skip over comments */
-	register int c, i = 0;  /* i is the number of lines skipped */
+	int c, i = 0;  /* i is the number of lines skipped */
 
 	/* skipcom is called after reading a / */
 
@@ -1467,7 +1467,7 @@ rhsfill(wchar_t *s)	/* either name or 0 */
 	static int rhs_len = RHS_TEXT_LEN;
 	static int used = 0;
 	int s_rhs = (s == NULL ? 0 : wcslen(s));
-	register wchar_t *p;
+	wchar_t *p;
 
 	if (!s)	/* print out and erase old text */
 	{
@@ -1716,7 +1716,7 @@ findchtok(int chlit)
 			return (mbchars->tvalue);
 	}
 
-	/* Not found.  Register it! */
+	/* Not found.  it! */
 	if (++nmbchars > nmbcharsz) { /* Make sure there's enough space */
 		nmbcharsz += NMBCHARSZ;
 		mbchars = realloc(mbchars, sizeof (MBCLIT)*nmbcharsz);

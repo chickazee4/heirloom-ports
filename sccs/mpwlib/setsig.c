@@ -84,8 +84,8 @@ static void	setsig1(int);
 void 
 setsig(void)
 {
-	register int j;
-	register void (*n)(int);
+	int j;
+	void (*n)(int);
 
 	for (j=1; j<ONSIG; j++)
 		if (j != SIGBUS)

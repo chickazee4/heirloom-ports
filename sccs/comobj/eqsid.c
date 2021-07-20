@@ -39,7 +39,7 @@
 # include	<defines.h>
 
 int 
-eqsid(register struct sid *s1, register struct sid *s2)
+eqsid(struct sid *s1, struct sid *s2)
 {
 	if (s1->s_rel == s2->s_rel &&
 		s1->s_lev == s2->s_lev &&

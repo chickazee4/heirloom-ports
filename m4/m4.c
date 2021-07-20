@@ -193,7 +193,7 @@ main(int argc, char **argv)
 				puttok(token);
 			}
 		} else if (match(t, lquote)) {
-			register int	qlev = 1;
+			int	qlev = 1;
 
 			for (;;) {
 				token[0] = t = getchr();
@@ -423,7 +423,7 @@ static void
 initalloc(void)
 {
 	static int	done = 0;
-	register int	t;
+	int	t;
 
 	if (done++)
 		return;
@@ -452,7 +452,7 @@ initalloc(void)
 void
 install(wchar_t *nam, wchar_t *val, int mode)
 {
-	register struct nlist *np;
+	struct nlist *np;
 	wchar_t	*cp;
 	int		l;
 
@@ -479,7 +479,7 @@ struct nlist *
 lookup(wchar_t *str)
 {
 	wchar_t	*s1;
-	register struct nlist	*np;
+	struct nlist	*np;
 	static struct nlist	nodef;
 
 	s1 = str;
@@ -500,7 +500,7 @@ static void
 expand(wchar_t **a1, int c)
 {
 	wchar_t	*dp;
-	register struct nlist	*sp;
+	struct nlist	*sp;
 
 	sp = (struct nlist *)a1[-1];
 
@@ -526,7 +526,7 @@ expand(wchar_t **a1, int c)
 			(*barray[builtin_idx(*dp)].bfunc)(a1, c);
 		} else if (dp[1] == '$') {
 			if (is_digit(*dp)) {
-				register int	n;
+				int	n;
 				if ((n = *dp-'0') <= c)
 					pbstr(a1[n]);
 				++dp;
@@ -534,7 +534,7 @@ expand(wchar_t **a1, int c)
 				pbnum((long)c);
 				++dp;
 			} else if (*dp == '*' || *dp == '@') {
-				register int i = c;
+				int i = c;
 				wchar_t **a = a1;
 
 				if (i > 0)
@@ -594,7 +594,7 @@ lnsync(FILE *iop)
 static void
 fpath(FILE *iop)
 {
-	register int	i;
+	int	i;
 
 	if (fname[0] == NULL)
 		return;
@@ -617,7 +617,7 @@ catchsig(int i)
 void
 delexit(int code, int flushio)
 {
-	register int i;
+	int i;
 
 	cf = stdout;
 
@@ -666,7 +666,7 @@ pbstr(wchar_t *str)
 void
 undiv(int i, int code)
 {
-	register FILE *fp;
+	FILE *fp;
 	wint_t c;
 
 	if (i < 1 || i > 9 || i == ofx || !ofile[i])
@@ -702,7 +702,7 @@ pbnum(long num)
 void
 pbnbr(long nbr, int base, int len)
 {
-	register int	neg = 0;
+	int	neg = 0;
 
 	if (base <= 0)
 		return;
@@ -713,7 +713,7 @@ pbnbr(long nbr, int base, int len)
 		nbr = -nbr;
 
 	while (nbr < 0) {
-		register int	i;
+		int	i;
 		if (base > 1) {
 			i = nbr%base;
 			nbr /= base;
@@ -751,7 +751,7 @@ itochr(int i)
 long
 ctol(wchar_t *str)
 {
-	register int sign;
+	int sign;
 	long num;
 
 	while (is_space(*str))
@@ -833,7 +833,7 @@ xmalloc(size_t size)
 static void *
 xcalloc(size_t nbr, size_t size)
 {
-	register void	*ptr;
+	void	*ptr;
 
 	ptr = xmalloc(nbr * size);
 	memset(ptr, '\0', nbr * size);
@@ -862,7 +862,7 @@ static void
 error3(void)
 {
 	if (Cp) {
-		register struct call	*mptr;
+		struct call	*mptr;
 
 		/* fix limit */
 		*op = EOS;

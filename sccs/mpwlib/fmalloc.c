@@ -86,7 +86,7 @@ fmalloc(unsigned asize)
 void 
 ffree(void *aptr)
 {
-	register unsigned cnt;
+	unsigned cnt;
 
 	cnt = ptrcnt;
 	while (cnt)

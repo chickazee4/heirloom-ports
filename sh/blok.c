@@ -59,7 +59,7 @@ void *
 alloc(nbytes)
 	size_t nbytes;
 {
-	register unsigned rbytes = round(nbytes+BYTESPERWORD, BYTESPERWORD);
+	unsigned rbytes = round(nbytes+BYTESPERWORD, BYTESPERWORD);
 
 	if (stakbot == 0) {
 		addblok((unsigned)0);
@@ -68,8 +68,8 @@ alloc(nbytes)
 	for (;;)
 	{
 		int	c = 0;
-		register struct blk *p = blokp;
-		register struct blk *q;
+		struct blk *p = blokp;
+		struct blk *q;
 
 		do
 		{
@@ -106,8 +106,8 @@ addblok(unsigned reqd)
 
 	if (stakbas != staktop)
 	{
-		register unsigned char *rndstak;
-		register struct blk *blokstak;
+		unsigned char *rndstak;
+		struct blk *blokstak;
 
 		if (staktop >= brkend)
 			growstak(staktop);
@@ -143,9 +143,9 @@ addblok(unsigned reqd)
 	}
 	bloktop->word = (struct blk *)(brkbegin + 1);
 	{
-		register unsigned char *stakadr = (unsigned char *)
+		unsigned char *stakadr = (unsigned char *)
 							(bloktop + 2);
-		register unsigned char *sp = stakadr;
+		unsigned char *sp = stakadr;
 		if (reqd = (staktop-stakbot))
 		{
 			if (stakadr + reqd >= brkend)
@@ -165,7 +165,7 @@ void
 free(ap)
 	void *ap;
 {
-	register struct blk *p;
+	struct blk *p;
 
 	if ((p = (struct blk *)ap) && p < bloktop && p > (struct blk *)brkbegin)
 	{
@@ -186,8 +186,8 @@ int
 chkbptr(struct blk *ptr)
 {
 	int	exf = 0;
-	register struct blk *p = (struct blk *)brkbegin;
-	register struct blk *q;
+	struct blk *p = (struct blk *)brkbegin;
+	struct blk *q;
 	int	us = 0, un = 0;
 
 	for (;;)
@@ -221,8 +221,8 @@ chkbptr(struct blk *ptr)
 int 
 chkmem(void)
 {
-	register struct blk *p = (struct blk *)brkbegin;
-	register struct blk *q;
+	struct blk *p = (struct blk *)brkbegin;
+	struct blk *q;
 	int	us = 0, un = 0;
 
 	for (;;) {
@@ -260,8 +260,8 @@ chkmem(void)
 size_t
 blklen(char *q)
 {
-	register struct blk *pp = (struct blk *)q;
-	register struct blk *p;
+	struct blk *pp = (struct blk *)q;
+	struct blk *p;
 
 	--pp;
 	p = (struct blk *)(Rcheat(pp->word) & ~BUSY);

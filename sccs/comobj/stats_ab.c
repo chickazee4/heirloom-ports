@@ -39,9 +39,9 @@
 # include	<defines.h>
 
 void 
-stats_ab(register struct packet *pkt, register struct stats *statp)
+stats_ab(struct packet *pkt, struct stats *statp)
 {
-	register char *p = getline(pkt);
+	char *p = getline(pkt);
 
 	if (p == NULL || *p++ != CTLCHAR || *p++ != STATS)
 		fmterr(pkt);

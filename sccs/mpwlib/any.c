@@ -42,7 +42,7 @@
 */
 
 int 
-any(int c, register char *s)
+any(int c, char *s)
 {
 	while (*s)
 		if (*s++ == c)

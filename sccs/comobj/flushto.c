@@ -39,9 +39,9 @@
 # include	<defines.h>
 
 void 
-flushto(register struct packet *pkt, int ch, int put)
+flushto(struct packet *pkt, int ch, int put)
 {
-	register char *p;
+	char *p;
 
 	while ((p = getline(pkt)) != NULL && !(*p++ == CTLCHAR && *p == ch))
 		pkt->p_wrttn = (char) put;

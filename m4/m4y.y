@@ -126,7 +126,7 @@ yylex(void) {
 	case '!':
 		return (peek('=', NE, '!'));
 	default: {
-		register int32_t	base;
+		int32_t	base;
 
 		evalval = 0;
 
@@ -140,7 +140,7 @@ yylex(void) {
 			base = 10;
 
 		for (;;) {
-			register int32_t	c, dig;
+			int32_t	c, dig;
 
 			c = *pe;
 

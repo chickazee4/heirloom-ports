@@ -63,7 +63,7 @@ static int adb = 0;
 void 
 callopt(void)
 {
-	register int i, *p, j, k, *q;
+	int i, *p, j, k, *q;
 
 	ggreed = malloc(sizeof (int) * size);
 	pgo = malloc(sizeof (int) * size);
@@ -195,7 +195,7 @@ callopt(void)
 static void 
 gin(int i)
 {
-	register int *r, *s, *q1, *q2;
+	int *r, *s, *q1, *q2;
 	int *p;
 
 	/* enter gotos on nonterminal i into array amem */
@@ -269,7 +269,7 @@ gin(int i)
 static void 
 stin(int i)
 {
-	register int *r, n, nn, flag, j, *q1, *q2;
+	int *r, n, nn, flag, j, *q1, *q2;
 	int *s;
 
 	tystate[i] = 0;
@@ -363,7 +363,7 @@ static int
 nxti(void)
 {
 	/* finds the next i */
-	register int i, max, maxi = 0;
+	int i, max, maxi = 0;
 	max = 0;
 
 	for (i = 1; i <= nnonter; ++i)
@@ -389,7 +389,7 @@ static void
 osummary(void)
 {
 	/* write summary */
-	register int i, *p;
+	int i, *p;
 
 	if (foutput == NULL)
 		return;
@@ -422,7 +422,7 @@ aoutput(void)
 static void
 arout(wchar_t *s, int *v, int n)
 {
-	register int i;
+	int i;
 
 	fprintf(ftable, "static YYCONST yytabelem %ls[]={\n", s);
 	for (i = 0; i < n; ) {
@@ -439,7 +439,7 @@ arout(wchar_t *s, int *v, int n)
 static int
 gtnm(void)
 {
-	register int s, val, c;
+	int s, val, c;
 
 	/* read and convert an integer from the standard input */
 	/* return the terminating character */

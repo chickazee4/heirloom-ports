@@ -52,10 +52,10 @@ unsigned char cwdname[PATH_MAX+1];
 static int 	didpwd = FALSE;
 
 void
-cwd(register unsigned char *dir)
+cwd(unsigned char *dir)
 {
-	register unsigned char *pcwd;
-	register unsigned char *pdir;
+	unsigned char *pcwd;
+	unsigned char *pdir;
 
 	/* First remove extra /'s */
 
@@ -245,7 +245,7 @@ cwdget(void)
 void
 cwdprint(void)
 {
-	register unsigned char *cp;
+	unsigned char *cp;
 
 	cwd2();
 	if (didpwd == FALSE) {
@@ -273,7 +273,7 @@ cwdprint(void)
 static void 
 rmslash(unsigned char *string)
 {
-	register unsigned char *pstring;
+	unsigned char *pstring;
 
 	pstring = string;
 	while(*pstring)

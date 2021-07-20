@@ -130,7 +130,7 @@ sigval[MAXTRAP]))() =
 };
 
 static int 
-ignoring(register int i)
+ignoring(int i)
 {
 	struct sigaction act;
 	if (trapflg[i] & SIGIGN)
@@ -171,7 +171,7 @@ clrsig(int i)
 void 
 done(int sig)
 {
-	register unsigned char	*t;
+	unsigned char	*t;
 	int	savxit;
 
 	if (t = trapcom[0])
@@ -210,9 +210,9 @@ done(int sig)
 }
 
 void 
-fault(register int sig)
+fault(int sig)
 {
-	register int flag = 0;
+	int flag = 0;
 
 	switch (sig) {
 		case SIGALRM:
@@ -278,7 +278,7 @@ handle(int sig, void (*func)(int))
 void 
 stdsigs(void)
 {
-	register int	i;
+	int	i;
 	stack_t	ss;
 	int	err = 0;
 #ifdef	SIGRTMIN
@@ -322,8 +322,8 @@ stdsigs(void)
 void 
 oldsigs(void)
 {
-	register int	i;
-	register unsigned char	*t;
+	int	i;
+	unsigned char	*t;
 
 	i = MAXTRAP;
 	while (i--)
@@ -343,8 +343,8 @@ oldsigs(void)
 void 
 chktrap(void)
 {
-	register int	i = MAXTRAP;
-	register unsigned char	*t;
+	int	i = MAXTRAP;
+	unsigned char	*t;
 
 	trapnote &= ~TRAPSET;
 	while (--i)

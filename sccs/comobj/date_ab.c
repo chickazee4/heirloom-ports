@@ -212,9 +212,9 @@ mosize(int y, int t)
 int
 gN(char *str, char **next, int num, int *digits, int *chars)
 {
-	register int c = 0;
-	register int n = 0;
-	register int m = 0;
+	int c = 0;
+	int n = 0;
+	int m = 0;
 
 	while (*str && !numeric(*str)) {
 		str++;

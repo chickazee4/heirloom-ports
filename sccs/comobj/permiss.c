@@ -39,12 +39,12 @@
 # include	<defines.h>
 # include       <i18n.h>
 
-static void ck_lock(register char *, register struct packet *);
+static void ck_lock(char *, struct packet *);
 
 void 
-finduser(register struct packet *pkt)
+finduser(struct packet *pkt)
 {
-	register char *p;
+	char *p;
 	char	*user;
 	char groupid[6];
 	int none;
@@ -83,8 +83,8 @@ char	*Sflags[NFLAGS] = { 0 };
 void 
 doflags(struct packet *pkt)
 {
-	register char *p;
-	register int k;
+	char *p;
+	int k;
 
 	for (k = 0; k < NFLAGS; k++)
 		Sflags[k] = 0;
@@ -101,11 +101,11 @@ doflags(struct packet *pkt)
 }
 
 void 
-permiss(register struct packet *pkt)
+permiss(struct packet *pkt)
 {
 	extern char *Sflags[];
-	register char *p;
-	register int n;
+	char *p;
+	int n;
 	extern char SccsError[];
 
 	if (!pkt->p_user)
@@ -144,7 +144,7 @@ permiss(register struct packet *pkt)
 static char l_str[121];	
 
 static void 
-ck_lock(register char *p, register struct packet *pkt)
+ck_lock(char *p, struct packet *pkt)
 {
 	int l_rel;
 	int locked;

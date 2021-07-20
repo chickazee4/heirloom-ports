@@ -193,9 +193,9 @@ map(void *addr, size_t len)
 void *
 malloc(size_t nbytes)
 {
-	register union store *p, *q;
+	union store *p, *q;
 	struct pool *o;
-	register int nw;
+	int nw;
 	static int temp;	/*coroutines assume no auto*/
 	static size_t poolblock = 0100000;
 
@@ -294,9 +294,9 @@ found:
 /*	freeing strategy tuned for LIFO allocation
 */
 void 
-free(register void *ap)
+free(void *ap)
 {
-	register union store *p = ap;
+	union store *p = ap;
 	struct pool *o;
 
 	dump("  free", (uintptr_t)ap);
@@ -320,11 +320,11 @@ free(register void *ap)
 void *
 realloc(void *ap, size_t nbytes)
 {
-	register union store *p = ap;
-	register union store *q;
+	union store *p = ap;
+	union store *q;
 	struct pool *o;
 	union store *s, *t;
-	register size_t nw;
+	size_t nw;
 	size_t onw;
 
 	if (p==NULL)
@@ -358,7 +358,7 @@ allock(void *ao)
 {
 #ifdef longdebug
 	struct pool *o = ao;
-	register union store *p;
+	union store *p;
 	int x;
 	x = 0;
 	for(p= &allocs[0]; clearbusy(p->ptr) > p; p=clearbusy(p->ptr)) {
@@ -379,9 +379,9 @@ allock(void *ao)
 void *
 calloc(size_t num, size_t size)
 {
-	register char *mp;
-	register INT *q;
-	register int m;
+	char *mp;
+	INT *q;
+	int m;
 
 	num *= size;
 	mp = malloc(num);

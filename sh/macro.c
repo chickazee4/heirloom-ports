@@ -54,9 +54,9 @@ copyto (
     int trimflag  /* flag to check if argument will be trimmed */
 )
 {
-	register unsigned int	c;
-	register unsigned int 	d;
-	register unsigned char *pc;
+	unsigned int	c;
+	unsigned int 	d;
+	unsigned char *pc;
 
 	while ((c = getch(endch, trimflag)) != endch && c)
 		if (quote) {
@@ -148,7 +148,7 @@ skipto(int endch)
 	/*
 	 * skip chars up to }
 	 */
-	register unsigned int	c;
+	unsigned int	c;
 
 	while ((c = readwc()) && c != endch)
 	{
@@ -179,7 +179,7 @@ getch (
 	 */
 )
 {
-	register unsigned int	d;
+	unsigned int	d;
 	int atflag = 0;  /* flag to check if $@ has already been seen within double 
 		        quotes */
 retry:
@@ -197,7 +197,7 @@ retry:
 			int		dolg = 0;
 			BOOL		bra;
 			BOOL		nulflg;
-			register unsigned char	*argp, *v = NULL;
+			unsigned char	*argp, *v = NULL;
 			unsigned char		idb[2];
 			unsigned char		*id = idb;
 
@@ -305,7 +305,7 @@ retry:
 						} else {
 							while (c = *v) {
 								wchar_t 	wc;
-								register int 	length;
+								int 	length;
 								if ((length = nextc(&wc, (char *)v)) <= 0)
 									length = 1;
 
@@ -361,7 +361,7 @@ retry:
 						usestak();
 						while(c = *argp) {
 							wchar_t 	wc;
-							register int 	len;
+							int 	len;
 
 							if ((len = nextc(&wc, (char *)argp)) <= 0)
 								len = 1;
@@ -424,8 +424,8 @@ macro(unsigned char *as)
 	 * Strip "" and do $ substitution
 	 * Leaves result on top of stack
 	 */
-	register BOOL	savqu = quoted;
-	register unsigned char	savq = quote;
+	BOOL	savqu = quoted;
+	unsigned char	savq = quote;
 	struct filehdr	fb;
 
 	push((struct fileblk *)&fb);
@@ -462,9 +462,9 @@ comsubst (
 	 * command substn
 	 */
 	struct fileblk	cb;
-	register unsigned int	d;
+	unsigned int	d;
 	int strlngth = staktop - stakbot;
-	register unsigned char *oldstaktop;
+	unsigned char *oldstaktop;
 	unsigned char *savptr = fixstak();
 	unsigned char	*pc;
 
@@ -495,14 +495,14 @@ comsubst (
 		}
 	}
 	{
-		register unsigned char	*argc;
+		unsigned char	*argc;
 
 		argc = fixstak(); 
 		push(&cb);
 		estabf(argc);  /* read from string */
 	}
 	{
-		register struct trenod *t;
+		struct trenod *t;
 		int		pv[2];
 
 		/*
@@ -522,7 +522,7 @@ comsubst (
 	oldstaktop = staktop = stakbot + strlngth;
 	while (d = readwc()) {
 		if(quote || (d == '\\' && trimflag)) {
-			register unsigned char *rest;
+			unsigned char *rest;
 			/* quote output from command subst. if within double 
 			   quotes or backslash part of output */
 			rest = readw(d);
@@ -548,7 +548,7 @@ comsubst (
 	{
 		extern pid_t parent;
 		int stat;
-		register int rc;
+		int rc;
 		int	ret = 0;
 
 		while ((ret = waitpid(parent,&stat,0)) != parent) {
@@ -583,9 +583,9 @@ comsubst (
 void
 subst(int in, int ot)
 {
-	register unsigned int	c;
+	unsigned int	c;
 	struct fileblk	fb;
-	register int	count = CPYSIZ;
+	int	count = CPYSIZ;
 	unsigned char	*pc;
 
 	push(&fb);

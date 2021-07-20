@@ -59,7 +59,7 @@ execute(struct trenod *argt, int xflags, int errorflg, int *pf1, int *pf2)
 	/*
 	 * `stakbot' is preserved by this routine
 	 */
-	register struct trenod	*t;
+	struct trenod	*t;
 	unsigned char		*sav = savstak();
 
 	sigchk();
@@ -67,8 +67,8 @@ execute(struct trenod *argt, int xflags, int errorflg, int *pf1, int *pf2)
 		flags &= ~errflg;
 
 	if ((t = argt) && execbrk == 0) {
-		register int treeflgs;
-		register unsigned char **com = NULL;
+		int treeflgs;
+		unsigned char **com = NULL;
 		int type;
 		short pos = 0;
 
@@ -368,7 +368,7 @@ execute(struct trenod *argt, int xflags, int errorflg, int *pf1, int *pf2)
 		case TAND:
 		case TORF:
 		{
-			register int xval;
+			int xval;
 			xval = execute(lstptr(t)->lstlef, XEC_NOSTOP, 0, NULL, NULL);
 			if ((xval == 0) == (type == TAND))
 				execute(lstptr(t)->lstrit, xflags|XEC_NOSTOP, errorflg, NULL, NULL);
@@ -444,8 +444,8 @@ execute(struct trenod *argt, int xflags, int errorflg, int *pf1, int *pf2)
 
 		case TSW:
 			{
-				register unsigned char	*r = mactrim(swptr(t)->swarg);
-				register struct regnod *regp;
+				unsigned char	*r = mactrim(swptr(t)->swarg);
+				struct regnod *regp;
 
 				regp = swptr(t)->swlst;
 				while (regp)
@@ -454,7 +454,7 @@ execute(struct trenod *argt, int xflags, int errorflg, int *pf1, int *pf2)
 
 					while (rex)
 					{
-						register unsigned char	*s;
+						unsigned char	*s;
 
 						if (gmatch(r, s = macro(rex->argval)) || (trim(s), eq(r, s)))
 						{
@@ -499,7 +499,7 @@ execexp(unsigned char *s, intptr_t f)
 void
 execprint(unsigned char **com)
 {
-	register int 	argn = 0;
+	int 	argn = 0;
 	unsigned char	*s;
 
 	prs(execpmsg);

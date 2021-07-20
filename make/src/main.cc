@@ -106,7 +106,7 @@
 #include <vroot/report.h>	/* report_dependency(), get_report_file() */
 
 // From read2.cc
-extern	Name		normalize_name(register wchar_t *name_string, register int length);
+extern	Name		normalize_name(wchar_t *name_string, int length);
 
 // From parallel.cc
 #if defined(TEAMWARE_MAKE_CMN)
@@ -182,7 +182,7 @@ extern "C" {
 }
 #endif
 
-extern	Name		normalize_name(register wchar_t *name_string, register int length);
+extern	Name		normalize_name(wchar_t *name_string, int length);
 
 extern	int		main(int, char * []);
 
@@ -201,7 +201,7 @@ static	void		setup_for_projectdir(void);
 static	void		setup_makeflags_argv(void);
 static	void		report_dir_enter_leave(Boolean entering);
 
-extern void expand_value(Name, register String , Boolean);
+extern void expand_value(Name, String , Boolean);
 
 #ifdef DISTRIBUTED
 	extern	int		dmake_ofd;
@@ -248,7 +248,7 @@ main(int argc, char *argv[])
 	 * cp is a -> to the value of the MAKEFLAGS env var,
 	 * which has to be regular chars.
 	 */
-	register char		*cp;
+	char		*cp;
 	char 			make_state_dir[MAXPATHLEN];
 	Boolean			parallel_flag = false;
 	char			*prognameptr;
@@ -1210,17 +1210,17 @@ doalarm(int)
  *	Global variables used:
  */
 static void
-read_command_options(register int argc, register char **argv)
+read_command_options(int argc, char **argv)
 {
-	register int		ch;
+	int		ch;
 	int			current_optind = 1;
 	int			last_optind_with_double_hyphen = 0;
 	int			last_optind;
 	int			last_current_optind;
-	register int		i;
-	register int		j;
-	register int		k;
-	register int		makefile_next = 0; /*
+	int		i;
+	int		j;
+	int		k;
+	int		makefile_next = 0; /*
 						    * flag to note options:
 						    * -c, f, g, j, m, o
 						    */
@@ -1697,7 +1697,7 @@ setup_makeflags_argv()
  *		touch			Set for make -t
  */
 static int
-parse_command_option(register char ch)
+parse_command_option(char ch)
 {
 	static int		invert_next = 0;
 	int			invert_this = invert_next;
@@ -2139,24 +2139,24 @@ read_files_and_state(int argc, char **argv)
 {
 	wchar_t			buffer[1000];
 	wchar_t			buffer_posix[1000];
-	register char		*cp;
+	char		*cp;
 	Property		def_make_macro = NULL;
 	Name			def_make_name;
 	Name			default_makefile;
 	String_rec		dest;
 	wchar_t			destbuffer[STRING_BUFFER_LENGTH];
-	register int		i;
+	int		i;
 	Name			keep_state_name;
 	Name			Makefile;
-	register Property	macro;
+	Property	macro;
 	struct stat		make_state_stat;
 	Name			makefile_name;
-	register Boolean	makefile_read = false;
+	Boolean	makefile_read = false;
 	String_rec		makeflags_string;
 	String_rec		makeflags_string_posix;
 	String_rec *		makeflags_string_current;
 	Name			makeflags_value_saved;
-	register Name		name;
+	Name		name;
 	Name			new_make_value;
 	Boolean			save_do_not_exec_rule;
 	Name			sdotMakefile;
@@ -2165,7 +2165,7 @@ read_files_and_state(int argc, char **argv)
 	static struct _Name	state_filename;
 	Boolean			temp;
 	char			tmp_char;
-	register Name		value;
+	Name		value;
 	ASCII_Dyn_Array		makeflags_and_macro;
 	Boolean			is_xpg4;
 
@@ -2824,14 +2824,14 @@ read_files_and_state(int argc, char **argv)
 static void
 enter_argv_values(int argc, char *argv[], ASCII_Dyn_Array *makeflags_and_macro)
 {
-	register char		*cp;
-	register int		i;
+	char		*cp;
+	int		i;
 	int			length;
-	register Name		name;
+	Name		name;
 	int			opt_separator = argc; 
 	char			tmp_char;
 	wchar_t			*tmp_wcs_buffer;
-	register Name		value;
+	Name		value;
 	Boolean			append = false;
 	Property		macro;
 	struct stat		statbuf;
@@ -3035,7 +3035,7 @@ enter_argv_values(int argc, char *argv[], ASCII_Dyn_Array *makeflags_and_macro)
  * Append the DMake option and value to the MAKEFLAGS string.
  */
 static void
-append_makeflags_string(Name name, register String makeflags_string)
+append_makeflags_string(Name name, String makeflags_string)
 {
 	char		*option = NULL;
 
@@ -3085,13 +3085,13 @@ append_makeflags_string(Name name, register String makeflags_string)
 static void
 read_environment(Boolean read_only)
 {
-	register char		**environment;
+	char		**environment;
 	int			length;
 	wchar_t			*tmp_wcs_buffer = NULL;
 	Boolean			alloced_tmp_wcs_buffer = false;
-	register wchar_t	*name;
-	register wchar_t	*value;
-	register Name		macro;
+	wchar_t	*name;
+	wchar_t	*value;
+	Name		macro;
 	Property		val;
 	Boolean			read_only_saved;
 
@@ -3204,7 +3204,7 @@ read_environment(Boolean read_only)
  *		recursion_level	Initialized
  */
 static Boolean
-read_makefile(register Name makefile, Boolean complain, Boolean must_exist, Boolean report_file)
+read_makefile(Name makefile, Boolean complain, Boolean must_exist, Boolean report_file)
 {
 	Boolean			b;
 	
@@ -3246,7 +3246,7 @@ make_targets(int argc, char **argv, Boolean parallel_flag)
 	int			i;
 	char			*cp;
 	Doname			result;
-	register Boolean	target_to_make_found = false;
+	Boolean	target_to_make_found = false;
 
 	doname(init, true, true);
 	recursion_level = 1;
@@ -3491,9 +3491,9 @@ make_targets(int argc, char **argv, Boolean parallel_flag)
  *		report_dependency	dwight
  */
 static void
-report_recursion(register Name target)
+report_recursion(Name target)
 {
-	register FILE		*report_file = get_report_file();
+	FILE		*report_file = get_report_file();
 
 	if ((report_file == NULL) || (report_file == (FILE*)-1)) {
 		return;
@@ -3523,14 +3523,14 @@ report_recursion(register Name target)
 extern void
 append_or_replace_macro_in_dyn_array(ASCII_Dyn_Array *Ar, char *macro)
 {
-	register char	*cp0;	/* work pointer in macro */
-	register char	*cp1;	/* work pointer in array */
-	register char	*cp2;	/* work pointer in array */
-	register char	*cp3;	/* work pointer in array */
-	register char	*name;	/* macro name */
-	register char	*value;	/* macro value */
-	register int 	len_array;
-	register int 	len_macro;
+	char	*cp0;	/* work pointer in macro */
+	char	*cp1;	/* work pointer in array */
+	char	*cp2;	/* work pointer in array */
+	char	*cp3;	/* work pointer in array */
+	char	*name;	/* macro name */
+	char	*value;	/* macro value */
+	int 	len_array;
+	int 	len_macro;
 
 	char * esc_value = NULL;
 	int esc_len;

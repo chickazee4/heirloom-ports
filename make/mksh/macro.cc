@@ -56,9 +56,9 @@
  */
 static void	add_macro_to_global_list(Name macro_to_add);
 #ifdef NSE
-static void	expand_value_with_daemon(Name name, register Property macro, register String destination, Boolean cmd);
+static void	expand_value_with_daemon(Name name, Property macro, String destination, Boolean cmd);
 #else
-static void	expand_value_with_daemon(Name, register Property macro, register String destination, Boolean cmd);
+static void	expand_value_with_daemon(Name, Property macro, String destination, Boolean cmd);
 #endif
 static Boolean	expand_function(wchar_t *, wchar_t *, String);
 
@@ -85,11 +85,11 @@ long env_alloc_bytes = 0;
  *	Global variables used:
  */
 Name
-getvar(register Name name)
+getvar(Name name)
 {
 	String_rec		destination;
 	wchar_t			buffer[STRING_BUFFER_LENGTH];
-	register Name		result;
+	Name		result;
 
 	if ((name == host_arch) || (name == target_arch)) {
 		if (!init_arch_done) {
@@ -130,12 +130,12 @@ getvar(register Name name)
  *	Global variables used:
  */
 void
-expand_value(Name value, register String destination, Boolean cmd)
+expand_value(Name value, String destination, Boolean cmd)
 {
 	Source_rec		sourceb;
-	register Source		source = &sourceb;
-	register wchar_t	*source_p = NULL;
-	register wchar_t	*source_end = NULL;
+	Source		source = &sourceb;
+	wchar_t	*source_p = NULL;
+	wchar_t	*source_end = NULL;
 	wchar_t			*block_start = NULL;
 	int			quote_seen = 0;
 
@@ -183,7 +183,7 @@ expand_value(Name value, register String destination, Boolean cmd)
 	  sourceb.inp_buf_ptr =
 	    sourceb.inp_buf_end = NULL;
 	sourceb.error_converting = false;
-	/* Lift some pointers from the struct to local register variables */
+	/* Lift some pointers from the struct to local variables */
 	CACHE_SOURCE(0);
 /* We parse the string in segments */
 /* We read chars until we find a $, then we append what we have read so far */
@@ -274,19 +274,19 @@ expand_value(Name value, register String destination, Boolean cmd)
  *		query_mentioned	Set if the word "?" is mentioned
  */
 void
-expand_macro(register Source source, register String destination, wchar_t *current_string, Boolean cmd)
+expand_macro(Source source, String destination, wchar_t *current_string, Boolean cmd)
 {
 	static Name		make = (Name)NULL;
 	static wchar_t		colon_sh[4];
 	static wchar_t		colon_shell[7];
 	String_rec		string;
 	wchar_t			buffer[STRING_BUFFER_LENGTH];
-	register wchar_t	*source_p = source->string.text.p;
-	register wchar_t	*source_end = source->string.text.end;
-	register int		closer = 0;
+	wchar_t	*source_p = source->string.text.p;
+	wchar_t	*source_end = source->string.text.end;
+	int		closer = 0;
 	wchar_t			*block_start = (wchar_t *)NULL;
 	int			quote_seen = 0;
-	register int		closer_level = 1;
+	int		closer_level = 1;
 	Name			name = (Name)NULL;
 	wchar_t			*colon = (wchar_t *)NULL;
 	wchar_t			*percent = (wchar_t *)NULL;
@@ -1061,12 +1061,12 @@ init_mach_macros(void)
  */
 static void
 #ifdef NSE
-expand_value_with_daemon(Name name, register Property macro, register String destination, Boolean cmd)
+expand_value_with_daemon(Name name, Property macro, String destination, Boolean cmd)
 #else
-expand_value_with_daemon(Name, register Property macro, register String destination, Boolean cmd)
+expand_value_with_daemon(Name, Property macro, String destination, Boolean cmd)
 #endif
 {
-	register Chain		chain;
+	Chain		chain;
 
 #ifdef NSE
         if (reading_dependencies) {
@@ -1152,14 +1152,14 @@ int	sunpro_dependencies_buf_size = 0;
  *		envvar		A list of environment vars with $ in value
  */
 Property
-setvar_daemon(register Name name, register Name value, Boolean append, Daemon daemon, Boolean strip_trailing_spaces, short debug_level)
+setvar_daemon(Name name, Name value, Boolean append, Daemon daemon, Boolean strip_trailing_spaces, short debug_level)
 {
-	register Property	macro = maybe_append_prop(name, macro_prop);
-	register Property	macro_apx = get_prop(name->prop, macro_append_prop);
+	Property	macro = maybe_append_prop(name, macro_prop);
+	Property	macro_apx = get_prop(name->prop, macro_append_prop);
 	int			length = 0;
 	String_rec		destination;
 	wchar_t			buffer[STRING_BUFFER_LENGTH];
-	register Chain		chain;
+	Chain		chain;
 	Name			val;
 	wchar_t			*val_string = (wchar_t*)NULL;
 	Wstring			wcb;

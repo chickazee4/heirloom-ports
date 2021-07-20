@@ -40,7 +40,7 @@
 #include        <locale.h>
 
 void
-chksid(char *p,register struct sid *sp)
+chksid(char *p,struct sid *sp)
 {
 	if (*p ||
 		(sp->s_rel == 0 && sp->s_lev) ||

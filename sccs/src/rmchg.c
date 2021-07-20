@@ -103,7 +103,7 @@ static int	msg(char *, char *, char *, char *, char *, char *);
 static int	testfred(char *, char *);
 static void	split_mrs(void);
 static void	putmrs(struct packet *);
-static void	rdpfile(register struct packet *, struct sid *);
+static void	rdpfile(struct packet *, struct sid *);
 static void	ckmrs(struct packet *, char *);
 static void	put_delmrs(struct packet *);
 
@@ -112,8 +112,8 @@ void	clean_up(void);
 int
 main(int argc,char **argv)
 {
-	register int i;
-	register char *p;
+	int i;
+	char *p;
 	int  c, no_arg;
 	extern int Fcnt;
 	int current_optind;
@@ -800,7 +800,7 @@ extern char **Varg;
 static void 
 split_mrs(void)
 {
-	register char **argv;
+	char **argv;
 	char	**dargv;
 	char	**nargv;
 	char	*ap;
@@ -825,7 +825,7 @@ split_mrs(void)
 static void 
 putmrs(struct packet *pkt)
 {
-	register char **argv;
+	char **argv;
 	char	str[64];
 
 	for(argv = &Varg[VSTART]; *argv; argv++) {
@@ -853,7 +853,7 @@ clean_up(void)
 }
 
 static void 
-rdpfile(register struct packet *pkt, struct sid *sp)
+rdpfile(struct packet *pkt, struct sid *sp)
 {
 	struct pfile pf;
 	char rline[BUFSIZ];
@@ -877,7 +877,7 @@ rdpfile(register struct packet *pkt, struct sid *sp)
 static void 
 ckmrs(struct packet *pkt, char *p)
 {
-	register char **argv, **eargv;
+	char **argv, **eargv;
 	char mr_no[BUFSIZ];
 	char *mr_ptr;
 
@@ -898,8 +898,8 @@ static void
 put_delmrs(struct packet *pkt)
 {
 
-	register char	**argv;
-	register int first;
+	char	**argv;
+	int first;
 	char	str[64];
 
 	first = 1;

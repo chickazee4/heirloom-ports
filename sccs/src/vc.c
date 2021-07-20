@@ -95,8 +95,8 @@ static int	Lineno;
 static char	*Repflag;
 static char	*Linend;
 static int	Silent;
-static void	asgfunc(register char *);
-static void	dclfunc(register char *);
+static void	asgfunc(char *);
+static void	dclfunc(char *);
 static void	errfunc(char *);
 static void	endfunc(void);
 static void	msgfunc(char *);
@@ -107,9 +107,9 @@ static int	doand(void);
 #undef	exp
 #define	exp	xxexp
 static int	exp(void);
-static char	*getid(register char *);
-static int	numcomp(register char *, register char *);
-static void	numck(register char *);
+static char	*getid(char *);
+static int	numcomp(char *, char *);
+static void	numck(char *);
 static char	*replace(char *);
 static int	lookup(char *);
 static int	putin(char *, char *);
@@ -129,8 +129,8 @@ static void	*srealloc(void *, size_t);
 int 
 main(int argc, char *argv[])
 {
-	register  char *lineptr, *p;
-	register int i;
+	 char *lineptr, *p;
+	int i;
 	char *line = NULL;
 	size_t	linesize = 0, linelen;
 	extern int Fflags;
@@ -247,9 +247,9 @@ main(int argc, char *argv[])
  */
 
 static void 
-asgfunc(register char *aptr)
+asgfunc(char *aptr)
 {
-	register char *end, *aname;
+	char *end, *aname;
 	char *avalue;
 
 	aptr = replace(aptr);
@@ -278,9 +278,9 @@ asgfunc(register char *aptr)
  */
 
 static void 
-dclfunc(register char *dptr)
+dclfunc(char *dptr)
 {
-	register char *end, *name;
+	char *end, *name;
 	int i;
 
 	dptr = replace(dptr);
@@ -376,7 +376,7 @@ repfunc(char *s)
 static void 
 iffunc(char *iptr)
 {
-	register int value, not;
+	int value, not;
 
 	Ifcount++;
 	if (Delflag > 0)
@@ -443,8 +443,8 @@ doand(void)
 static int 
 exp(void)
 {
-	register char op, save;
-	register int value = 0;
+	char op, save;
+	int value = 0;
 	char *id1, *id2, next = 0;
 
 	NONBLANK(sptr);
@@ -498,9 +498,9 @@ exp(void)
  */
 
 static char *
-getid(register char *gptr)
+getid(char *gptr)
 {
-	register char *id;
+	char *id;
 
 	NONBLANK(gptr);
 	id = gptr;
@@ -521,7 +521,7 @@ getid(register char *gptr)
  */
 
 static int 
-numcomp(register char *id1, register char *id2)
+numcomp(char *id1, char *id2)
 {
 	int k1, k2;
 
@@ -553,7 +553,7 @@ numcomp(register char *id1, register char *id2)
  */
 
 static void 
-numck(register char *nptr)
+numck(char *nptr)
 {
 	for (; *nptr != '\0'; nptr++)
 		if (!numeric(*nptr)) {
@@ -588,7 +588,7 @@ replace(char *ptr)
 	int NSLOTS = 0;
 	char **slots = NULL;
 	int i,j,newlen;
-	register char *s, *t, *p;
+	char *s, *t, *p;
 
 	for (s=ptr; *s++!='\n';);
 	*(--s) = '\0';
@@ -633,9 +633,9 @@ replace(char *ptr)
 static int 
 lookup(char *lname)
 {
-	register int i;
-	register char *t;
-	register struct symtab *s;
+	int i;
+	char *t;
+	struct symtab *s;
 
 	t = lname;
 	while (((i = *t++) != 0) &&
@@ -671,8 +671,8 @@ lookup(char *lname)
 static int 
 putin(char *pname, char *pvalue)
 {
-	register int i;
-	register struct symtab *s;
+	int i;
+	struct symtab *s;
 
 	s = &Sym[i = lookup(pname)];
 	ffree(s->value);
@@ -686,7 +686,7 @@ putin(char *pname, char *pvalue)
 static char *
 findch(char *astr, char *match, int len)
 {
-	register char *s, *t;
+	char *s, *t;
 	wchar_t	c;
 	int n;
 	char *temp;
@@ -722,7 +722,7 @@ findch(char *astr, char *match, int len)
 static char *
 ecopy(char *s1, char *s2)
 {
-	register char *r1, *r2;
+	char *r1, *r2;
 
 	r1 = s1;
 	r2 = s2;
@@ -734,7 +734,7 @@ ecopy(char *s1, char *s2)
 static char *
 findstr(char *astr, char *pat)
 {
-	register char *s, *t, c;
+	char *s, *t, c;
 	char *temp;
 
 	for (s=astr; ((c = *s) != '\0') && any(c,pat)==0; s++)

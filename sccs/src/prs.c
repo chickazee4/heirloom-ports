@@ -106,25 +106,25 @@ static struct	tm	*Dtime;
 static struct tm 	Date_time;
 static struct tm 	Del_Date_time;
 
-static void	process(register char *);
-static void	dodeltbl(register struct packet *);
+static void	process(char *);
+static void	dodeltbl(struct packet *);
 static void	scanspec(char [], struct deltab *, struct stats *);
-static int	invalid(register char *);
-static void	deltblchk(register struct packet *);
-static int	getstats(register struct packet *, register struct stats *);
+static int	invalid(char *);
+static void	deltblchk(struct packet *);
+static int	getstats(struct packet *, struct stats *);
 static int	sidcmp(struct sid *, struct sid *);
-static int	getadel(register struct packet *, register struct deltab *);
+static int	getadel(struct packet *, struct deltab *);
 static FILE*	maket(char *);
-static void	printfile(register char *);
-static int	read_mod(register struct packet *);
+static void	printfile(char *);
+static int	read_mod(struct packet *);
 static void	getbody(struct sid *, struct packet *);
-static void	getit(register char *, register char *);
+static void	getit(char *, char *);
 static void	aux_create(FILE *, char *, char);
-static void	putmr(register char *);
-static void	putcom(register char *);
-static void	read_to(int, register struct packet *);
+static void	putmr(char *);
+static void	putcom(char *);
+static void	read_to(int, struct packet *);
 static void	printflags(void);
-static void	ck_spec(register char *);
+static void	ck_spec(char *);
 #if defined(BUG_1205145) || defined(GMT_TIME)
 static void idsetup(struct sid *,struct packet *,struct deltab *);
 #else
@@ -136,8 +136,8 @@ void	clean_up(void);
 int 
 main(int argc, char *argv[])
 {
-	register int j;
-	register char *p;
+	int j;
+	char *p;
 	int  c;
 	int strlength = 0;
 	extern int Fcnt;
@@ -311,7 +311,7 @@ main(int argc, char *argv[])
 */
 
 static void 
-process(register char *file)
+process(char *file)
 {
 	if (setjmp(Fjmp))	/* set up to return here from 'fatal' */
 		return;		/* and return to caller of 'process' */
@@ -407,7 +407,7 @@ process(register char *file)
 */
 
 static void 
-dodeltbl(register struct packet *pkt)
+dodeltbl(struct packet *pkt)
 {
 	char	*n;
 	int	stopdel;
@@ -547,8 +547,8 @@ static void
 scanspec(char spec[], struct deltab *dtp, struct stats *statp)
 {
 
-	register char *lp;
-	register char	*k;
+	char *lp;
+	char	*k;
 
 	int	istr;
 	register	char	c;
@@ -891,9 +891,9 @@ clean_up(void)
 */
 
 static int 
-invalid(register char *i_sid)
+invalid(char *i_sid)
 {
-	register int digits = 0;
+	int digits = 0;
 	if (*i_sid == '0' || *i_sid == '.')
 		return (1);
 	i_sid++;
@@ -922,7 +922,7 @@ invalid(register char *i_sid)
 */
 
 static void 
-deltblchk(register struct packet *pkt)
+deltblchk(struct packet *pkt)
 {
 	char	*n;
 	int	found;
@@ -1031,9 +1031,9 @@ deltblchk(register struct packet *pkt)
 */
 
 static int 
-getstats(register struct packet *pkt, register struct stats *statp)
+getstats(struct packet *pkt, struct stats *statp)
 {
-	register char *p = getline(pkt);
+	char *p = getline(pkt);
 
 	if ( p == NULL || *p++ != CTLCHAR || *p++ != STATS)
 		return(0);
@@ -1070,7 +1070,7 @@ int diff = 0;
 */
 
 static int 
-getadel(register struct packet *pkt, register struct deltab *dt)
+getadel(struct packet *pkt, struct deltab *dt)
 {
 	if (getline(pkt) == NULL)
 		fmterr(pkt);
@@ -1105,7 +1105,7 @@ maket(char *file)
 */
 
 static void 
-printfile(register char *file)
+printfile(char *file)
 {
 	register	char	*p;
 	FILE	*iop;
@@ -1124,9 +1124,9 @@ printfile(register char *file)
 */
 
 static int 
-read_mod(register struct packet *pkt)
+read_mod(struct packet *pkt)
 {
-	register char *p;
+	char *p;
 	int ser;
 	int iod;
 
@@ -1209,7 +1209,7 @@ getbody(struct sid *gsid, struct packet *pkt)
 */
 
 static void 
-getit(register char *str, register char *cp)
+getit(char *str, char *cp)
 {
 	cp += 2;
 	NONBLANK(cp);
@@ -1309,7 +1309,7 @@ idsetup(struct sid *gsid,struct packet *pkt,time_t *bdate)
 */
 
 static void 
-putmr(register char *cp)
+putmr(char *cp)
 {
 
 	cp += 3;
@@ -1331,7 +1331,7 @@ putmr(register char *cp)
 */
 
 static void 
-putcom(register char *cp)
+putcom(char *cp)
 {
 
 	cp += 3;
@@ -1349,9 +1349,9 @@ putcom(register char *cp)
 */
 
 static void 
-read_to(int ch, register struct packet *pkt)
+read_to(int ch, struct packet *pkt)
 {
-	register char *p;
+	char *p;
 	while (((p = getline(pkt)) != NULL) &&
 			!(*p++ == CTLCHAR && *p == ch))
 		;
@@ -1425,7 +1425,7 @@ printflags(void)
 */
 
 static void 
-ck_spec(register char *p)
+ck_spec(char *p)
 {
 	if (sccs_index(p,NOGETTEXT(":C:")) != -1)	/* check for Comment keyword */
 		HAD_CM = 1;

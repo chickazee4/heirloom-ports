@@ -1,8 +1,3 @@
-cmake_minimum_required(VERSION 3.1)
-set(CMAKE_CXX_STANDARD 17)
-
-project( hmake )
-
 set(
     LIBMKSH_SRC
     mksh/dosys.cc
@@ -79,6 +74,7 @@ target_include_directories(mksh PUBLIC include)
 add_library(vroot STATIC ${LIBVROOT_SRC})
 target_include_directories(vroot PUBLIC include)
 add_executable(hmake ${MAKE_SRC} )
+target_include_directories(hmake PRIVATE ${RPC_INCLUDE_DIR})
 
 target_link_libraries(hmake makestate mksdmsi18n mksh vroot)
 

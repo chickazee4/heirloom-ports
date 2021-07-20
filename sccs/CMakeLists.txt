@@ -1,9 +1,3 @@
-cmake_minimum_required(VERSION 3.1)
-# 3.1 is required for target_sources() command which is used to grab the large number of source files for the main application
-set(CMAKE_CXX_STANDARD 17)
-
-project(hsccs)
-
 set(
     LIBCASSI_SRC
     cassi/cmrcheck.c
@@ -114,17 +108,10 @@ target_link_libraries(what ${SCCS_LIBS})
 install(
     TARGETS admin comb delta prs prt rmchg unget val vc what
     RUNTIME
-     DESTINATION /usr/bin/hsccs
+     DESTINATION ${CMAKE_INSTALL_BINDIR}/hsccs
     PUBLIC_HEADER
      DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/hsccs
 )
 
 add_executable(hsccs src/sccs.c src/version.c)
 target_link_libraries(hsccs ${SCCS_LIBS})
-
-# TODO: need better way to do this
-add_custom_command(
-    TARGET hsccs
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy hsccs ${CMAKE_INSTALL_BINDIR}
-)

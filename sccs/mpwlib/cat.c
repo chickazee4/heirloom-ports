@@ -49,7 +49,7 @@
 char *
 cat(char *dest, ...)
 {
-	register char *d, *s;
+	char *d, *s;
 	va_list ap;
 
 	va_start(ap, dest);

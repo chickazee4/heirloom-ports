@@ -223,15 +223,15 @@ static int	callprog(char *, int, char **, int);
 static char	*makefile(char *, const char *);
 static bool	isdir(char *);
 static bool	isfile(char *);
-static bool	safepath(register char *);
+static bool	safepath(char *);
 static int	clean(int, char **);
 static bool	isbranch(char *);
 static void	unedit(char *);
-static char	*tail(register char *);
+static char	*tail(char *);
 static struct p_file	*getpfent(FILE *);
 static int	checkpfent(struct p_file *);
-static char	*nextfield(register char *);
-static void	putpfent(register struct p_file *, register FILE *);
+static char	*nextfield(char *);
+static void	putpfent(struct p_file *, FILE *);
 static int	usrerr(const char *, ...);
 static void	syserr(const char *, ...);
 static char	*gstrcat(char *, const char *, unsigned);
@@ -369,14 +369,14 @@ static char	*Pflag;		/* directory prefix */
 int 
 main(int argc, char **argv)
 {
-	register char *p;
-	register int i;
+	char *p;
+	int i;
 	int current_optind, c;
-	register char *argp;
+	char *argp;
 
 # ifndef V6
 # ifndef SCCSDIR
-	register struct passwd *pw;
+	struct passwd *pw;
 	char buf[FBUFSIZ], cwdpath[FBUFSIZ];
 
 	MyName = basename(argv[0]);
@@ -621,15 +621,15 @@ getNsid(char *file, char *user)
 static int 
 command(char **argv, int forkflag, char *arg0)
 {
-	register struct sccsprog *cmd;
-	register char *p;
+	struct sccsprog *cmd;
+	char *p;
 	char buf[FILESIZE];
 	char **nav;
 	char macro_opstr[64];
 	char **np, *nextp;
-	register char **ap;
-	register int i;
-	register char *q;
+	char **ap;
+	int i;
+	char *q;
 	int rval = 0;
 	int hady = 0;
 	int len;
@@ -1656,7 +1656,7 @@ get_comments(void)
 static struct sccsprog *
 lookup(char *name)
 {
-	register struct sccsprog *cmd;
+	struct sccsprog *cmd;
 
 	for (cmd = SccsProg; cmd->sccsname != NULL; cmd++)
 	{
@@ -1689,12 +1689,12 @@ lookup(char *name)
 static int 
 callprog(char *progpath, int flags, char **argv, int forkflag)
 {
-	register int i;
-	register int wpid;
+	int i;
+	int wpid;
 	auto int st;
-	register int sigcode;
-	register int coredumped;
-	register char *sigmsg;
+	int sigcode;
+	int coredumped;
+	char *sigmsg;
 #ifndef __STDC__
 	auto char sigmsgbuf[10+1];	/* "Signal 127" + terminating '\0' */
 #endif
@@ -1827,9 +1827,9 @@ callprog(char *progpath, int flags, char **argv, int forkflag)
 static char *
 makefile(char *name, const char *in_SccsDir)
 {
-	register char *p;
+	char *p;
 	char buf[3*FBUFSIZ];
-	register char *q;
+	char *q;
 	int Spath = FALSE;
 	char *Sp, *np;
 	struct stat Statbuf;
@@ -1994,7 +1994,7 @@ isfile(char *name)
 */
 
 static bool 
-safepath(register char *p)
+safepath(char *p)
 {
 	if (*p != '/')
 	{
@@ -2071,15 +2071,15 @@ clean(int mode, char **argv)
 	char namefile[MAXPATHLEN];
 	char basebuf[MAXPATHLEN];
 	char *bufend, *baseend;
-	register DIR *dirfd;
-	register char *basefile;
+	DIR *dirfd;
+	char *basefile;
 	bool gotedit;
 	bool edited;
 	bool gotpfent;
 	FILE *pfp;
 	bool nobranch = FALSE;
-	register struct p_file *pf;
-	register char **ap;
+	struct p_file *pf;
+	char **ap;
 	char *usernm = NULL;
 	char *subdir = NULL;
 	struct stat Statbuf;
@@ -2263,7 +2263,7 @@ clean(int mode, char **argv)
 static bool 
 isbranch(char *sid)
 {
-	register char *p;
+	char *p;
 	int dots;
 
 	dots = 0;
@@ -2299,13 +2299,13 @@ isbranch(char *sid)
 static void 
 unedit(char *fn)
 {
-	register FILE *pfp;
+	FILE *pfp;
 	char *gfile, *pfn;
 	char *_gfile = NULL;
 	char   template[] = NOGETTEXT("/tmp/sccsXXXXX");
 	static char tfn[20];
 	FILE *tfp;
-	register char *q;
+	char *q;
 	bool delete = FALSE;
 	bool others = FALSE;
 	char *myname;
@@ -2489,9 +2489,9 @@ unedit(char *fn)
 */
 
 static char *
-tail(register char *fn)
+tail(char *fn)
 {
-	register char *p;
+	char *p;
 
 	for (p = fn; *p != 0; p++)
 		if (*p == '/' && p[1] != '\0' && p[1] != '/')
@@ -2518,7 +2518,7 @@ getpfent(FILE *pfp)
 {
 	static struct p_file ent;
 	static char buf[PFILELG];
-	register char *p;
+	char *p;
 
 	if (fgets(buf, sizeof buf, pfp) == NULL)
 		return (NULL);
@@ -2549,7 +2549,7 @@ checkpfent(struct p_file *pf)
 }
 
 static char *
-nextfield(register char *p)
+nextfield(char *p)
 {
 	if (p == NULL || *p == '\0')
 		return (NULL);
@@ -2579,7 +2579,7 @@ nextfield(register char *p)
 */
 
 static void
-putpfent(register struct p_file *pf, register FILE *f)
+putpfent(struct p_file *pf, FILE *f)
 {
 	fprintf(f, "%s %s %s %s %s", pf->p_osid, pf->p_nsid,
 		pf->p_user, pf->p_date, pf->p_time);
@@ -2785,7 +2785,7 @@ diffs(char *file)
 static char *
 makegfile(char *name)
 {
-	register char *gname, *p, *g, *s;
+	char *gname, *p, *g, *s;
 	
 	if (name == NULL || *name == '\0') {
 		return NULL;

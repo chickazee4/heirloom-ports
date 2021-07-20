@@ -40,7 +40,7 @@
 # include       <locale.h>
 
 void
-fmterr(register struct packet *pkt)
+fmterr(struct packet *pkt)
 {
 	extern char SccsError[];
 

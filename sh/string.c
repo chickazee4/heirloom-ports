@@ -40,7 +40,7 @@
 
 
 unsigned char *
-movstr(register const unsigned char *a, register unsigned char *b)
+movstr(const unsigned char *a, unsigned char *b)
 {
 	while (*b++ = *a++);
 	return(--b);
@@ -49,7 +49,7 @@ movstr(register const unsigned char *a, register unsigned char *b)
 int
 any(wchar_t c, const unsigned char *s)
 {
-	register unsigned int d;
+	unsigned int d;
 
 	while (d = *s++)
 	{
@@ -63,8 +63,8 @@ int
 anys(const unsigned char *c, const unsigned char *s)
 {
 	wchar_t f, e;
-	register wchar_t d;
-	register int n;
+	wchar_t d;
+	int n;
 	if((n = nextc(&f, (const char *)c)) <= 0)
 		return(FALSE);
 	d = f;
@@ -78,7 +78,7 @@ anys(const unsigned char *c, const unsigned char *s)
 }
 
 int 
-cf(register const unsigned char *s1, register const unsigned char *s2)
+cf(const unsigned char *s1, const unsigned char *s2)
 {
 	while (*s1++ == *s2)
 		if (*s2++ == 0)
@@ -89,7 +89,7 @@ cf(register const unsigned char *s1, register const unsigned char *s2)
 int 
 length(const unsigned char *as)
 {
-	register const unsigned char	*s;
+	const unsigned char	*s;
 
 	if (s = as)
 		while (*s++);
@@ -97,8 +97,8 @@ length(const unsigned char *as)
 }
 
 unsigned char *
-movstrn(register const unsigned char *a,
-		register unsigned char *b, register int n)
+movstrn(const unsigned char *a,
+		unsigned char *b, int n)
 {
 	while ((n-- > 0) && *a)
 		*b++ = *a++;

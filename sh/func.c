@@ -48,11 +48,11 @@ freefunc(struct namnod *n)
 
 
 void
-freetree(register struct trenod *t)
+freetree(struct trenod *t)
 {
 	if (t)
 	{
-		register int type;
+		int type;
 
 		if (t->tretyp & CNTMSK)
 		{
@@ -130,9 +130,9 @@ freetree(register struct trenod *t)
 }
 
 void
-free_arg(register struct argnod *argp)
+free_arg(struct argnod *argp)
 {
-	register struct argnod 	*sav;
+	struct argnod 	*sav;
 
 	while (argp)
 	{
@@ -144,9 +144,9 @@ free_arg(register struct argnod *argp)
 
 
 void
-freeio(register struct ionod *iop)
+freeio(struct ionod *iop)
 {
-	register struct ionod *sav;
+	struct ionod *sav;
 
 	while (iop)
 	{
@@ -183,9 +183,9 @@ freeio(register struct ionod *iop)
 
 
 void
-freereg(register struct regnod *regp)
+freereg(struct regnod *regp)
 {
-	register struct regnod 	*sav;
+	struct regnod 	*sav;
 
 	while (regp)
 	{
@@ -229,13 +229,13 @@ prcmd(struct trenod *t)
 }
 
 void
-prf(register struct trenod *t)
+prf(struct trenod *t)
 {
 	sigchk();
 
 	if (t)
 	{
-		register int	type;
+		int	type;
 
 		type = t->tretyp & COMMSK;
 
@@ -243,7 +243,7 @@ prf(register struct trenod *t)
 		{
 			case TFND:
 			{
-				register struct fndnod *f = (struct fndnod *)t;
+				struct fndnod *f = (struct fndnod *)t;
 
 				prs_buff(f->fndnam);
 				prs_buff("(){");
@@ -302,8 +302,8 @@ prf(register struct trenod *t)
 
 			case TFOR:
 				{
-					register struct argnod	*arg;
-					register struct fornod 	*f = (struct fornod *)t;
+					struct argnod	*arg;
+					struct fornod 	*f = (struct fornod *)t;
 
 					prs_buff("for ");
 					prs_buff(f->fornam);
@@ -371,7 +371,7 @@ prf(register struct trenod *t)
 
 			case TSW:
 				{
-					register struct regnod 	*swl;
+					struct regnod 	*swl;
 
 					prs_buff("case ");
 					prs_buff(swptr(t)->swarg);
@@ -408,7 +408,7 @@ prf(register struct trenod *t)
 }
 
 void
-prarg(register struct argnod *argp)
+prarg(struct argnod *argp)
 {
 	while (argp)
 	{
@@ -421,10 +421,10 @@ prarg(register struct argnod *argp)
 
 
 void
-prio(register struct ionod *iop)
+prio(struct ionod *iop)
 {
-	register int	iof;
-	register unsigned char	*ion;
+	int	iof;
+	unsigned char	*ion;
 
 	while (iop)
 	{

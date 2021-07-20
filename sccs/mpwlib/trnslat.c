@@ -43,9 +43,9 @@
 */
 
 char *
-trnslat(register char *str, char *old, char *new, char *result)
+trnslat(char *str, char *old, char *new, char *result)
 {
-	register char *r, *o;
+	char *r, *o;
 
 	for (r = result; *r = *str++; r++)
 		for (o = old; *o; )

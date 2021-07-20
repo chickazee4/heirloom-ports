@@ -45,14 +45,14 @@
 */
 
 char *
-getline(register struct packet *pkt)
+getline(struct packet *pkt)
 {
 	char	buf[DEF_LINE_SIZE];
 	int	eof;
-	register size_t read = 0;
-	register size_t used = 0;
-	register signed char *p;
-	register unsigned char *u_p;
+	size_t read = 0;
+	size_t used = 0;
+	signed char *p;
+	unsigned char *u_p;
 
 	if(pkt->p_wrttn==0)
 		putline(pkt,(char *) 0);

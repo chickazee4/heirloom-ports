@@ -44,8 +44,8 @@
 char *
 date_ba(time_t *bdt, char *adt)
 {
-	register struct tm *lcltm;
-	register char *p;
+	struct tm *lcltm;
+	char *p;
 
 #if defined(BUG_1205145) || defined(GMT_TIME)
 	lcltm = gmtime(bdt);

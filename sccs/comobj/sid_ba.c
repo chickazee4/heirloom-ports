@@ -40,7 +40,7 @@
 
 
 char *
-sid_ba(register struct sid *sp, register char *p)
+sid_ba(struct sid *sp, char *p)
 {
 	sprintf(p,"%d.%d",sp->s_rel,sp->s_lev);
 	while (*p++)

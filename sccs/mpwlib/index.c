@@ -45,7 +45,7 @@
 int 
 sccs_index(char *as1, char *as2)
 {
-	register char *s1,*s2,c;
+	char *s1,*s2,c;
 	int offset;
 
 	s1 = as1;

@@ -40,9 +40,9 @@
 
 
 char *
-del_ba(register struct deltab *dt, char *str)
+del_ba(struct deltab *dt, char *str)
 {
-	register char *p;
+	char *p;
 
 	p = str;
 	*p++ = CTLCHAR;

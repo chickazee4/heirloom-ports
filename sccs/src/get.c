@@ -86,20 +86,20 @@ static int	cmri = 0;
 /* End of insertion */
 
 static void	get(char *);
-static void	gen_lfile(register struct packet *);
-static void	idsetup(register struct packet *);
-static void	makgdate(register char *, register char *);
-static char	*idsubst(register struct packet *, char []);
-static char	*_trans(register char *, register char *, register char *);
-static void	prfx(register struct packet *);
-static void	wrtpfile(register struct packet *, char *, char *);
+static void	gen_lfile(struct packet *);
+static void	idsetup(struct packet *);
+static void	makgdate(char *, char *);
+static char	*idsubst(struct packet *, char []);
+static char	*_trans(char *, char *, char *);
+static void	prfx(struct packet *);
+static void	wrtpfile(struct packet *, char *, char *);
 static int	cmrinsert(void);
 
 int 
-main(int argc, register char *argv[])
+main(int argc, char *argv[])
 {
-	register int i;
-	register char *p;
+	int i;
+	char *p;
 	int  c;
 	extern int Fcnt;
 	int current_optind;
@@ -294,8 +294,8 @@ extern char *Sflags[];
 static void 
 get(char *file)
 {
-	register char *p;
-	register unsigned ser;
+	char *p;
+	unsigned ser;
 	extern char had_dir, had_standinp;
 	struct stats stats;
 	char	str[32];
@@ -513,7 +513,7 @@ void
 enter(struct packet *pkt, int ch, int n, struct sid *sidp)
 {
 	char str[32];
-	register struct apply *ap;
+	struct apply *ap;
 
 	sid_ba(sidp,str);
 	if (pkt->p_verbose)
@@ -544,7 +544,7 @@ enter(struct packet *pkt, int ch, int n, struct sid *sidp)
 }
 
 static void 
-gen_lfile(register struct packet *pkt)
+gen_lfile(struct packet *pkt)
 {
 	char *n;
 	int reason;
@@ -660,11 +660,11 @@ static char	Dir[BUFSIZ];
 static char	*Qsect;
 
 static void 
-idsetup(register struct packet *pkt)
+idsetup(struct packet *pkt)
 {
 	extern time_t Timenow;
-	register int n;
-	register char *p;
+	int n;
+	char *p;
 
 	date_ba(&Timenow,Curdate);
 	Curtime = &Curdate[9];
@@ -696,7 +696,7 @@ idsetup(register struct packet *pkt)
 }
 
 static void 
-makgdate(register char *old, register char *new)
+makgdate(char *old, char *new)
 {
 	if ((*new = old[3]) != '0')
 		new++;
@@ -718,13 +718,13 @@ static size_t tline_size = 0;
 #define trans(a, b)	_trans(a, b, lp)
 
 static char *
-idsubst(register struct packet *pkt, char line[])
+idsubst(struct packet *pkt, char line[])
 {
 	static char *hold = NULL;
 	static size_t hold_size = 0;
 	size_t new_hold_size;
 	static char str[32];
-	register char *lp, *tp;
+	char *lp, *tp;
 	int recursive = 0;
 	extern char *Type;
 	extern char *Sflags[];
@@ -889,10 +889,10 @@ idsubst(register struct packet *pkt, char line[])
 }
 
 static char *
-_trans(register char *tp, register char *str, register char *rest)
+_trans(char *tp, char *str, char *rest)
 {
-	register size_t filled_size	= tp - tline;
-	register size_t new_size	= filled_size + strlen(str) + 1;
+	size_t filled_size	= tp - tline;
+	size_t new_size	= filled_size + strlen(str) + 1;
 
 	if (new_size > tline_size) {
 		tline_size = new_size + strlen(rest) + DEF_LINE_SIZE;
@@ -908,7 +908,7 @@ _trans(register char *tp, register char *str, register char *rest)
 }
 
 static void 
-prfx(register struct packet *pkt)
+prfx(struct packet *pkt)
 {
 	char str[32];
 
@@ -950,7 +950,7 @@ clean_up(void)
 static	char	warn[] = NOGETTEXT("WARNING: being edited: `%s' (ge18)\n");
 
 static void 
-wrtpfile(register struct packet *pkt, char *inc, char *exc)
+wrtpfile(struct packet *pkt, char *inc, char *exc)
 {
 	char line[64], str1[32], str2[32];
 	char *user, *pfile;

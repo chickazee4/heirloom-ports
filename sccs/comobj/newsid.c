@@ -41,7 +41,7 @@
 static int	in_pfile(struct sid *sp, struct packet *pkt);
 
 void 
-newsid(register struct packet *pkt, int branch)
+newsid(struct packet *pkt, int branch)
 {
 	int chkbr;
 

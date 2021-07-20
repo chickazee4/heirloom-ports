@@ -113,17 +113,17 @@ static char *flagdesc[26] = {
 };
 
 static void	prt(char *);
-static void	getdel(register struct delent *, register char *);
+static void	getdel(struct delent *, char *);
 static char	*read_to(int);
-static char	*lineread(register int);
-static void	printdel(register char *, register struct delent *);
-static void	printit(register char *, register char *, register char *);
+static char	*lineread(int);
+static void	printdel(char *, struct delent *);
+static void	printit(char *, char *, char *);
 
 int 
 main(int argc, char *argv[])
 {
-	register int j;
-	register char *p;
+	int j;
+	char *p;
 	int  c;
 	int testklt;
 	extern int Fcnt;
@@ -512,7 +512,7 @@ prt(char *file)
 
 
 static void 
-getdel(register struct delent *delp, register char *lp)
+getdel(struct delent *delp, char *lp)
 {
 	lp += 2;
 	NONBLANK(lp);
@@ -555,7 +555,7 @@ read_to(int ch)
 
 
 static char *
-lineread(register int eof)
+lineread(int eof)
 {
 	char	buf[512];
 	size_t	read, used = 0;
@@ -589,7 +589,7 @@ lineread(register int eof)
 
 
 static void 
-printdel(register char *file, register struct delent *delp)
+printdel(char *file, struct delent *delp)
 {
 	printf("\n");
 
@@ -605,7 +605,7 @@ printdel(register char *file, register struct delent *delp)
 
 /*ARGSUSED*/
 static void 
-printit(register char *file, register char *str, register char *cp)
+printit(char *file, char *str, char *cp)
 {
 	cp++;
 	NONBLANK(cp);

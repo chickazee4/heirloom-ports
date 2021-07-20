@@ -40,9 +40,9 @@
 # include      <had.h>
 
 int 
-getser(register struct packet *pkt)
+getser(struct packet *pkt)
 {
-	register struct idel *rdp;
+	struct idel *rdp;
 	int n, ser, def;
 	char *p;
 	extern char *Sflags[];

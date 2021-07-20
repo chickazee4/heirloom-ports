@@ -45,7 +45,7 @@ unsigned char *
 setbrk(int incr)
 {
 
-	register unsigned char *a = (unsigned char *)sbrk(incr);
+	unsigned char *a = (unsigned char *)sbrk(incr);
 
 	brkend = a + incr;
 	return(a);

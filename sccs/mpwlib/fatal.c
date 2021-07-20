@@ -147,7 +147,7 @@ fatal(char *msg)
 char *
 nse_file_trim(char *f, int vcshist)
 {
-        register char   *p;
+        char   *p;
         char            *q;
         char            *r;
         char            c;

@@ -39,7 +39,7 @@
 # include	<defines.h>
 
 char 
-del_ab(register char *p, register struct deltab *dt, struct packet *pkt)
+del_ab(char *p, struct deltab *dt, struct packet *pkt)
 {
 	int n;
 	extern char *Datep;
@@ -83,7 +83,7 @@ del_ab(register char *p, register struct deltab *dt, struct packet *pkt)
 */
 
 void 
-get_Del_Date_time(register char *p, struct deltab *dt, struct packet *pkt, struct tm *p_tm)
+get_Del_Date_time(char *p, struct deltab *dt, struct packet *pkt, struct tm *p_tm)
 {
 	char	* cp;
 	

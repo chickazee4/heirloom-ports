@@ -39,10 +39,10 @@
 # include	<defines.h>
 # include       <locale.h>
 
-static char *getasid(register char *, register struct sid *);
+static char *getasid(char *, struct sid *);
 
 void 
-dolist(struct packet *pkt, register char *list, int ch)
+dolist(struct packet *pkt, char *list, int ch)
 {
 	void	enter(struct packet *, int, int, struct sid *);
 	struct sid lowsid, highsid, sid;
@@ -102,9 +102,9 @@ dolist(struct packet *pkt, register char *list, int ch)
 
 
 static char *
-getasid(register char *p, register struct sid *sp)
+getasid(char *p, struct sid *sp)
 {
-	register char *old;
+	char *old;
 
 	p = sid_ab(old = p,sp);
 	if (old == p || sp->s_rel == 0)

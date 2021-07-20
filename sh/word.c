@@ -51,9 +51,9 @@ static int	readb(struct fileblk *, int, int);
 int 
 word(void)
 {
-	register unsigned int	c, d, cc;
+	unsigned int	c, d, cc;
 	struct argnod	*arg = (struct argnod *)locstak();
-	register unsigned char	*argp = arg->argval;
+	unsigned char	*argp = arg->argval;
 	unsigned char	*oldargp;
 	int		alpha = 1;
 	unsigned char *pc;
@@ -246,7 +246,7 @@ word(void)
 unsigned int 
 skipwc(void)
 {
-	register unsigned int c;
+	unsigned int c;
 
 	while (c = nextwc(), space(c))
 		;
@@ -256,7 +256,7 @@ skipwc(void)
 unsigned int 
 nextwc(void)
 {
-	register unsigned int	c, d;
+	unsigned int	c, d;
 
 retry:
 	if ((d = readwc()) == ESCAPE) {

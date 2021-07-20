@@ -43,8 +43,8 @@
 int
 chkid(char *line,char *idstr)
 {
-	register char *lp;
-	register char *p;
+	char *lp;
+	char *p;
 	extern int Did_id;
 
 	if (!Did_id && (lp = strchr(line,'%') ) )

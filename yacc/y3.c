@@ -56,7 +56,7 @@ void
 output(void)
 {
 	int i, k, c;
-	register WSET *u, *v;
+	WSET *u, *v;
 
 	fprintf(ftable, "static YYCONST yytabelem yyexca[] ={\n");
 
@@ -135,7 +135,7 @@ apack(int *p, int n)
 {
 	/* pack state i from temp1 into amem */
 	int off;
-	register int *pp, *qq;
+	int *pp, *qq;
 	int *q, /**r,*/ *rr;
 	int diff;
 
@@ -436,9 +436,9 @@ static void
 wrstate(int i)
 {
 	/* writes state i */
-	register int j0, j1;
-	register ITEM *pp, *qq;
-	register WSET *u;
+	int j0, j1;
+	ITEM *pp, *qq;
+	WSET *u;
 
 	if (foutput == NULL)
 		return;
@@ -494,7 +494,7 @@ wdef(wchar_t *s, int n)
 void
 warray(wchar_t *s, int *v, int n)
 {
-	register int i;
+	int i;
 	fprintf(ftable, "static YYCONST yytabelem %ls[]={\n", s);
 	for (i = 0; i < n; ) {
 		if (i % 10 == 0)
@@ -517,7 +517,7 @@ hideprod(void)
 	 * derived by productions in levprd.
 	 */
 
-	register int i, j;
+	int i, j;
 
 	j = 0;
 	levprd[0] = 0;

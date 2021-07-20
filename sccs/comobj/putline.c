@@ -58,12 +58,12 @@ FILE	*Xiop;
 static const int signed_chksum = 1;
 
 void 
-putline(register struct packet *pkt, char *newline)
+putline(struct packet *pkt, char *newline)
 {
 	static char obf[BUFSIZ];
 	char *xf = (char *) NULL;
-	register signed char *p;
-	register unsigned char *u_p;
+	signed char *p;
+	unsigned char *u_p;
 	
 
 	if(pkt->p_upd == 0) return;
@@ -127,10 +127,10 @@ int org_chash;
 int org_uchash;
 
 void 
-flushline(register struct packet *pkt, register struct stats *stats)
+flushline(struct packet *pkt, struct stats *stats)
 {
-	register signed char *p;
-	register unsigned char *u_p;
+	signed char *p;
+	unsigned char *u_p;
 	char *xf = (char *) NULL;
 	char ins[6], del[6], unc[6], hash[6];
 

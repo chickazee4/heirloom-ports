@@ -85,7 +85,7 @@ static int lochelp(char *, char *);
 int 
 main(int argc, char *argv[])
 {
-	register int i;
+	int i;
 	int numerrs=0;
 
 	Fflags = FTLMSG;
@@ -104,7 +104,7 @@ findprt (
     char *p		/* "p" is user specified error code. */
 )
 {
-	register char *q;
+	char *q;
 	char key[150];
 
 	if ((int) size(p) > 50) 

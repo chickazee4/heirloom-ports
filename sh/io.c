@@ -52,7 +52,7 @@ short topfd;
 void
 initf(int fd)
 {
-	register struct fileblk *f = standin;
+	struct fileblk *f = standin;
 
 	f->fdes = fd;
 	f->fsiz = ((flags & oneflg) == 0 ? BUFFERSIZE : 1);
@@ -64,9 +64,9 @@ initf(int fd)
 }
 
 int 
-estabf(register unsigned char *s)
+estabf(unsigned char *s)
 {
-	register struct fileblk *f;
+	struct fileblk *f;
 
 	(f = standin)->fdes = -1;
 	f->fend = length(s) + (f->fnxt = s);
@@ -79,7 +79,7 @@ estabf(register unsigned char *s)
 void
 push(struct fileblk *af)
 {
-	register struct fileblk *f;
+	struct fileblk *f;
 
 	(f = af)->fstak = standin;
 	f->feof = 0;
@@ -90,7 +90,7 @@ push(struct fileblk *af)
 int 
 pop(void)
 {
-	register struct fileblk *f;
+	struct fileblk *f;
 
 	if ((f = standin)->fstak)
 	{
@@ -133,7 +133,7 @@ chkpipe(int *pv)
 int 
 chkopen(const unsigned char *idf, int mode)
 {
-	register int	rc;
+	int	rc;
 
 	if ((rc = open((const char *)idf, mode, 0666)) < 0)
 		failed(idf, badopen);
@@ -146,7 +146,7 @@ chkopen(const unsigned char *idf, int mode)
  * accordingly.
  */
 void
-renamef(register int f1, register int f2)
+renamef(int f1, int f2)
 {
 #ifdef RES
 	if (f1 != f2)
@@ -176,7 +176,7 @@ renamef(register int f1, register int f2)
 int 
 create(unsigned char *s)
 {
-	register int	rc;
+	int	rc;
 
 	if ((rc = creat((char *)s, 0666)) < 0)
 		failed(s, badcreate);
@@ -210,9 +210,9 @@ extern BOOL		nosubst;
 void
 copy(struct ionod *ioparg)
 {
-	register unsigned char	*cline;
-	register unsigned char	*clinep;
-	register struct ionod	*iop;
+	unsigned char	*cline;
+	unsigned char	*clinep;
+	struct ionod	*iop;
 	unsigned int	c;
 	unsigned char	*ends;
 	unsigned char	*start;
@@ -375,7 +375,7 @@ swap_iodoc_nm(struct ionod *i)
 int 
 savefd(int fd)
 {
-	register int	f;
+	int	f;
 
 	f = fcntl(fd, F_DUPFD, 10);
 	return (f);
@@ -383,10 +383,10 @@ savefd(int fd)
 
 
 void
-restore(register int last)
+restore(int last)
 {
-	register int 	i;
-	register int	dupfd;
+	int 	i;
+	int	dupfd;
 
 	for (i = topfd - 1; i >= last; i--)
 	{

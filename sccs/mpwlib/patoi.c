@@ -47,9 +47,9 @@
 */
 
 int
-patoi(register char *s)
+patoi(char *s)
 {
-	register int i;
+	int i;
 	char str[2];
 
 	i = 0;

@@ -80,9 +80,9 @@ static int	mkdelt(struct packet *, struct sid *, struct sid *, int, int);
 static void	mkixg(struct packet *, int, int);
 static void	putmrs(struct packet *);
 static void	putcmrs(struct packet *);
-static struct pfile	*rdpfile(register struct packet *, struct sid *);
+static struct pfile	*rdpfile(struct packet *, struct sid *);
 static FILE	*dodiff(char *,char *,int);
-static int	getdiff(register char *, register int *);
+static int	getdiff(char *, int *);
 static void	insert(struct packet *, int, int, int);
 static void	delete(struct packet *, int, int, int);
 static void	after(struct packet *, int);
@@ -100,10 +100,10 @@ extern int	org_uchash;
 extern char *		saveid;
 
 int 
-main(int argc, register char *argv[])
+main(int argc, char *argv[])
 {
-	register int i;
-	register char *p;
+	int i;
+	char *p;
 	int no_arg, c;
 	extern int Fcnt;
 	int current_optind;
@@ -245,7 +245,7 @@ delta(char *file)
 	static int first = 1;
 	int n, linenum;
 	char type = 0;
-	register int ser;
+	int ser;
 	extern char had_dir, had_standinp;
 	extern char *Sflags[];
 	char nsid[50];
@@ -562,7 +562,7 @@ mkdelt(struct packet *pkt, struct sid *sp, struct sid *osp, int diffloop, int or
 	char str[BUFSIZ];
 	int newser;
 	extern char *Sflags[];
-	register char *p;
+	char *p;
 	int ser_inc, opred, nulldel;
 
 	if (!diffloop && pkt->p_verbose) {
@@ -702,7 +702,7 @@ mkixg(struct packet *pkt, int reason, int ch)
 static void 
 putmrs(struct packet *pkt)
 {
-	register char **argv;
+	char **argv;
 	char str[LENMR+6];
 	extern char **Varg;
 
@@ -733,7 +733,7 @@ putcmrs(struct packet *pkt)
 static char ambig[] = NOGETTEXT("ambiguous `r' keyletter value (de15)");
 
 static struct pfile *
-rdpfile(register struct packet *pkt, struct sid *sp)
+rdpfile(struct packet *pkt, struct sid *sp)
 {
 	char *user;
 	struct pfile pf;
@@ -821,7 +821,7 @@ rdpfile(register struct packet *pkt, struct sid *sp)
 static FILE *
 dodiff(char *newf,char *oldf,int difflim)
 {
-	register int i;
+	int i;
 	int pfd[2];
 	FILE *iop;
 	char num[10];
@@ -876,10 +876,10 @@ dodiff(char *newf,char *oldf,int difflim)
 
 
 static int 
-getdiff(register char *type, register int *plinenum)
+getdiff(char *type, int *plinenum)
 {
 	char line[BUFSIZ];
-	register char *p;
+	char *p;
 	int num_lines = 0;
 	static int chg_num, chg_ln;
 	int lowline, highline;
@@ -1035,7 +1035,7 @@ void
 enter(struct packet *pkt, int ch, int n, struct sid *sidp)
 {
 	char str[32];
-	register struct apply *ap;
+	struct apply *ap;
 
 	sid_ba(sidp,str);
 	ap = &pkt->p_apply[n];

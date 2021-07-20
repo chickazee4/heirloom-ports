@@ -88,7 +88,7 @@ builtin(int type, int argc, unsigned char **argv, struct trenod *t)
 	case SYSDOT:
 		if (a1)
 		{
-			register int	f;
+			int	f;
 
 			if ((f = pathopen(getpath(a1), a1)) < 0)
 				failed(a1, notfound);

@@ -44,7 +44,7 @@
 static struct trenod *makelist(int, struct trenod *, struct trenod *);
 static struct trenod *list(int);
 static struct trenod *term(int);
-static struct regnod *syncase(register int);
+static struct regnod *syncase(int);
 static struct trenod *item(BOOL);
 static int skipnl(void);
 static struct ionod *inout(struct ionod *);
@@ -73,7 +73,7 @@ getstor(int asize)
 struct trenod *
 makefork(int flgs, struct trenod *i)
 {
-	register struct forknod *t;
+	struct forknod *t;
 
 	t = (struct forknod *)getstor(sizeof(struct forknod));
 	t->forktyp = flgs|TFORK;
@@ -85,7 +85,7 @@ makefork(int flgs, struct trenod *i)
 static struct trenod *
 makelist(int type, struct trenod *i, struct trenod *r)
 {
-	register struct lstnod *t = NULL;
+	struct lstnod *t = NULL;
 
 	if (i == 0 || r == 0)
 		synbad();
@@ -107,9 +107,9 @@ makelist(int type, struct trenod *i, struct trenod *r)
  *	list [ ; cmd ]
  */
 struct trenod *
-cmd(register int sym, int flg)
+cmd(int sym, int flg)
 {
-	register struct trenod *i, *e;
+	struct trenod *i, *e;
 	i = list(flg);
 	if (wdval == NL)
 	{
@@ -157,8 +157,8 @@ cmd(register int sym, int flg)
 static struct trenod *
 list(int flg)
 {
-	register struct trenod *r;
-	register int		b;
+	struct trenod *r;
+	int		b;
 	r = term(flg);
 	while (r && ((b = (wdval == ANDFSYM)) || wdval == ORFSYM))
 		r = makelist((b ? TAND : TORF), r, term(NLFLG));
@@ -173,7 +173,7 @@ list(int flg)
 static struct trenod *
 term(int flg)
 {
-	register struct trenod *t;
+	struct trenod *t;
 
 	reserv++;
 	if (flg & NLFLG)
@@ -195,15 +195,15 @@ term(int flg)
 
 
 static struct regnod *
-syncase(register int esym)
+syncase(int esym)
 {
 	skipnl();
 	if (wdval == esym)
 		return(0);
 	else
 	{
-		register struct regnod *r = (struct regnod *)getstor(sizeof(struct regnod));
-		register struct argnod *argp;
+		struct regnod *r = (struct regnod *)getstor(sizeof(struct regnod));
+		struct argnod *argp;
 
 		r->regptr = 0;
 		for (;;)
@@ -254,8 +254,8 @@ syncase(register int esym)
 static struct trenod *
 item(BOOL flag)
 {
-	register struct trenod *r;
-	register struct ionod *io;
+	struct trenod *r;
+	struct ionod *io;
 
 	if (flag)
 		io = inout((struct ionod *)0);
@@ -265,7 +265,7 @@ item(BOOL flag)
 	{
 	case CASYM:
 		{
-			register struct swnod *t;
+			struct swnod *t;
 			
 			t = (struct swnod *)getstor(sizeof(struct swnod));
 			r = (struct trenod *)t;
@@ -284,8 +284,8 @@ item(BOOL flag)
 
 	case IFSYM:
 		{
-			register int	w;
-			register struct ifnod *t;
+			int	w;
+			struct ifnod *t;
 
 			t = (struct ifnod *)getstor(sizeof(struct ifnod));
 			r = (struct trenod *)t;
@@ -301,7 +301,7 @@ item(BOOL flag)
 
 	case FORSYM:
 		{
-			register struct fornod *t;
+			struct fornod *t;
 
 			t = (struct fornod *)getstor(sizeof(struct fornod));
 			r = (struct trenod *)t;
@@ -335,7 +335,7 @@ item(BOOL flag)
 	case WHSYM:
 	case UNSYM:
 		{
-			register struct whnod *t;
+			struct whnod *t;
 
 			t = (struct whnod *)getstor(sizeof(struct whnod));	
 			r = (struct trenod *)t;
@@ -352,7 +352,7 @@ item(BOOL flag)
 
 	case '(':
 		{
-			register struct parnod *p;
+			struct parnod *p;
 
 			p = (struct parnod *)getstor(sizeof(struct parnod));
 			p->partre = cmd(')', NLFLG);
@@ -367,10 +367,10 @@ item(BOOL flag)
 
 	case 0:
 		{
-			register struct comnod *t;
-			register struct argnod *argp;
-			register struct argnod **argtail;
-			register struct argnod **argset = 0;
+			struct comnod *t;
+			struct argnod *argp;
+			struct argnod **argtail;
+			struct argnod **argset = 0;
 			int	keywd = 1;
 			unsigned char	*com;
 
@@ -495,9 +495,9 @@ skipnl(void)
 static struct ionod *
 inout(struct ionod *lastio)
 {
-	register int	iof;
-	register struct ionod *iop;
-	register unsigned int	c;
+	int	iof;
+	struct ionod *iop;
+	unsigned int	c;
 
 	iof = wdnum;
 	switch (wdval)
@@ -560,7 +560,7 @@ chkword(void)
 static void
 chksym(int sym)
 {
-	register int	x = sym & wdval;
+	int	x = sym & wdval;
 
 	if (((x & SYMFLG) ? x : sym) != wdval)
 		synbad();
@@ -571,7 +571,7 @@ prsym(int sym)
 {
 	if (sym & SYMFLG)
 	{
-		register const struct sysnod *sp = reserved;
+		const struct sysnod *sp = reserved;
 
 		while (sp->sysval && sp->sysval != sym)
 			sp++;

@@ -42,7 +42,7 @@
 */
 
 char *
-zero(register char *p, register int n)
+zero(char *p, int n)
 {
 	char *op = p;
 	while (--n >= 0)

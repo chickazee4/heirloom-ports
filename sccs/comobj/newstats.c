@@ -39,10 +39,10 @@
 # include	<defines.h>
 
 void 
-newstats(register struct packet *pkt, register char *strp, register char *ch)
+newstats(struct packet *pkt, char *strp, char *ch)
 {
 	char fivech[6];
-	register char *r;
+	char *r;
 	int i;
 
 	r = fivech;

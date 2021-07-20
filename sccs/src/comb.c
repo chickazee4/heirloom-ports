@@ -60,10 +60,10 @@ static int	getpred(struct idel *, int *, int);
 static struct sid	*prtget(struct idel *, int, FILE *, char *);
 
 int 
-main(int argc, register char *argv[])
+main(int argc, char *argv[])
 {
-	register int i;
-	register char *p;
+	int i;
+	char *p;
 	int  c;
 	int testmore;
 	extern int Fcnt;
@@ -168,8 +168,8 @@ main(int argc, register char *argv[])
 static void 
 comb(char *file)
 {
-	register int i, n;
-	register struct idel *rdp;
+	int i, n;
+	struct idel *rdp;
 	char *p;
 	char rarg[32];
 	int succnt;

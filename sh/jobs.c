@@ -105,9 +105,9 @@ static struct job 	*jobcur, /* active jobs listed in currency order */
 static void	printjob(struct job *jp, int propts);
 
 static struct job *
-pgid2job(register pid_t pgid)
+pgid2job(pid_t pgid)
 {
-	register struct job *jp;
+	struct job *jp;
 
 	for (jp = joblst; jp != 0 && jp->j_pid != pgid; jp = jp->j_nxtp)
 		continue;
@@ -116,10 +116,10 @@ pgid2job(register pid_t pgid)
 }
 
 static struct job *
-str2job(register char *cmd, register char *job, int mustbejob)
+str2job(char *cmd, char *job, int mustbejob)
 {
-	register struct job *jp, *njp;
-	register int i;
+	struct job *jp, *njp;
+	int i;
 
 	if (*job != '%')
 		jp = pgid2job(stoi(job));
@@ -132,8 +132,8 @@ str2job(register char *cmd, register char *job, int mustbejob)
 		for (jp = joblst; jp && jp->j_jid != i; jp = jp->j_nxtp)
 			continue;
 	} else if (*job == '?') {
-		register int j;
-		register char *p;
+		int j;
+		char *p;
 		i = strlen(++job);
 		jp = 0;
 		for (njp = jobcur; njp; njp = njp->j_curp) {
@@ -169,10 +169,10 @@ str2job(register char *cmd, register char *job, int mustbejob)
 }
 
 static void 
-freejob(register struct job *jp)
+freejob(struct job *jp)
 {
-	register struct job **njp;
-	register struct job **cjp;
+	struct job **njp;
+	struct job **cjp;
 
 	for (njp = &joblst; *njp != jp; njp = &(*njp)->j_nxtp)
 		continue;
@@ -196,8 +196,8 @@ freejob(register struct job *jp)
 void
 collect_fg_job(void)
 {
-	register struct job *jp;
-	register pid_t pid;
+	struct job *jp;
+	pid_t pid;
 	int stat;
 
 	for (jp = joblst; jp; jp = jp->j_nxtp)
@@ -226,7 +226,7 @@ collect_fg_job(void)
  */
 
 static int
-statjob(register struct job *jp, int stat, int fg, int rc)
+statjob(struct job *jp, int stat, int fg, int rc)
 {
 	pid_t tgid;
 	int done = 0;
@@ -319,7 +319,7 @@ static void
 collectjobs(int wnohang)
 {
 	pid_t pid;
-	register struct job *jp;
+	struct job *jp;
 	int stat, n;
 	int wflags;
 
@@ -340,12 +340,12 @@ collectjobs(int wnohang)
 void 
 freejobs(void)
 {
-	register struct job *jp;
+	struct job *jp;
 
 	collectjobs(WNOHANG);
 
 	if (jobnote) {
-		register int savefd = setb(2);
+		int savefd = setb(2);
 		for (jp = joblst; jp; jp = jp->j_nxtp) {
 			if (jp->j_flag & J_NOTIFY) {
 				if (jp->j_jid)
@@ -368,7 +368,7 @@ freejobs(void)
 }
 
 static void 
-waitjob(register struct job *jp)
+waitjob(struct job *jp)
 {
 	int stat;
 	int done;
@@ -409,7 +409,7 @@ waitjob(register struct job *jp)
 int
 settgid(pid_t new, pid_t expected)
 {
-	register pid_t current = tcgetpgrp(0);
+	pid_t current = tcgetpgrp(0);
 
 	if (current != expected && (kill(-current, 0) == 0 || errno == EPERM))
 		return (current);
@@ -421,10 +421,10 @@ settgid(pid_t new, pid_t expected)
 }
 
 static void 
-restartjob(register struct job *jp, int fg)
+restartjob(struct job *jp, int fg)
 {
 	if (jp != jobcur) {
-		register struct job *t;
+		struct job *t;
 		for (t = jobcur; t->j_curp != jp; t = t->j_curp);
 		t->j_curp = jp->j_curp;
 		jp->j_curp = jobcur;
@@ -458,7 +458,7 @@ restartjob(register struct job *jp, int fg)
 }
 
 static void
-printjob(register struct job *jp, int propts)
+printjob(struct job *jp, int propts)
 {
 	int sp = 0;
 
@@ -591,7 +591,7 @@ endjobs(int check_if)
 		return (1);
 
 	if (check_if && jobcnt && eofflg++ == 0) {
-		register struct job *jp;
+		struct job *jp;
 		if (check_if & JOB_STOPPED) {
 			for (jp = joblst; jp; jp = jp->j_nxtp) {
 				if (jp->j_jid && (jp->j_flag & J_STOPPED)) {
@@ -633,10 +633,10 @@ deallocjob(void)
 }
 
 void
-allocjob(register char *cmd, register unsigned char *cwd, int monitor)
+allocjob(char *cmd, unsigned char *cwd, int monitor)
 {
-	register struct job *jp, **jpp;
-	register int jid, cmdlen, cwdlen;
+	struct job *jp, **jpp;
+	int jid, cmdlen, cwdlen;
 
 	cmdlen = strlen(cmd) + 1;
 	if (cmd[cmdlen-2] == '&') {
@@ -673,7 +673,7 @@ allocjob(register char *cmd, register unsigned char *cwd, int monitor)
 void
 clearjobs(void)
 {
-	register struct job *jp, *sjp;
+	struct job *jp, *sjp;
 
 	for (jp = joblst; jp; jp = sjp) {
 		sjp = jp->j_nxtp;
@@ -717,7 +717,7 @@ void
 postjob(pid_t pid, int fg)
 {
 
-	register int propts;
+	int propts;
 
 	thisjob->j_nxtp = *nextjob;
 	*nextjob = thisjob;
@@ -754,9 +754,9 @@ postjob(pid_t pid, int fg)
 void 
 sysjobs(int argc, char *argv[])
 {
-	register char *cmd = *argv;
-	register struct job *jp;
-	register int propts, c;
+	char *cmd = *argv;
+	struct job *jp;
+	int propts, c;
 	int savoptind = optind;
 	int loptind = -1;
 	int savopterr = opterr;
@@ -801,8 +801,8 @@ err:
 		return;
 
 	if (propts == -1) {
-		register unsigned char *bp;
-		register char *cp;
+		unsigned char *bp;
+		char *cp;
 		unsigned char *savebp;
 		for (savebp = bp = locstak(); loptind < argc; loptind++) {
 			cp = argv[loptind];
@@ -848,8 +848,8 @@ err:
 void
 sysfgbg(int argc, char *argv[])
 {
-	register char *cmd = *argv;
-	register int fg;
+	char *cmd = *argv;
+	int fg;
 
 	if ((flags & jcflg) == 0)
 		failed(cmd, nojc);
@@ -880,8 +880,8 @@ sysfgbg(int argc, char *argv[])
 void 
 syswait(int argc, char *argv[])
 {
-	register char *cmd = *argv;
-	register struct job *jp;
+	char *cmd = *argv;
+	struct job *jp;
 	int stat;
 	int wflags;
 
@@ -911,7 +911,7 @@ sigv(char *cmd, int sig, char *args)
 	pid_t id;
 
 	if (*args == '%') {
-		register struct job *jp;
+		struct job *jp;
 		jp = str2job(cmd, args, 1);
 		id = jp->j_pgid;
 		pgrp++;
@@ -1003,9 +1003,9 @@ syskill(int argc, char *argv[])
 
 		if (argc == 2) {
 
-			register int i;
-			register int cnt = 0;
-			register char sep = 0;
+			int i;
+			int cnt = 0;
+			char sep = 0;
 			char buf[12];
 
 			if (!eq(argv[1], "-l")) {

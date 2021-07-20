@@ -54,7 +54,7 @@
 int
 xopen(char name[], mode_t mode)
 {
-	register int fd;
+	int fd;
 	extern char SccsError[];
 
 	if ((fd = open(name,mode)) < 0) {

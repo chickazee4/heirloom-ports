@@ -101,7 +101,7 @@ yyless(x)
 int x;
 #endif
 {
-	register CHR *lastch, *ptr;
+	CHR *lastch, *ptr;
 
 	lastch = YYTEXT+YYLENG;
 	if (x >= 0 && x <= YYLENG)

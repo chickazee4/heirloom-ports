@@ -43,7 +43,7 @@ char	had_dir;
 char	had_standinp;
 
 void 
-do_file(register char *p, void (*func)(char *), int check_file)
+do_file(char *p, void (*func)(char *), int check_file)
 {
 	extern char *Ffile;
 	int fd;

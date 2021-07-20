@@ -68,10 +68,10 @@
  */
 
 void
-setvar_append(register Name name, register Name value)
+setvar_append(Name name, Name value)
 {
-	register Property	macro_apx = get_prop(name->prop, macro_append_prop);
-	register Property	macro = get_prop(name->prop, macro_prop);
+	Property	macro_apx = get_prop(name->prop, macro_append_prop);
+	Property	macro = get_prop(name->prop, macro_prop);
 	String_rec		destination;
 	wchar_t			buffer[STRING_BUFFER_LENGTH];
 	Name			val = NULL;

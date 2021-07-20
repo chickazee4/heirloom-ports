@@ -39,10 +39,10 @@
 # include	<defines.h>
 
 int 
-sidtoser(register struct sid *sp, struct packet *pkt)
+sidtoser(struct sid *sp, struct packet *pkt)
 {
-	register int n;
-	register struct idel *rdp;
+	int n;
+	struct idel *rdp;
 
 	for (n = maxser(pkt); n; n--) {
 		rdp = &pkt->p_idel[n];

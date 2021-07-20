@@ -65,7 +65,7 @@ expand(unsigned char *as, int rcnt)
 	BOOL	dir = 0;
 	unsigned char	*rescan = 0;
 	unsigned char 	*slashsav = 0;
-	register unsigned char	*s, *cs;
+	unsigned char	*s, *cs;
 	unsigned char *s2 = 0;
 	struct argnod	*schain = gchain;
 	BOOL	slash;
@@ -79,7 +79,7 @@ expand(unsigned char *as, int rcnt)
 	 * check for meta chars
 	 */
 	{
-		register BOOL open;
+		BOOL open;
 
 		slash = 0;
 		open = 0;
@@ -165,7 +165,7 @@ expand(unsigned char *as, int rcnt)
 	/* check for rescan */
 	if (dir)
 	{
-		register unsigned char *rs;
+		unsigned char *rs;
 		struct dirent *e;
 
 		rs = cs;
@@ -194,7 +194,7 @@ expand(unsigned char *as, int rcnt)
 
 		if (rescan)
 		{
-			register struct argnod	*rchain;
+			struct argnod	*rchain;
 
 			rchain = gchain;
 			gchain = schain;
@@ -221,8 +221,8 @@ static void
 addg(unsigned char *as1, unsigned char *as2,
 		unsigned char *as3, unsigned char *as4)
 {
-	register unsigned char	*s1, *s2;
-	register int	c;
+	unsigned char	*s1, *s2;
+	int	c;
 	int		len;
 	wchar_t		wc;
 
@@ -291,7 +291,7 @@ addg(unsigned char *as1, unsigned char *as2,
 }
 
 void
-makearg(register struct argnod *args)
+makearg(struct argnod *args)
 {
 	args->argnxt = gchain;
 	gchain = args;
