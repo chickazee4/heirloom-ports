@@ -36,7 +36,7 @@
  * Sccsid @(#)sub1.c	1.5 (gritter) 11/26/05
  */
 
-#include "ldefs.c"
+#include <ldefs.h>
 #include <limits.h>
 #include <wchar.h>
 #include <ctype.h>

@@ -38,7 +38,7 @@ sfile(int dfd, int sfd, mode_t mode, long long count)
 	static int	enosys, einval, success;
 	off_t	offset;
 	ssize_t	sent, total;
-	extern void	writerr(void *, int, int);
+	// extern void	writerr(void *, int, int);
 	/*
 	 * A process is not interruptible while executing a sendfile()
 	 * system call. So it is not advisable to to send an entire
@@ -83,7 +83,7 @@ sfile(int dfd, int sfd, mode_t mode, long long count)
 	case ENOMEM:
 		return 0;
 	default:
-		writerr(NULL, count > chunk ? chunk : count, 0);
+		// writerr(NULL, count > chunk ? chunk : count, 0);
 		return -1;
 	}
 }

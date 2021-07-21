@@ -93,4 +93,4 @@ extern int	ob_chr(int c, struct oblok *op);
  * This function must be supplied by the calling code; it is called on
  * write error.
  */
-extern void	writerr(struct oblok *op, int count, int written);
+// extern void	writerr(struct oblok *op, int count, int written);

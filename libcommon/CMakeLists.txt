@@ -37,6 +37,7 @@ set(
 
 add_library(common SHARED ${LIBCOMMON_SRC})
 target_include_directories(common PUBLIC include)
+target_link_libraries(common uxre)
 
 install(
     TARGETS common

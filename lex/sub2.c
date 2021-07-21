@@ -36,7 +36,7 @@
  * Sccsid @(#)sub2.c	1.7 (gritter) 01/12/07
  */
 
-#include "ldefs.c"
+#include "ldefs.h"
 
 static void add(int **array, int n);
 static void follow(int v);

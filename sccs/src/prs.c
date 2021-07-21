@@ -551,7 +551,7 @@ scanspec(char spec[], struct deltab *dtp, struct stats *statp)
 	char	*k;
 
 	int	istr;
-	register	char	c;
+		char	c;
 
 	istr = 0;
 
@@ -1107,7 +1107,7 @@ maket(char *file)
 static void 
 printfile(char *file)
 {
-	register	char	*p;
+		char	*p;
 	FILE	*iop;
 
 	iop = xfopen(file,0);
@@ -1270,7 +1270,7 @@ idsetup(struct sid *gsid,struct packet *pkt,time_t *bdate)
 #endif
 {
 
-	register	char	*p;
+		char	*p;
 
 #if defined(BUG_1205145) || defined(GMT_TIME)
 	Dtime = localtime(&dt->d_datetime);
@@ -1368,7 +1368,7 @@ read_to(int ch, struct packet *pkt)
 static void 
 printflags(void)
 {
-	register	char	*k;
+		char	*k;
 
 	if (Sflags[BRCHFLAG - 'a'])	/* check for 'branch' flag */
 		printf("branch\n");

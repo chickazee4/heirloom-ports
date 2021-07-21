@@ -51,7 +51,7 @@
 #include	<widec.h>
 #endif
 #include	"search.h"
-#include	"ldefs.c"
+#include	<ldefs.h>
 #include	<ctype.h>
 
 /*

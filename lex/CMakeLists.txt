@@ -18,10 +18,9 @@ set(
     parser.y
     getopt.c
     lsearch.c
-    once.h
-    search.h
-    sgs.h
 )
+
+include_directories(include)
 
 add_library(libl STATIC ${LIBL_SRC})
 add_executable(hlex ${LEX_SRC})
@@ -30,4 +29,5 @@ target_link_libraries(hlex libl)
 
 install(
     TARGETS hlex
+    PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lex
 )

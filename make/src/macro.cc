@@ -133,8 +133,8 @@ setvar_envvar(void)
 #ifdef DISTRIBUTED
 	Property		macro;
 #endif
-	register	char	*mbs, *tmp_mbs_buffer = NULL;
-	register	char	*env, *tmp_mbs_buffer2 = NULL;
+		char	*mbs, *tmp_mbs_buffer = NULL;
+		char	*env, *tmp_mbs_buffer2 = NULL;
 	Envvar			p;
 	String_rec		value;
 

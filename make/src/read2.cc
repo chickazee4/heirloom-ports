@@ -589,7 +589,7 @@ enter_dependencies(Name target, Chain target_group, Name_vector depes, Cmd_line 
 	Property		line2;
 	wchar_t			relative[MAXPATHLEN];
 	int		recursive_state;
-	Boolean			register_as_auto;
+	Boolean			_as_auto;
 	Boolean			not_auto_found;
 	char			*slash;
 	Wstring			depstr;
@@ -838,7 +838,7 @@ enter_dependencies(Name target, Chain target_group, Name_vector depes, Cmd_line 
 		printf("%s:\t", target->string_mb);
 	}
 	/* Enter the dependencies */
-	register_as_auto = BOOLEAN(makefile_type != reading_makefile);
+	_as_auto = BOOLEAN(makefile_type != reading_makefile);
 	not_auto_found = false;
 	for (;
 	     (depes != NULL) && !not_auto_found;
@@ -855,7 +855,7 @@ enter_dependencies(Name target, Chain target_group, Name_vector depes, Cmd_line 
 			}
 			enter_dependency(line,
 					 depes->names[i],
-					 register_as_auto);
+					 _as_auto);
 		}
 	}
 	if (trace_reader) {
