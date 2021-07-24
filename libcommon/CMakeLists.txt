@@ -32,6 +32,7 @@ set(
     setuxlabel.c
     pfmt_label.c
     sysv3.c
+    writerr.c
     CHECK.c
 )
 

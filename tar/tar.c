@@ -106,6 +106,8 @@ static const char sccsid[] USED = "@(#)tar.sl	1.180 (gritter) 10/9/10";
 #include <atoll.h>
 #include <memalign.h>
 
+#include <progname.h>
+
 #ifdef	__GLIBC__
 #ifdef	_IO_getc_unlocked
 #undef	getc
@@ -268,7 +270,6 @@ static enum {
 	PREORDER  = 1
 } order;
 
-static char	*progname;
 extern int	sysv3;
 
 static dev_t	*vis_dev;
@@ -3195,13 +3196,4 @@ settmp(char *tbuf, size_t len, const char *template)
 		tmpdir = "/tmp";
 	if (snprintf(tbuf, len, template, tmpdir) >= len)
 		snprintf(tbuf, len, template, "/tmp");
-}
-
-void
-writerr(struct oblok *op, int count, int written)
-{
-	fprintf(stderr,
-		"%s: write error (%d/%d characters written)\n%s\n",
-			progname, written, count,
-			strerror(errno));
 }

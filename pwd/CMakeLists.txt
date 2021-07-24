@@ -1,0 +1,1 @@
+add_executable(hpwd pwd.c)

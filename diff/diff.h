@@ -1,111 +1,56 @@
 /*
- * This code contains changes by
- * Gunnar Ritter, Freiburg i. Br., Germany, March 2003. All rights reserved.
+ * CDDL HEADER START
  *
- * Conditions 1, 2, and 4 and the no-warranty notice below apply
- * to these changes.
+ * The contents of this file are subject to the terms of the
+ * Common Development and Distribution License, Version 1.0 only
+ * (the "License").  You may not use this file except in compliance
+ * with the License.
  *
+ * You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ * or http://www.opensolaris.org/os/licensing.
+ * See the License for the specific language governing permissions
+ * and limitations under the License.
  *
- * Copyright (c) 1991
- * 	The Regents of the University of California.  All rights reserved.
+ * When distributing Covered Code, include this CDDL HEADER in each
+ * file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ * If applicable, add the following below this CDDL HEADER, with the
+ * fields enclosed by brackets "[]" replaced with your own identifying
+ * information: Portions Copyright [yyyy] [name of copyright owner]
  *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- * 	This product includes software developed by the University of
- * 	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
- *    may be used to endorse or promote products derived from this software
- *    without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
- * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- *
- *
- * Copyright(C) Caldera International Inc. 2001-2002. All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- *   Redistributions of source code and documentation must retain the
- *    above copyright notice, this list of conditions and the following
- *    disclaimer.
- *   Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- *   All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *      This product includes software developed or owned by Caldera
- *      International, Inc.
- *   Neither the name of Caldera International, Inc. nor the names of
- *    other contributors may be used to endorse or promote products
- *    derived from this software without specific prior written permission.
- *
- * USE OF THE SOFTWARE PROVIDED FOR UNDER THIS LICENSE BY CALDERA
- * INTERNATIONAL, INC. AND CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED. IN NO EVENT SHALL CALDERA INTERNATIONAL, INC. BE
- * LIABLE FOR ANY DIRECT, INDIRECT INCIDENTAL, SPECIAL, EXEMPLARY, OR
- * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
- * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
- * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * CDDL HEADER END
+ */
+/*
+ * Copyright 2001 Sun Microsystems, Inc.  All rights reserved.
+ * Use is subject to license terms.
  */
 
-/*	Sccsid @(#)diff.h	1.15 (gritter) 3/26/05>	*/
-/*	from 4.3BSD diff.h	4.7	85/08/16	*/
+/*	Copyright (c) 1984, 1986, 1987, 1988, 1989 AT&T	*/
+/*	  All Rights Reserved  	*/
 
 /*
- * diff - common declarations
+ * University Copyright- Copyright (c) 1982, 1986, 1988
+ * The Regents of the University of California
+ * All Rights Reserved
+ *
+ * University Acknowledgment- Portions of this document are derived from
+ * software developed by the University of California, Berkeley, and its
+ * contributors.
  */
 
-#include <stdio.h>
-#include <ctype.h>
-#include <sys/param.h>
-#include <sys/stat.h>
-#include <dirent.h>
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>
-#include <libgen.h>
-#include <errno.h>
-#include <setjmp.h>
+#ifndef	_DIFF_H
+#define	_DIFF_H
 
-#if defined (__GLIBC__)
-#if defined (_IO_getc_unlocked)
-#undef	getc
-#define	getc(f)		_IO_getc_unlocked(f)
-#endif
-#if defined (_IO_putc_unlocked)
-#undef	putc
-#define	putc(c, f)	_IO_putc_unlocked(c, f)
-#undef	putchar
-#define	putchar(c)	_IO_putc_unlocked(c, stdout)
-#endif
+#pragma ident	"%Z%%M%	%I%	%E% SMI"
+
+
+#ifdef	__cplusplus
+extern "C" {
 #endif
 
 /*
  * Output format options
  */
+
 int	opt;
 
 #define	D_NORMAL	0	/* Normal output */
@@ -113,70 +58,102 @@ int	opt;
 #define	D_REVERSE	1	/* Reverse editor script */
 #define	D_CONTEXT	2	/* Diff with context */
 #define	D_IFDEF		3	/* Diff with merged #ifdef's */
-#define	D_NREVERSE	4	/* Reverse ed script with numbered
-				   lines and no trailing . */
-#define	D_UNIFIED	5	/* Unified diff */
+#define	D_NREVERSE	4	/* Reverse ed script with numbered */
+				/* lines and no trailing . */
 
-int	aflag;			/* diff binary files */
-int	tflag;			/* expand tabs on output */
-int	pflag;			/* show surrounding C function */
+/*
+ * Constant declarations
+ */
+#define	HALFMASK	0xf
+
+#define	prints(s)	fputs(s, stdout)
+
+#define	MAX_CONTEXT	128
+
+/*
+ * diff - directory comparison
+ */
+#define	d_flags	d_ino
+
+#define	ONLY	1		/* Only in this directory */
+#define	SAME	2		/* Both places and same */
+#define	DIFFER	4		/* Both places and different */
+#define	DIRECT	8		/* Directory */
+
+struct dir {
+	ulong		d_ino;
+	int16_t		d_reclen;
+	int16_t		d_namlen;
+	char		*d_entry;
+} dir;
+
+
+/*
+ * type definitions
+ */
+
+struct cand {
+	int x;
+	int y;
+	int pred;
+} cand;
+
+struct line {
+	int serial;
+	int value;
+} *file[2], line;
+
+/*
+ * The following struct is used to record change information when
+ * doing a "context" diff.  (see routine "change" to understand the
+ * highly mneumonic field names)
+ */
+struct context_vec {
+	int	a;	/* start line in old file */
+	int	b;	/* end line in old file */
+	int	c;	/* start line in new file */
+	int	d;	/* end line in new file */
+};
+
 
 /*
  * Algorithm related options
  */
-int	hflag;			/* -h, use halfhearted DIFFH */
-int	bflag;			/* ignore blanks in comparisons */
-int	wflag;			/* totally ignore blanks in comparisons */
-int	iflag;			/* ignore case in comparisons */
-int	Bflag;			/* ignore changes that consist of blank lines */
+int bflag = 0;
+int tflag = 0;
+int wflag = 0;
+int iflag = 0;
+int rflag = 0;
+int lflag = 0;
+int sflag = 0;
+int hflag = 0;
+int uflag = 0;
 
 /*
- * Options on hierarchical diffs.
+ * Variables for D_IFDEF option.
  */
-int	lflag;			/* long output format with header */
-int	rflag;			/* recursively trace directories */
-int	sflag;			/* announce files which are same */
-int	Nflag;			/* write text of nonexistant files */
-const char	*start;		/* do file only if name >= this */
-
-struct xclusion {
-	struct xclusion	*x_nxt;
-	const char	*x_pat;
-}	*xflag;			/* patterns to exclude from comparison */
+int wantelses = 0;	/* used with D_IFDEF */
+char *ifdef1, *ifdef2;  /* hold the ifdef strings */
+char *endifname;
+int inifdef = 0;
 
 /*
- * Variables for -I D_IFDEF option.
+ * Variables for -C (-c) context option.
  */
-int	wantelses;		/* -E */
-char	*ifdef1;		/* String for -1 */
-char	*ifdef2;		/* String for -2 */
-char	*endifname;		/* What we will print on next #endif */
-int	inifdef;
+int context = 0;	/* number of lines specfied with the C flag */
 
-/*
- * Variables for -c context option.
- */
-int	context;		/* lines of context to be printed */
+char *empty = "";	/* the empty string */
 
-/*
- * State for exit status.
- */
-int	status;
-int	anychange;
-char	*tempfile1;		/* used when comparing against std input */
-char	*tempfile2;		/* used when comparing against std input */
+char **diffargv;	/* keep track of argv for diffdir */
 
-/*
- * Variables for diffdir.
- */
-char	**diffargv;		/* option list to pass to recursive diffs */
-int	recdepth;		/* recursion depth */
-jmp_buf	recenv;			/* jump stack on error */
+char start[256];	/* specify where to start, used with -S */
 
-struct stackblk {
-	struct stackblk	*s_prev;
-	struct stackblk	*s_next;
-} *curstack;
+FILE *input[2];		/* two input files */
+int  len[2];
+struct line *sfile[2];  /* shortened by pruning common prefix and suffix */
+int  slen[2];
+
+struct stat stb1;
 
 /*
  * Input file names.
@@ -187,25 +164,28 @@ struct stackblk {
 char	*file1, *file2, *efile1, *efile2;
 struct	stat stb1, stb2;
 
-extern	const char diffh[], diff[], pr[];
-extern	const char *argv0;
-extern	const char *progname;
-int	mb_cur_max;
-extern int	sysv3;
+/*
+ * input_file1 and input_file2 are to display
+ * the filenames in the output
+ */
+char	*input_file1, *input_file2;
 
-/* diff.c */
-void	diffany(char **);
-int	min(int, int);
-int	max(int, int);
-void	done(void);
-void	*dalloc(size_t);
-void	*talloc(size_t);
-void	*ralloc(void *, size_t);
-void	tfree(void *);
-void	purgestack(void);
-void	oomsg(const char *);
-/* diffdir.c */
-void	diffdir(char **);
-int	ascii(int);
-/* diffreg.c */
-void	diffreg(void);
+char pr[] = "/usr/bin/pr";
+char diff[] = "/usr/bin/diff";
+char diffh[] = "/usr/lib/diffh";
+int status = 2;
+int anychange = 0;
+
+struct	context_vec	*context_vec_start,
+			*context_vec_end,
+			*context_vec_ptr;
+
+char tempfile[2][16];	/* used when comparing against std input */
+			/* or char special devices */
+int whichtemp;
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif	/* _DIFF_H */

@@ -22,10 +22,10 @@ set(
 
 include_directories(include)
 
-add_library(libl STATIC ${LIBL_SRC})
+add_library(l STATIC ${LIBL_SRC})
 add_executable(hlex ${LEX_SRC})
 
-target_link_libraries(hlex libl)
+target_link_libraries(hlex l)
 
 install(
     TARGETS hlex

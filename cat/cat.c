@@ -46,6 +46,7 @@ static const char sccsid[] USED = "@(#)cat.sl	2.18.1 (heirloom-ports) 2021";
 #include	<locale.h>
 #include	<wctype.h>
 #include	<ctype.h>
+#include 	<progname.h>
 
 #include	"sfile.h"
 #include	"iblok.h"
@@ -58,7 +59,6 @@ static int	vflag;			/* visible conversion */
 static int	tflag;			/* tab conversion */
 static int	eflag;			/* eol display */
 static long	Bflag;			/* set buffer size, from SUPER-UX */
-static char	*progname;		/* argv[0] to main() */
 static struct stat	ostat;		/* output stat */
 static int	multibyte;		/* MB_CUR_MAX > 1 */
 
@@ -79,17 +79,6 @@ usage(void)
 {
 	fprintf(stderr, "usage: %s -usvte [-|file] ...\n", progname);
 	exit(2);
-}
-
-void
-writerr(struct oblok *op, int count, int written)
-{
-	if (sflag == 0)
-		fprintf(stderr,
-			"%s: output error (%d/%d characters written)\n%s\n",
-				progname, written, count,
-				strerror(errno));
-	errcnt |= 4;
 }
 
 static void

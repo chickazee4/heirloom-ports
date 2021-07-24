@@ -52,6 +52,8 @@ static const char sccsid[] USED = "@(#)dd.sl	1.30.1 (heirloom-ports) 2021";
 #include	<wctype.h>
 #include	<limits.h>
 
+#include	<progname.h>
+
 #include	<sys/ioctl.h>
 
 #if defined (__linux__) || defined (__sun) || defined (__FreeBSD__) || \
@@ -132,8 +134,6 @@ static const unsigned char	c_ebcdic[] = {
 0270,0271,0272,0273,0274,0241,0276,0277,0312,0313,0314,0315,0316,0317,0332,0333,
 0334,0335,0336,0337,0352,0353,0354,0355,0356,0357,0372,0373,0374,0375,0376,0377
 };
-
-static char		*progname;	/* argv[0] to main() */
 
 typedef	long long	d_type;
 
@@ -947,15 +947,6 @@ charconv(char *data, size_t size)
 		}
 	}
 	blokconv(data, size);
-}
-
-void
-writerr(struct oblok *op, int count, int written)
-{
-	fprintf(stderr,
-		"%s: write error (%d/%d characters written)\n%s\n",
-			progname, written, count,
-			strerror(errno));
 }
 
 static void

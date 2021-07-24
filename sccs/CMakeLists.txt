@@ -104,6 +104,7 @@ add_executable(vc src/vc.c src/version.c)
 target_link_libraries(vc ${SCCS_LIBS})
 add_executable(what src/what.c src/version.c)
 target_link_libraries(what ${SCCS_LIBS})
+configure_file(src/sccsdiff.sh hsccsdiff @ONLY)
 
 install(
     TARGETS admin comb delta prs prt rmchg unget val vc what
@@ -111,6 +112,10 @@ install(
      DESTINATION ${CMAKE_INSTALL_BINDIR}/hsccs
     PUBLIC_HEADER
      DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/hsccs
+)
+
+install(
+    FILES hsccsdiff DESTINATION ${CMAKE_INSTALL_BINDIR}/hsccs
 )
 
 add_executable(hsccs src/sccs.c src/version.c)

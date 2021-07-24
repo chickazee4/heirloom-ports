@@ -221,17 +221,25 @@ others(void)
 	int c, i, j;
 	int tmpline;
 
-	/* This  routine has been "stolen" from the driver */
-	if (parser == NULL)
-#ifdef LEOS
-		parser = "/System/Libraries/yaccpar";
-#else
-        parser = "/usr/lib/yaccpar";
-#endif
-
-	finput = fopen(parser, "r");
-	if (finput == NULL)
-		error("cannot find parser %s", parser);
+	/* silly lil loop finds parser in multiple possible locations - there's gotta be a better way to do this */
+	if (parser == NULL) {
+		if (fopen("yaccpar", "r") == NULL) {
+			if (fopen("/usr/lib/yaccpar", "r") == NULL) {
+				if (fopen("/lib/yaccpar", "r") == NULL) {
+					if(fopen("/usr/share/yacc/yaccpar", "r") == NULL)
+						error("cannot find parser %s", parser);
+					else 
+						parser = "/usr/share/yacc/yaccpar";
+				}
+				else
+					parser = "/lib/yaccpar";
+			}
+			else 
+				parser = "/usr/lib/yaccpar";
+		}
+		else 
+			parser = "yaccpar";
+	}
 
 	warray(L"yyr1", levprd, nprod);
 

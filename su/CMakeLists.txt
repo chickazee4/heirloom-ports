@@ -1,0 +1,5 @@
+add_executable(hsu su.c)
+if(SHADOW_PASSWORDS)
+    target_compile_definitions(hsu PRIVATE SHADOW_PASSWORDS)
+endif()
+target_link_libraries(hsu crypt)
