@@ -23,20 +23,30 @@ currently, the following software from the heirloom project has been ported:
 * make (build succeeds but program fails)
 * mkdir
 * more
+* nice
+* ps
 * pwd
 * sccs
 * sed
 * sh
 * sleep
+* su
 * tar
 * tee
+* what
 * yacc
 
 \* indicates the program has been re-ported from Unix 7 due to significant issues introduced by the original heirloom project. these programs will usually have less functionality than is provided by the heirloom project or modern gnu implementations, but re-extending them in a more modern way is on the agenda.
 
 main binaries are built as `h+[name]` so that they can be installed coterminously with standard tools for testing purposes.
 
-the heirloom documentation tools will *not* be supported, as they are still under active development at https://github.com/n-t-roff/heirloom-doctools/.
+the heirloom documentation tools will *not* be supported, as they are still under active development at https://github.com/n-t-roff/heirloom-doctools. i also will be packaging the heirloom pkgtools separately since they are technically not really a unix component in the same sense as the applications included here. also, some components are not high priorities to be ported because they're redundant:
+
+* calendar
+* copy
+* mvdir
+* rmdir
+
 
 ## building
 
