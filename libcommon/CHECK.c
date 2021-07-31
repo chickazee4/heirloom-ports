@@ -30,7 +30,7 @@
 #endif
 
 #ifdef	__APPLE__
-#include <available.h>
+#include <availability.h>
 #if __MAC_OS_X_VERSION_MIN_REQUIRED < __MAC_OS_X_VERSION_10_5
 #define	NEED_ALLOCA_H	1
 #endif
