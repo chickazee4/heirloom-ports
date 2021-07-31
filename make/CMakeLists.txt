@@ -73,13 +73,20 @@ add_library(mksh STATIC ${LIBMKSH_SRC})
 target_include_directories(mksh PUBLIC include)
 add_library(vroot STATIC ${LIBVROOT_SRC})
 target_include_directories(vroot PUBLIC include)
-add_executable(hmake ${MAKE_SRC} )
-target_include_directories(hmake PRIVATE ${RPC_INCLUDE_DIR})
+add_executable(make ${MAKE_SRC} )
+target_include_directories(make PRIVATE ${RPC_INCLUDE_DIR})
 
-target_link_libraries(hmake makestate mksdmsi18n mksh vroot)
+target_link_libraries(make makestate mksdmsi18n mksh vroot)
 
-install(
-    TARGETS hmake
-    PUBLIC_HEADER
-     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/hmake
-)
+if(ENABLE_HNAMES)
+    set_target_properties(make PROPERTIES PREFIX "h")
+    install(
+        TARGETS make
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/hmake
+    )
+else()
+    install(
+        TARGETS make
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/make
+    )
+endif()

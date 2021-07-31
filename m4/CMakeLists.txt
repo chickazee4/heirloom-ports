@@ -8,8 +8,9 @@ set(
     version.c
 )
 
-add_executable(hm4 ${M4_SRC})
+add_executable(m4 ${M4_SRC})
 
-install(
-    TARGETS hm4
-)
+if(ENABLE_HNAMES)
+    set_target_properties(m4 PROPERTIES PREFIX "h")
+endif()
+install(TARGETS m4)

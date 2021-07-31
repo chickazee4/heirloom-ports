@@ -4265,7 +4265,7 @@ static void
 defaults(void)
 {
 	FILE	*fp;
-	static const char	dfl_location[] = "/etc/ps.conf";
+	static const char	dfl_location[] = "/@ETCDIR@/ps.conf";
 
 	if ((fp = fopen(dfl_location, "r")) != NULL) {
 		char	buf[LINE_MAX];

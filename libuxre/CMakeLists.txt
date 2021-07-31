@@ -13,9 +13,5 @@ set(
     #regparse.c
     #stubs.c
 )
-add_library(uxre SHARED ${LIBUXRE_SRC})
+add_library(uxre STATIC ${LIBUXRE_SRC})
 target_include_directories(uxre PUBLIC include)
-install(
-    TARGETS uxre
-    PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/libuxre
-)

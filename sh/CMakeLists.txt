@@ -37,10 +37,18 @@ set(
     xec.c
 )
 
-add_executable(hsh ${HSH_SRC})
-target_include_directories(hsh PUBLIC include)
+add_executable(sh ${HSH_SRC})
+target_include_directories(sh PUBLIC include)
 
-install(
-    TARGETS hsh
-    PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/hsh
-)
+if(ENABLE_HNAMES)
+    set_target_properties(sh PROPERTIES PREFIX "h")
+    install(
+        TARGETS sh
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/hsh
+    )
+else()
+    install(
+        TARGETS sh
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/sh
+    )
+endif()

@@ -1,2 +1,6 @@
-add_executable(hdu du.c)
-target_link_libraries(hdu common)
+add_executable(du du.c)
+target_link_libraries(du heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(du PROPERTIES PREFIX "h")
+endif()
+install(TARGETS du)

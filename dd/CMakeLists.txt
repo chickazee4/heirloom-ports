@@ -1,2 +1,6 @@
-add_executable(hdd dd.c)
-target_link_libraries(hdd common)
+add_executable(dd dd.c)
+target_link_libraries(dd heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(dd PROPERTIES PREFIX "h")
+endif()
+install(TARGETS dd)

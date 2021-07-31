@@ -1,1 +1,5 @@
-add_executable(hpwd pwd.c)
+add_executable(pwd pwd.c)
+if(ENABLE_HNAMES)
+    set_target_properties(pwd PROPERTIES PREFIX "h")
+endif()
+install(TARGETS pwd)

@@ -1,12 +1,7 @@
 add_executable(hmore more.c)
-target_link_libraries(hmore common)
+target_link_libraries(hmore heirloom)
 
-install(
-    TARGETS hmore
-)
-install(CODE "execute_process( \
-    COMMAND ${CMAKE_COMMAND} -E create_symlink \
-    hmore \
-    hless \
-    )"
-)
+if(ENABLE_HNAMES)
+    set_target_properties(more PROPERTIES PREFIX "h")
+endif()
+install(TARGETS more)

@@ -1,2 +1,6 @@
-add_executable(hed ed.c)
-target_link_libraries(hed common)
+add_executable(ed ed.c)
+target_link_libraries(ed heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(ed PROPERTIES PREFIX "h")
+endif()
+install(TARGETS ed)

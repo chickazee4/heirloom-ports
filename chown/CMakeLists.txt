@@ -1,1 +1,5 @@
-add_executable(hchown chown.c)
+add_executable(chown chown.c)
+if(ENABLE_HNAMES)
+    set_target_properties(chown PROPERTIES PREFIX "h")
+endif()
+install(TARGETS chown)

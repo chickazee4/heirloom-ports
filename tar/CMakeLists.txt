@@ -1,2 +1,7 @@
-add_executable(htar tar.c)
-target_link_libraries(htar common ${ZLIB_LIBRARIES} ${BZIP2_LIBRARIES})
+add_executable(tar tar.c)
+target_link_libraries(tar heirloom ${ZLIB_LIBRARIES} ${BZIP2_LIBRARIES})
+
+if(ENABLE_HNAMES)
+    set_target_properties(tar PROPERTIES PREFIX "h")
+endif()
+install(TARGETS tar)

@@ -1,1 +1,5 @@
-add_executable(hcksum cksum.c)
+add_executable(cksum cksum.c)
+if(ENABLE_HNAMES)
+    set_target_properties(cksum PROPERTIES PREFIX "h")
+endif()
+install(TARGETS cksum)

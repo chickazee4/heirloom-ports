@@ -23,11 +23,19 @@ set(
 include_directories(include)
 
 add_library(l STATIC ${LIBL_SRC})
-add_executable(hlex ${LEX_SRC})
+add_executable(lex ${LEX_SRC})
 
-target_link_libraries(hlex l)
+target_link_libraries(lex l)
 
-install(
-    TARGETS hlex
-    PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lex
-)
+if(ENABLE_HNAMES)
+    set_target_properties(lex PROPERTIES PREFIX h)
+    install(
+        TARGETS lex
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/hlex
+    )
+else()
+    install(
+        TARGETS lex
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lex
+    )
+endif()

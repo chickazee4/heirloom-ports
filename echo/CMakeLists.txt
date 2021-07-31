@@ -1,1 +1,5 @@
-add_executable(hecho echo.c)
+add_executable(echo echo.c)
+if(ENABLE_HNAMES)
+    set_target_properties(echo PROPERTIES PREFIX "h")
+endif()
+install(TARGETS echo)

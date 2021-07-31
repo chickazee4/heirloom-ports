@@ -11,11 +11,6 @@ set(
     wctype.c
     wcwidth.c
 )
-add_library(wchar SHARED ${LIBWCHAR_SRC})
+add_library(wchar STATIC ${LIBWCHAR_SRC})
 target_include_directories(wchar PUBLIC include)
-target_link_libraries(wchar common)
-
-install(
-    TARGETS wchar
-    PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/libwchar
-)
+target_link_libraries(wchar heirloom)

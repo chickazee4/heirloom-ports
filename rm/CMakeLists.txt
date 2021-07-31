@@ -1,2 +1,6 @@
-add_executable(hrm rm.c)
-target_link_libraries(hrm common)
+add_executable(rm rm.c)
+target_link_libraries(rm heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(rm PROPERTIES PREFIX "h")
+endif()
+install(TARGETS rm)

@@ -1,4 +1,10 @@
-add_executable(hps ps.c)
-target_link_libraries(hps common)
+configure_file(ps.c ps-def.c @ONLY)
+add_executable(ps ps-def.c)
+target_link_libraries(ps heirloom)
 configure_file(ps.dfl ps.conf)
-install(FILES ps.conf DESTINATION /etc/)
+
+if(ENABLE_HNAMES)
+    set_target_properties(ps PROPERTIES PREFIX "h")
+endif()
+install(TARGETS ps)
+install(FILES ${CMAKE_BINARY_DIR}/ps/ps.conf DESTINATION ${ETCDIR})

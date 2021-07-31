@@ -1111,7 +1111,16 @@ static const char *
 getfl(void)
 {
 	const char	*optstring;
-
+#ifdef HNAMES
+	if (progname[0] == 'h' && progname[1] == 'm' && progname[2] == 'v') {
+		pers = PERS_MV;
+		optstring = "b:fi";
+		dflag = pflag = rflag = Rflag = 1;
+		go = cpmv;
+	} else if (progname[0] == 'h' && progname[1] == 'l' && progname[2] == 'n') {
+		pers = PERS_LN;
+		optstring = "fns";
+#else
 	if (progname[0] == 'm' && progname[1] == 'v') {
 		pers = PERS_MV;
 		optstring = "b:fi";
@@ -1120,6 +1129,7 @@ getfl(void)
 	} else if (progname[0] == 'l' && progname[1] == 'n') {
 		pers = PERS_LN;
 		optstring = "fns";
+#endif
 #if defined (SUS)
 		nflag = 1;
 #endif	/* SUS */

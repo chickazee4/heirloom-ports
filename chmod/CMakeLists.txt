@@ -1,1 +1,5 @@
-add_executable(hchmod chmod.c)
+add_executable(chmod chmod.c)
+if(ENABLE_HNAMES)
+    set_target_properties(chmod PROPERTIES PREFIX "h")
+endif()
+install(TARGETS chmod)

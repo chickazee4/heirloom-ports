@@ -4,4 +4,8 @@ set(
     strsig.c
     version.c
 )
-add_executable(hkill ${KILL_SRC})
+add_executable(kill ${KILL_SRC})
+if(ENABLE_HNAMES)
+    set_target_properties(kill PROPERTIES PREFIX "h")
+endif()
+install(TARGETS kill)

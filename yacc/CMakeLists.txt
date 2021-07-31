@@ -15,7 +15,12 @@ set(
     y5.c
 )
 
-add_library( y STATIC ${LIBY_SRC} )
-add_executable( hyacc ${YACC_SRC} )
+add_library(y STATIC ${LIBY_SRC})
+add_executable(yacc ${YACC_SRC})
 
-target_link_libraries(hyacc y)
+target_link_libraries(yacc y)
+
+if(ENABLE_HNAMES)
+    set_target_properties(yacc PROPERTIES PREFIX "h")
+endif()
+install(TARGETS yacc)

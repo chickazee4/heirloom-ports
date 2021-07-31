@@ -1,1 +1,5 @@
-add_executable(hcal cal.c)
+add_executable(cal cal.c)
+if(ENABLE_HNAMES)
+    set_target_properties(cal PROPERTIES PREFIX "h")
+endif()
+install(TARGETS cal)

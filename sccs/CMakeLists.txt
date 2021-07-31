@@ -102,21 +102,37 @@ add_executable(val src/val.c src/version.c)
 target_link_libraries(val ${SCCS_LIBS})
 add_executable(vc src/vc.c src/version.c)
 target_link_libraries(vc ${SCCS_LIBS})
-add_executable(what src/what.c src/version.c)
-target_link_libraries(what ${SCCS_LIBS})
-configure_file(src/sccsdiff.sh hsccsdiff @ONLY)
+add_executable(swhat src/what.c src/version.c)
+target_link_libraries(swhat ${SCCS_LIBS})
 
-install(
-    TARGETS admin comb delta prs prt rmchg unget val vc what
-    RUNTIME
-     DESTINATION ${CMAKE_INSTALL_BINDIR}/hsccs
-    PUBLIC_HEADER
-     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/hsccs
-)
+add_executable(sccs src/sccs.c src/version.c)
+target_link_libraries(sccs ${SCCS_LIBS})
 
-install(
-    FILES hsccsdiff DESTINATION ${CMAKE_INSTALL_BINDIR}/hsccs
-)
+if(ENABLE_HNAMES)
+    configure_file(src/sccsdiff.sh hsccsdiff @ONLY)
+    set_target_properties(sccs PROPERTIES PREFIX "h")
+    install(
+        TARGETS admin comb delta prs prt rmchg unget val vc swhat
+        RUNTIME
+        DESTINATION ${CMAKE_INSTALL_BINDIR}/hsccs
+        PUBLIC_HEADER
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/hsccs
+    )
+    install(
+        FILES ${CMAKE_BINARY_DIR}/sccs/hsccsdiff DESTINATION ${CMAKE_INSTALL_BINDIR}/hsccs
+    )
+else()
+    configure_file(src/sccsdiff.sh sccsdiff @ONLY)
+    install(
+        TARGETS admin comb delta prs prt rmchg unget val vc swhat
+        RUNTIME
+        DESTINATION ${CMAKE_INSTALL_BINDIR}/sccs
+        PUBLIC_HEADER
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/sccs
+    )
+    install(
+        FILES ${CMAKE_BINARY_DIR}/sccs/sccsdiff DESTINATION ${CMAKE_INSTALL_BINDIR}/sccs
+    )
+endif()
 
-add_executable(hsccs src/sccs.c src/version.c)
-target_link_libraries(hsccs ${SCCS_LIBS})
+install(TARGETS sccs)
