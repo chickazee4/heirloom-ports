@@ -30,12 +30,12 @@
 
 /* This is a private header file.				*/
 
-/*	from OpenSolaris "s_string.h	1.6	05/06/08 SMI" 	 SVr4.0 1.4		*/
+/*	from OpenSolaris "s_string.h	1.6	2021 SMI" 	 SVr4.0 1.4		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)s_string.h	1.3 (gritter) 6/18/05
+ * Sccsid @(#)s_string.h	1.3 (heirloom-ports) 2021
  */
 /* extensible strings */
 

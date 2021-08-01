@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "hashmake.c	1.11	05/06/08 SMI"	 SVr4.0 1.2		*/
+/*	from OpenSolaris "hashmake.c	1.11	2021 SMI"	 SVr4.0 1.2		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)hashmake.c	2.4 (gritter) 6/25/05
+ * Sccsid @(#)hashmake.c	2.4 (heirloom-ports) 2021
  */
 
 #if __GNUC__ >= 3 && __GNUC_MINOR__ >= 4 || __GNUC__ >= 4
@@ -38,7 +38,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)hashmake.c	2.4 (gritter) 6/25/05";
+static const char sccsid[] USED = "@(#)hashmake.c	2.4 (heirloom-ports) 2021";
 
 #include <stdlib.h>
 #include <unistd.h>

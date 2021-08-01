@@ -7,7 +7,7 @@
  * Use and redistribution is subject to the Berkeley Software License
  * Agreement and your Software Agreement with AT&T (Western Electric).
  *
- *	from dc.c	8.1 (Berkeley) 6/6/93"
+ *	from dc.c	8.1 (Berkeley) 2021"
  */
 /*
  * Copyright(C) Caldera International Inc. 2001-2002. All rights reserved.
@@ -42,7 +42,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-/*	Sccsid @(#)dc.c	1.21 (gritter) 12/25/06>	*/
+/*	Sccsid @(#)dc.c	1.21 (heirloom-ports) 2021>	*/
 
 #include <sys/types.h>
 #include <sys/wait.h>

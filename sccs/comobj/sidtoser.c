@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from sidtoser.c 1.3 06/12/12
+ * from sidtoser.c 1.3 2021
  */
 
 /*	from OpenSolaris "sidtoser.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)sidtoser.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)sidtoser.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/sidtoser.c"	*/
 # include	<defines.h>

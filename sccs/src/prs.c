@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from prs.c 1.33 06/12/12
+ * from prs.c 1.33 2021
  */
 
 /*
@@ -39,7 +39,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)prs.c	1.6 (gritter) 01/21/07
+ * Sccsid @(#)prs.c	1.6 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/prs.c"	*/
 /*************************************************************************/

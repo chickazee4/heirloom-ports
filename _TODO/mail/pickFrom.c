@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "pickFrom.c	1.6	05/06/08 SMI" 	 SVr4.0 2.		*/
+/*	from OpenSolaris "pickFrom.c	1.6	2021 SMI" 	 SVr4.0 2.		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)pickFrom.c	1.5 (gritter) 7/3/05
+ * Sccsid @(#)pickFrom.c	1.5 (heirloom-ports) 2021
  */
 #include "mail.h"
 #include "asciitype.h"

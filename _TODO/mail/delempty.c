@@ -28,12 +28,12 @@
  * All rights reserved.
  */
 
-/*	from OpenSolaris "delempty.c	1.8	05/06/08 SMI"	*/
+/*	from OpenSolaris "delempty.c	1.8	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)delempty.c	1.4 (gritter) 6/22/05
+ * Sccsid @(#)delempty.c	1.4 (heirloom-ports) 2021
  */
 /*LINTLIBRARY*/
 

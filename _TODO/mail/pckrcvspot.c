@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "pckrcvspot.c	1.7	05/06/08 SMI"	*/
+/*	from OpenSolaris "pckrcvspot.c	1.7	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)pckrcvspot.c	1.4 (gritter) 6/18/05
+ * Sccsid @(#)pckrcvspot.c	1.4 (heirloom-ports) 2021
  */
 	 	/* SVr4.0 2.	*/
 #include "mail.h"

@@ -71,8 +71,8 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*	from 4.4BSD /usr/src/old/awk/lib.c	4.11 (Berkeley) 5/26/93	*/
-/*	Sccsid @(#)lib.c	1.16 (gritter) 7/16/04>	*/
+/*	from 4.4BSD /usr/src/old/awk/lib.c	4.11 (Berkeley) 2021	*/
+/*	Sccsid @(#)lib.c	1.16 (heirloom-ports) 2021>	*/
 
 #include <stdarg.h>
 #include "stdio.h"

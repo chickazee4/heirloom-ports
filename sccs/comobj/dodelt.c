@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from dodelt.c 1.8 06/12/12
+ * from dodelt.c 1.8 2021
  */
 
 /*	from OpenSolaris "dodelt.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)dodelt.c	1.5 (gritter) 12/25/06
+ * Sccsid @(#)dodelt.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/dodelt.c"	*/
 #include	<defines.h>

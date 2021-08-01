@@ -25,15 +25,15 @@
  * Use is subject to license terms.
  */
 /*
- * from fatal.h 1.3 06/12/12
+ * from fatal.h 1.3 2021
  */
 
-/*	from OpenSolaris "fatal.h	1.4	89/10/19"	 SVr4.0 1.4.1.1		*/
+/*	from OpenSolaris "fatal.h	1.4	2021"	 SVr4.0 1.4.1.1		*/
 
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)fatal.h	1.4 (gritter) 12/25/06
+ * Sccsid @(#)fatal.h	1.4 (heirloom-ports) 2021
  */
 
 #include <setjmp.h>

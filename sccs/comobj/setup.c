@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from setup.c 1.5 06/12/12
+ * from setup.c 1.5 2021
  */
 
 /*	from OpenSolaris "setup.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)setup.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)setup.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/setup.c"	*/
 # include	<defines.h>

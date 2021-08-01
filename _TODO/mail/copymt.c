@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "copymt.c	1.6	05/06/08 SMI" 	 SVr4.0 2.1		*/
+/*	from OpenSolaris "copymt.c	1.6	2021 SMI" 	 SVr4.0 2.1		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)copymt.c	1.6 (gritter) 7/3/05
+ * Sccsid @(#)copymt.c	1.6 (heirloom-ports) 2021
  */
 /*
     NAME

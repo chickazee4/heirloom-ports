@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from delta.c 1.40 06/12/12
+ * from delta.c 1.40 2021
  */
 
 /*	from OpenSolaris "delta.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)delta.c	1.8 (gritter) 3/17/07
+ * Sccsid @(#)delta.c	1.8 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/delta.c"	*/
 

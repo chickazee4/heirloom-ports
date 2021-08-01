@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from doie.c 1.7 06/12/12
+ * from doie.c 1.7 2021
  */
 
 /*	from OpenSolaris "doie.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)doie.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)doie.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/doie.c"	*/
 # include	<defines.h>

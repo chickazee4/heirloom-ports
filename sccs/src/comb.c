@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from comb.c 1.15 06/12/12
+ * from comb.c 1.15 2021
  */
 
 /*	from OpenSolaris "comb.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)comb.c	1.4 (gritter) 01/21/07
+ * Sccsid @(#)comb.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/comb.c"	*/
 # include	<defines.h>

@@ -25,7 +25,7 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-/*	Sccsid @(#)tabspec.c	1.2 (gritter) 5/30/03	*/
+/*	Sccsid @(#)tabspec.c	1.2 (heirloom-ports) 2021	*/
 
 #include	<stdlib.h>
 #include	<string.h>

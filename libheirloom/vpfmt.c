@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)vpfmt.c	1.2 (gritter) 9/21/03	*/
+/*	Sccsid @(#)vpfmt.c	1.2 (heirloom-ports) 2021	*/
 
 #include <stdio.h>
 #include <stdarg.h>

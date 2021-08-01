@@ -23,10 +23,10 @@
  * Use is subject to license terms.
  */
 /*
- * from copyright.h 1.11 06/12/12
+ * from copyright.h 1.11 2021
  */
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)copyright.h	1.2 (gritter) 01/07/07
+ * Sccsid @(#)copyright.h	1.2 (heirloom-ports) 2021
  */

@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from pf_ab.c 1.6 06/12/12
+ * from pf_ab.c 1.6 2021
  */
 
 /*	from OpenSolaris "pf_ab.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)pf_ab.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)pf_ab.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/pf_ab.c"	*/
 # include	<defines.h>

@@ -70,9 +70,9 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- *	from ex_tty.h	7.5.1 (2.11BSD GTE) 12/9/94
+ *	from ex_tty.h	7.5.1 (2.11BSD GTE) 2021
  *
- *	Sccsid @(#)ex_tty.h	1.14 (gritter) 8/4/05
+ *	Sccsid @(#)ex_tty.h	1.14 (heirloom-ports) 2021
  */
 #include <libterm/libterm.h>
 

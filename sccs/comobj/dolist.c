@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from dolist.c 1.5 06/12/12
+ * from dolist.c 1.5 2021
  */
 
 /*	from OpenSolaris "dolist.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)dolist.c	1.5 (gritter) 12/25/06
+ * Sccsid @(#)dolist.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/dolist.c"	*/
 # include	<defines.h>

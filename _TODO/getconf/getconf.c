@@ -29,7 +29,7 @@
  *
  */
 
-/*	from OpenSolaris "getconf.c	1.14	05/06/08 SMI"	*/
+/*	from OpenSolaris "getconf.c	1.14	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
@@ -42,9 +42,9 @@
 #define	USED
 #endif
 #if defined (SU3)
-static const char sccsid[] USED = "@(#)getconf_su3.sl	1.14 (gritter) 01/27/07";
+static const char sccsid[] USED = "@(#)getconf_su3.sl	1.14 (heirloom-ports) 2021";
 #else	/* !SU3 */
-static const char sccsid[] USED = "@(#)getconf.sl	1.14 (gritter) 01/27/07";
+static const char sccsid[] USED = "@(#)getconf.sl	1.14 (heirloom-ports) 2021";
 #endif	/* !SU3 */
 
 /*

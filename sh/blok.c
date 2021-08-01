@@ -30,10 +30,10 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)blok.c	1.7 (gritter) 6/16/05
+ * Sccsid @(#)blok.c	1.7 (heirloom-ports) 2021
  */
 
-/* from OpenSolaris "blok.c	1.19	05/06/08 SMI" */
+/* from OpenSolaris "blok.c	1.19	2021 SMI" */
 /*
  *	UNIX shell
  */

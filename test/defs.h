@@ -23,7 +23,7 @@
 /*
  * Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)defs.h	1.3 (gritter) 7/2/05
+ * Sccsid @(#)defs.h	1.3 (heirloom-ports) 2021
  */
 
 #include <stdlib.h>

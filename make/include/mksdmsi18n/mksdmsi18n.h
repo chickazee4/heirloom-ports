@@ -23,15 +23,15 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)mksdmsi18n.h 1.3 06/12/12
+ * @(#)mksdmsi18n.h 1.3 2021
  */
 
-/*	from OpenSolaris "mksdmsi18n.h	1.3	06/12/12"	*/
+/*	from OpenSolaris "mksdmsi18n.h	1.3	2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)mksdmsi18n.h	1.2 (gritter) 01/07/07
+ * Sccsid @(#)mksdmsi18n.h	1.2 (heirloom-ports) 2021
  */
 
 #ifndef _AVO_MKSDMSI18N_H

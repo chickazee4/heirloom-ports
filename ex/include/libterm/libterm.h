@@ -40,7 +40,7 @@
  *
  * Header for termcap routines derived from 2.11 BSD.
  *
- *	Sccsid @(#)libterm.h	1.4 (gritter) 11/23/04
+ *	Sccsid @(#)libterm.h	1.4 (heirloom-ports) 2021
  */
 
 /*

@@ -28,7 +28,7 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "bfs.c	1.14	05/06/08 SMI"	*/
+/*	from OpenSolaris "bfs.c	1.14	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
@@ -40,7 +40,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)bfs.c	1.15 (gritter) 7/2/05";
+static const char sccsid[] USED = "@(#)bfs.c	1.15 (heirloom-ports) 2021";
 
 #include <setjmp.h>
 #include <signal.h>

@@ -34,9 +34,9 @@
 #else
 #define	USED
 #endif
-static const char id[] = "@(#)kill.sl	1.2 (gritter) 6/30/05";
+static const char id[] = "@(#)kill.sl	1.2.1 (heirloom-ports) 2021";
 /* SLIST */
 /*
-kill.c: * Sccsid @(#)kill.c	1.2 (gritter) 6/30/05
-strsig.c: * Sccsid @(#)strsig.c	1.9 (gritter) 6/30/05
+kill.c: * Sccsid @(#)kill.c	1.2 (heirloom-ports) 2021
+strsig.c: * Sccsid @(#)strsig.c	1.9 (heirloom-ports) 2021
 */

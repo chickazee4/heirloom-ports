@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)utmpx.c	1.13 (gritter) 12/16/07	*/
+/*	Sccsid @(#)utmpx.c	1.13 (heirloom-ports) 2021	*/
 
 #include <stdio.h>
 

@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "Dout.c	1.5	05/06/08 SMI" 	 SVr4.0 1.		*/
+/*	from OpenSolaris "Dout.c	1.5	2021 SMI" 	 SVr4.0 1.		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)Dout.c	1.4 (gritter) 6/18/05
+ * Sccsid @(#)Dout.c	1.4 (heirloom-ports) 2021
  */
 /*
     NAME

@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from setsig.c 1.8 06/12/12
+ * from setsig.c 1.8 2021
  */
 
 /*	from OpenSolaris "setsig.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)setsig.c	1.4 (gritter) 12/25/06
+ * Sccsid @(#)setsig.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/mpwlib/setsig.c"	*/
 # include       <defines.h>

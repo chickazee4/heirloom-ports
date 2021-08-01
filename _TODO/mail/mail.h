@@ -31,12 +31,12 @@
 #ifndef _MAIL_H
 #define	_MAIL_H
 
-/*	from OpenSolaris "mail.h	1.17	05/06/08 SMI"	*/
+/*	from OpenSolaris "mail.h	1.17	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)mail.h	1.11 (gritter) 7/3/05
+ * Sccsid @(#)mail.h	1.11 (heirloom-ports) 2021
  */
 
  /*

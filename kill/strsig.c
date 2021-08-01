@@ -22,7 +22,7 @@
 /*
  * Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)strsig.c	1.9 (gritter) 6/30/05
+ * Sccsid @(#)strsig.c	1.9 (heirloom-ports) 2021
  */
 
 #include <signal.h>

@@ -23,14 +23,14 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)ld_file.c 1.7 06/12/12
+ * @(#)ld_file.c 1.7 2021
  */
-/*	from OpenSolaris "ld_file.c	1.7	06/12/12"	*/
+/*	from OpenSolaris "ld_file.c	1.7	2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)ld_file.c	1.8 (gritter) 01/23/07
+ * Sccsid @(#)ld_file.c	1.8 (heirloom-ports) 2021
  */
 
 #include <stdio.h>

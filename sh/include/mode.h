@@ -31,9 +31,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)mode.h	1.5 (gritter) 6/15/05
+ * Sccsid @(#)mode.h	1.5 (heirloom-ports) 2021
  */
-/* from OpenSolaris "mode.h	1.12	05/06/08 SMI"	 SVr4.0 1.8.1.2 */
+/* from OpenSolaris "mode.h	1.12	2021 SMI"	 SVr4.0 1.8.1.2 */
 /*
  *	UNIX shell
  */

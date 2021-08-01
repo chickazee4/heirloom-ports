@@ -28,12 +28,12 @@
  *      All rights reserved.
  */
 
-/*	from OpenSolaris "legal.c	1.8	05/06/08 SMI"	*/
+/*	from OpenSolaris "legal.c	1.8	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)legal.c	1.3 (gritter) 6/18/05
+ * Sccsid @(#)legal.c	1.3 (heirloom-ports) 2021
  */
 /*
  *  NAME

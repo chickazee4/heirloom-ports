@@ -1,5 +1,5 @@
 /*	from Unix 7th Edition sed	*/
-/*	Sccsid @(#)sed0.c	1.64 (gritter) 3/12/05>	*/
+/*	Sccsid @(#)sed0.c	1.64 (heirloom-ports) 2021>	*/
 /*
  * Copyright(C) Caldera International Inc. 2001-2002. All rights reserved.
  *

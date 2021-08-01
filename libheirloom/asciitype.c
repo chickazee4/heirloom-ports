@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)asciitype.c	1.4 (gritter) 4/17/03	*/
+/*	Sccsid @(#)asciitype.c	1.4 (heirloom-ports) 2021	*/
 
 #include "asciitype.h"
 

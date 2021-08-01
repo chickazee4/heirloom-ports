@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)statvfs.c	1.6 (gritter) 1/22/06	*/
+/*	Sccsid @(#)statvfs.c	1.6 (heirloom-ports) 2021	*/
 
 typedef	unsigned long long	fsblkcnt_t;
 typedef	unsigned long long	fsfilcnt_t;

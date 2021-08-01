@@ -25,10 +25,10 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)hash.c	1.6 (gritter) 6/26/05
+ * Sccsid @(#)hash.c	1.6 (heirloom-ports) 2021
  */
 
-/* from OpenSolaris "hash.c	1.8	05/06/08 SMI"	 SVr4.0 1.3.2.1 */
+/* from OpenSolaris "hash.c	1.8	2021 SMI"	 SVr4.0 1.3.2.1 */
 
 #include	"hash.h"
 #include	"defs.h"

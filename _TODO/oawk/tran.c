@@ -71,8 +71,8 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*	from 4.4BSD /usr/src/old/awk/tran.c	4.7 (Berkeley) 5/26/93	*/
-/*	Sccsid @(#)tran.c	1.7 (gritter) 3/31/03>	*/
+/*	from 4.4BSD /usr/src/old/awk/tran.c	4.7 (Berkeley) 2021	*/
+/*	Sccsid @(#)tran.c	1.7 (heirloom-ports) 2021>	*/
 
 #include "stdio.h"
 #include "awk.def"

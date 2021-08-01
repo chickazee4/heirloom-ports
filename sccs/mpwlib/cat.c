@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from cat.c 1.4 06/12/12
+ * from cat.c 1.4 2021
  */
 
 /*	from OpenSolaris "cat.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)cat.c	1.4 (gritter) 01/21/07
+ * Sccsid @(#)cat.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/mpwlib/cat.c"	*/
 #include	<stdlib.h>

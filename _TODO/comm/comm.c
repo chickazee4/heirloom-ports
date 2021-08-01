@@ -43,7 +43,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)comm.sl	1.7 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)comm.sl	1.7 (heirloom-ports) 2021";
 
 #include <stdio.h>
 #include <iblok.h>

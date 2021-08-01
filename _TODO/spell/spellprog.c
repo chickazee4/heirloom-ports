@@ -28,12 +28,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "spellprog.c	1.14	05/06/08 SMI"	*/
+/*	from OpenSolaris "spellprog.c	1.14	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)spellprog.c	2.5 (gritter) 6/25/05
+ * Sccsid @(#)spellprog.c	2.5 (heirloom-ports) 2021
  */
 
 #if __GNUC__ >= 3 && __GNUC_MINOR__ >= 4 || __GNUC__ >= 4
@@ -43,7 +43,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)spellprog.c	2.5 (gritter) 6/25/05";
+static const char sccsid[] USED = "@(#)spellprog.c	2.5 (heirloom-ports) 2021";
 
 #include <stdlib.h>
 #include <unistd.h>

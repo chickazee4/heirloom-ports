@@ -47,9 +47,9 @@
 #define	USED
 #endif
 #if defined (SUS)
-static const char sccsid[] USED = "@(#)file_sus.sl	1.33 (gritter) 4/14/06";
+static const char sccsid[] USED = "@(#)file_sus.sl	1.33 (heirloom-ports) 2021";
 #else	/* !SUS */
-static const char sccsid[] USED = "@(#)file.sl	1.33 (gritter) 4/14/06";
+static const char sccsid[] USED = "@(#)file.sl	1.33 (heirloom-ports) 2021";
 #endif	/* !SUS */
 
 #ifdef	__GLIBC__

@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "setsig.c	1.6	05/06/08 SMI" 	 SVr4.0 2.		*/
+/*	from OpenSolaris "setsig.c	1.6	2021 SMI" 	 SVr4.0 2.		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)setsig.c	1.5 (gritter) 6/18/05
+ * Sccsid @(#)setsig.c	1.5 (heirloom-ports) 2021
  */
 #include "mail.h"
 /*

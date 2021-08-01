@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from gf.c 1.5 06/12/12
+ * from gf.c 1.5 2021
  */
 
 /*	from OpenSolaris "gf.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)gf.c	1.5 (gritter) 2/26/07
+ * Sccsid @(#)gf.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/cassi/gf.c"	*/
 

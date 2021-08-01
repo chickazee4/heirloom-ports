@@ -25,15 +25,15 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)dosys.h 1.9 06/12/12
+ * @(#)dosys.h 1.9 2021
  */
 
-/*	from OpenSolaris "dosys.h	1.9	06/12/12"	*/
+/*	from OpenSolaris "dosys.h	1.9	2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)dosys.h	1.2 (gritter) 01/07/07
+ * Sccsid @(#)dosys.h	1.2 (heirloom-ports) 2021
  */
 
 #include <mksh/defs.h>

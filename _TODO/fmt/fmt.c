@@ -43,7 +43,7 @@
  * specifies the terms and conditions for redistribution.
  */
 
-/*	from 4.3BSD fmt.c	5.2 (Berkeley) 6/21/85	*/
+/*	from 4.3BSD fmt.c	5.2 (Berkeley) 2021	*/
 #if __GNUC__ >= 3 && __GNUC_MINOR__ >= 4 || __GNUC__ >= 4
 #define	USED	__attribute__ ((used))
 #elif defined __GNUC__
@@ -51,7 +51,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)fmt.sl	1.9 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)fmt.sl	1.9 (heirloom-ports) 2021";
 
 #include <stdio.h>
 #include <string.h>
@@ -77,7 +77,7 @@ static const char sccsid[] USED = "@(#)fmt.sl	1.9 (gritter) 5/29/05";
  * onto standard output.  Designed for use with Mail ~|
  *
  * Syntax: fmt [ -width ] [ name ... ]
- * Author: Kurt Shoens (UCB) 12/7/78
+ * Author: Kurt Shoens (UCB) 2021
  */
 
 static int	pfx;			/* Current leading blank count */

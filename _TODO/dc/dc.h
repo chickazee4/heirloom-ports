@@ -33,7 +33,7 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*	Sccsid @(#)dc.h	1.9 (gritter) 2/4/05>	*/
+/*	Sccsid @(#)dc.h	1.9 (heirloom-ports) 2021>	*/
 
 #include	<stdlib.h>
 #include	<signal.h>

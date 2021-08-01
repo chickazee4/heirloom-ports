@@ -25,15 +25,15 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)macro.h 1.3 06/12/12
+ * @(#)macro.h 1.3 2021
  */
 
-/*	from OpenSolaris "macro.h	1.3	06/12/12"	*/
+/*	from OpenSolaris "macro.h	1.3	2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)macro.h	1.2 (gritter) 01/07/07
+ * Sccsid @(#)macro.h	1.2 (heirloom-ports) 2021
  */
 
 #include <mksh/defs.h>

@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "hash.h	1.9	05/06/08 SMI"	 SVr4.0 1.2		*/
+/*	from OpenSolaris "hash.h	1.9	2021 SMI"	 SVr4.0 1.2		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)hash.h	2.2 (gritter) 6/21/05
+ * Sccsid @(#)hash.h	2.2 (heirloom-ports) 2021
  */
 
 #include <inttypes.h>

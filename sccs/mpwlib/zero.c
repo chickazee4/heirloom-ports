@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from zero.c 1.3 06/12/12
+ * from zero.c 1.3 2021
  */
 
 /*	from OpenSolaris "zero.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)zero.c	1.3 (gritter) 12/20/06
+ * Sccsid @(#)zero.c	1.3 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/mpwlib/zero.c"	*/
 /*

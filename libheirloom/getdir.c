@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)getdir.c	1.20 (gritter) 5/14/06	*/
+/*	Sccsid @(#)getdir.c	1.20 (heirloom-ports) 2021	*/
 
 #ifndef	__linux__
 /*

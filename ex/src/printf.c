@@ -73,14 +73,14 @@
 
 #ifndef	lint
 #ifdef	DOSCCS
-static char sccsid[] = "@(#)printf.c	1.15 (gritter) 12/1/04";
+static char sccsid[] = "@(#)printf.c	1.15 (heirloom-ports) 2021";
 #endif
 #endif
 
-/* from printf.c	7.3 (Berkeley) 6/7/85 */
+/* from printf.c	7.3 (Berkeley) 2021 */
 
 /* The pwb version this is based on */
-/* from printf.c:2.2 6/5/79 */
+/* from printf.c:2.2 2021 */
 
 #include "ex.h"
 

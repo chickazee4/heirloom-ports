@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from dname.c 1.4 06/12/12
+ * from dname.c 1.4 2021
  */
 
 /*	from OpenSolaris "dname.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)dname.c	1.3 (gritter) 12/20/06
+ * Sccsid @(#)dname.c	1.3 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/mpwlib/dname.c"	*/
 # include	<sys/types.h>

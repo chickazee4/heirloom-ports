@@ -36,7 +36,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- *	Sccsid @(#)mapmalloc.c	1.4 (gritter) 2/20/05
+ *	Sccsid @(#)mapmalloc.c	1.4 (heirloom-ports) 2021
  */
 
 #include <sys/types.h>

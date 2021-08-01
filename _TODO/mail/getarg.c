@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "getarg.c	1.6	05/06/08 SMI" 	 SVr4.0 2.		*/
+/*	from OpenSolaris "getarg.c	1.6	2021 SMI" 	 SVr4.0 2.		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)getarg.c	1.3 (gritter) 6/18/05
+ * Sccsid @(#)getarg.c	1.3 (heirloom-ports) 2021
  */
 #include "mail.h"
 /*

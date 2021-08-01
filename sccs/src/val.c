@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from val.c 1.22 06/12/12
+ * from val.c 1.22 2021
  */
 
 /*	from OpenSolaris "val.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)val.c	1.5 (gritter) 01/21/07
+ * Sccsid @(#)val.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/val.c"	*/
 /************************************************************************/

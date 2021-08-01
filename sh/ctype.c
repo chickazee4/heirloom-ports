@@ -25,10 +25,10 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)ctype.c	1.5 (gritter) 6/15/05
+ * Sccsid @(#)ctype.c	1.5 (heirloom-ports) 2021
  */
 
-/* from OpenSolaris "ctype.c	1.7	05/06/08 SMI"	 SVr4.0 1.9.1.1 */
+/* from OpenSolaris "ctype.c	1.7	2021 SMI"	 SVr4.0 1.9.1.1 */
 /*
  *	UNIX shell
  */

@@ -1,5 +1,5 @@
 /*
- * Sccsid @(#)wcslen.c	1.3 (gritter) 01/23/07
+ * Sccsid @(#)wcslen.c	1.3 (heirloom-ports) 2021
  */
 #if defined (__FreeBSD__) || defined (__APPLE__) || defined (__hpux) || defined (_AIX)
 #include <wchar.h>

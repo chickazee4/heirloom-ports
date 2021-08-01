@@ -32,13 +32,7 @@
 #else
 #define	USED
 #endif
-#if defined (SUS)
-static const char sccsid[] USED = "@(#)basename_sus.sl	1.9 (gritter) 5/29/05";
-#elif defined (UCB)
-static const char sccsid[] USED = "@(#)/usr/ucb/basename.sl	1.9 (gritter) 5/29/05";
-#else
-static const char sccsid[] USED = "@(#)basename.sl	1.9 (gritter) 5/29/05";
-#endif
+static const char sccsid[] USED = "@(#)basename.sl	1.9.1 (heirloom-ports) 2021";
 
 #include <stdio.h>
 #include <libgen.h>

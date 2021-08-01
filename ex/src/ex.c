@@ -77,11 +77,11 @@ char *copyright =
 "@(#) Copyright (c) 1980 Regents of the University of California.\n\
  All rights reserved.\n";
 
-static char sccsid[] = "@(#)ex.c	1.37 (gritter) 8/4/05";
+static char sccsid[] = "@(#)ex.c	1.37 (heirloom-ports) 2021";
 #endif	/* DOSCCS */
 #endif	/* !lint */
 
-/* from ex.c	7.5.1.1 (Berkeley) 8/12/86 */
+/* from ex.c	7.5.1.1 (Berkeley) 2021 */
 
 #include "ex.h"
 #include "ex_argv.h"
@@ -324,7 +324,7 @@ main(register int ac, register char *av[])
 		value(SHOWMODE) = 1;
 		/*
 		 * I do not understand why novices should not
-		 * switch to visual mode. So they can now. gritter
+		 * switch to visual mode. So they can now. heirloom-ports
 		 */
 		/*value(OPEN) = 0;*/
 		value(REPORT) = 1;

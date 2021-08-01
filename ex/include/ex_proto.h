@@ -71,7 +71,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- *	Sccsid @(#)ex_proto.h	1.33 (gritter) 8/6/05
+ *	Sccsid @(#)ex_proto.h	1.33 (heirloom-ports) 2021
  */
 
 /*

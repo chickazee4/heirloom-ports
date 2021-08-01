@@ -22,7 +22,7 @@
 /*
  * Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)fgetline.c	1.4 (gritter) 6/25/05
+ * Sccsid @(#)fgetline.c	1.4 (heirloom-ports) 2021
  */
 
 #include <sys/types.h>

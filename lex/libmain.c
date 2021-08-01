@@ -28,12 +28,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "libmain.c	6.6	05/06/08 SMI"	*/
+/*	from OpenSolaris "libmain.c	6.6	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)libmain.c	1.4 (gritter) 11/26/05
+ * Sccsid @(#)libmain.c	1.4 (heirloom-ports) 2021
  */
 
 #include "stdio.h"

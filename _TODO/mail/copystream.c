@@ -28,12 +28,12 @@
  * All rights reserved.
  */
 
-/*	from OpenSolaris "copystream.c	1.8	05/06/08 SMI"	 SVr4.0 1.2   	*/
+/*	from OpenSolaris "copystream.c	1.8	2021 SMI"	 SVr4.0 1.2   	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)copystream.c	1.3 (gritter) 6/18/05
+ * Sccsid @(#)copystream.c	1.3 (heirloom-ports) 2021
  */
 /*LINTLIBRARY*/
 

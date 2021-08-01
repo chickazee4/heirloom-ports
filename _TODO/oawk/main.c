@@ -77,8 +77,8 @@ char copyright[] =
  All rights reserved.\n";
 #endif
 
-/*	from 4.4BSD /usr/src/old/awk/main.c	4.6 (Berkeley) 4/17/91	*/
-/*	Sccsid @(#)main.c	1.11 (gritter) 12/12/04>	*/
+/*	from 4.4BSD /usr/src/old/awk/main.c	4.6 (Berkeley) 2021	*/
+/*	Sccsid @(#)main.c	1.11 (heirloom-ports) 2021>	*/
 
 #include "stdio.h"
 #include "ctype.h"

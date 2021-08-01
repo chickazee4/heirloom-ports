@@ -28,12 +28,12 @@
 /*	Copyright (c) 1988 AT&T	*/
 /*	All Rights Reserved	*/
 
-/*	from OpenSolaris "ldefs.c	6.16	05/06/08 SMI"	*/
+/*	from OpenSolaris "ldefs.c	6.16	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)ldefs.c	1.7 (gritter) 4/14/07
+ * Sccsid @(#)ldefs.c	1.7 (heirloom-ports) 2021
  */
 
 #include <stdio.h>

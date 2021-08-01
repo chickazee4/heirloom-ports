@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "hashcheck.c	1.12	05/06/08 SMI"	 SVr4.0 1.2		*/
+/*	from OpenSolaris "hashcheck.c	1.12	2021 SMI"	 SVr4.0 1.2		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)hashcheck.c	2.4 (gritter) 6/22/05
+ * Sccsid @(#)hashcheck.c	2.4 (heirloom-ports) 2021
  */
 
 #if __GNUC__ >= 3 && __GNUC_MINOR__ >= 4 || __GNUC__ >= 4
@@ -38,7 +38,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)hashcheck.c	2.4 (gritter) 6/22/05";
+static const char sccsid[] USED = "@(#)hashcheck.c	2.4 (heirloom-ports) 2021";
 
 #include <stdlib.h>
 #include <unistd.h>

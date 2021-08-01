@@ -50,9 +50,9 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)/usr/ucb/deroff.sl	1.13 (gritter) 12/25/06";
+static const char sccsid[] USED = "@(#)/usr/ucb/deroff.sl	1.13 (heirloom-ports) 2021";
 
-/*	from deroff.c	8.1 (Berkeley) 6/6/93	*/
+/*	from deroff.c	8.1 (Berkeley) 2021	*/
 
 #include <unistd.h>
 #include <stdio.h>

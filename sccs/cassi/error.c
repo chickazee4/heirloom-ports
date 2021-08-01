@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from error.c 1.2 06/12/12
+ * from error.c 1.2 2021
  */
 
 /*	from OpenSolaris "error.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)error.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)error.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/cassi/error.c"	*/
 #include <stdio.h>

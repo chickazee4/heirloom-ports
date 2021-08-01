@@ -32,7 +32,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)/usr/ucb/install.sl	1.12 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)/usr/ucb/install.sl	1.12 (heirloom-ports) 2021";
 
 #include	<sys/types.h>
 #include	<sys/stat.h>

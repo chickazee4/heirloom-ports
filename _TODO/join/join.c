@@ -43,7 +43,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)join.sl	1.15 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)join.sl	1.15 (heirloom-ports) 2021";
 
 /*	join F1 F2 on stuff */
 

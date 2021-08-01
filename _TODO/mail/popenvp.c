@@ -28,12 +28,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "popenvp.c	1.9	05/06/08 SMI"	*/
+/*	from OpenSolaris "popenvp.c	1.9	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)popenvp.c	1.6 (gritter) 6/22/05
+ * Sccsid @(#)popenvp.c	1.6 (heirloom-ports) 2021
  */
 /*LINTLIBRARY*/
 

@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "isheader.c	1.7	05/06/08 SMI" 	 SVr4.0 1.		*/
+/*	from OpenSolaris "isheader.c	1.7	2021 SMI" 	 SVr4.0 1.		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)isheader.c	1.5 (gritter) 7/3/05
+ * Sccsid @(#)isheader.c	1.5 (heirloom-ports) 2021
  */
 #include "mail.h"
 #include "asciitype.h"

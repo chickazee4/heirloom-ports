@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)oblok.h	1.3 (gritter) 4/17/03	*/
+/*	Sccsid @(#)oblok.h	1.3 (heirloom-ports) 2021	*/
 
 #include	<sys/types.h>
 

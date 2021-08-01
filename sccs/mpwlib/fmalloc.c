@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from fmalloc.c 1.5 06/12/12
+ * from fmalloc.c 1.5 2021
  */
 
 /*	from OpenSolaris "fmalloc.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)fmalloc.c	1.3 (gritter) 12/20/06
+ * Sccsid @(#)fmalloc.c	1.3 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/mpwlib/fmalloc.c"	*/
 

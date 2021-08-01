@@ -30,11 +30,11 @@
 #define	USED
 #endif
 #if defined (SU3)
-static const char sccsid[] USED = "@(#)pg_su3.sl	2.68 (gritter) 6/5/09";
+static const char sccsid[] USED = "@(#)pg_su3.sl	2.68 (heirloom-ports) 2021";
 #elif defined (SUS)
-static const char sccsid[] USED = "@(#)pg_sus.sl	2.68 (gritter) 6/5/09";
+static const char sccsid[] USED = "@(#)pg_sus.sl	2.68 (heirloom-ports) 2021";
 #else
-static const char sccsid[] USED = "@(#)pg.sl	2.68 (gritter) 6/5/09";
+static const char sccsid[] USED = "@(#)pg.sl	2.68 (heirloom-ports) 2021";
 #endif
 
 #ifndef	USE_TERMCAP

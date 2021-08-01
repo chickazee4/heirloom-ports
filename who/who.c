@@ -32,11 +32,7 @@
 #else
 #define	USED
 #endif
-#ifdef	SUS
-static const char sccsid[] USED = "@(#)who_sus.sl	1.20 (gritter) 1/1/10";
-#else
-static const char sccsid[] USED = "@(#)who.sl	1.20 (gritter) 1/1/10";
-#endif
+static const char sccsid[] USED = "@(#)who.sl	1.20.1 (heirloom-ports) 2021";
 
 #include	<sys/types.h>
 #include	<sys/stat.h>
@@ -49,7 +45,7 @@ static const char sccsid[] USED = "@(#)who.sl	1.20 (gritter) 1/1/10";
 #include	<errno.h>
 #include	<time.h>
 #include	<libgen.h>
-#include	<utmpx.h>
+#include	<_utmpx.h>
 #include	<limits.h>
 
 #ifndef LINE_MAX
@@ -201,10 +197,6 @@ print(const struct utmpx *u)
 			printf(" %6d", (int)u->ut_pid);
 	}
 	if (u->ut_type == DEAD_PROCESS && !sflag)
-#ifdef	__hpux
-#define	e_termination	__e_termination
-#define	e_exit		__e_exit
-#endif	/* __hpux */
 		printf("  id=%4.4s term=%-3d exit=%d",
 				u->ut_id,
 #if !defined (_AIX) || !defined (__APPLE__)

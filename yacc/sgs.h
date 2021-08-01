@@ -22,7 +22,7 @@
 /*
  * Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)main.c	1.2 (gritter) 6/14/05
+ * Sccsid @(#)main.c	1.2 (heirloom-ports) 2021
  */
 #if __GNUC__ >= 3 && __GNUC_MINOR__ >= 4 || __GNUC__ >= 4
 #define	USED	__attribute__ ((used))
@@ -31,19 +31,19 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)yacc.sl	2.6 (gritter) 11/26/05";
-static const char pkg[] = "Heirloom Development Tools";
-static const char rel[] = "2.6 (gritter) 11/26/05";
+static const char sccsid[] USED = "@(#)yacc.sl	2.6.1 (heirloom-ports) 2021";
+static const char pkg[] = "heirloom-ports";
+static const char rel[] = "2.6.1 (heirloom-ports) 2021";
 /* SLIST */
 /*
-dextern: * Sccsid @(#)dextern	1.6 (gritter) 11/10/05
-getopt.c: * Sccsid @(#)getopt.c	1.8 (gritter) 8/2/05
-libmai.c: * Sccsid @(#)libmai.c	1.3 (gritter) 6/18/05
-libzer.c: * Sccsid @(#)libzer.c	1.3 (gritter) 6/18/05
-y1.c: * Sccsid @(#)y1.c	1.7 (gritter) 11/26/05
-y2.c: * Sccsid @(#)y2.c	1.11 (gritter) 11/26/05
-y3.c: * Sccsid @(#)y3.c	1.5 (gritter) 11/26/05
-y4.c: * Sccsid @(#)y4.c	1.5 (gritter) 11/26/05
-y5.c: * Sccsid @(#)y5.c	1.1 (gritter) 6/25/05
-yaccpar: * Sccsid @(#)yaccpar	1.5 (gritter) 11/26/05
+dextern: * Sccsid @(#)dextern	1.6 (heirloom-ports) 2021
+getopt.c: * Sccsid @(#)getopt.c	1.8 (heirloom-ports) 2021
+libmai.c: * Sccsid @(#)libmai.c	1.3 (heirloom-ports) 2021
+libzer.c: * Sccsid @(#)libzer.c	1.3 (heirloom-ports) 2021
+y1.c: * Sccsid @(#)y1.c	1.7 (heirloom-ports) 2021
+y2.c: * Sccsid @(#)y2.c	1.11 (heirloom-ports) 2021
+y3.c: * Sccsid @(#)y3.c	1.5 (heirloom-ports) 2021
+y4.c: * Sccsid @(#)y4.c	1.5 (heirloom-ports) 2021
+y5.c: * Sccsid @(#)y5.c	1.1 (heirloom-ports) 2021
+yaccpar: * Sccsid @(#)yaccpar	1.5 (heirloom-ports) 2021
 */

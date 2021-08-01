@@ -7,7 +7,7 @@
  */
 
 /*	from Unix 7th Edition and Unix 32V sed	*/
-/*	Sccsid @(#)sed.h	1.32 (gritter) 2/6/05	*/
+/*	Sccsid @(#)sed.h	1.32 (heirloom-ports) 2021	*/
 /*
  * Copyright(C) Caldera International Inc. 2001-2002. All rights reserved.
  *

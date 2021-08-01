@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from cmpdate.c 1.2 06/12/12
+ * from cmpdate.c 1.2 2021
  */
 
 /*	from OpenSolaris "cmpdate.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)cmpdate.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)cmpdate.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/cmpdate.c"	*/
 #include <time.h>

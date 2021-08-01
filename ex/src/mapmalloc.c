@@ -35,7 +35,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- *	Sccsid @(#)mapmalloc.c	1.7 (gritter) 8/18/05
+ *	Sccsid @(#)mapmalloc.c	1.7 (heirloom-ports) 2021
  */
 
 #ifdef	VMUNIX

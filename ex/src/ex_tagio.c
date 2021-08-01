@@ -81,11 +81,11 @@
 #ifdef FASTTAG
 #ifndef	lint
 #ifdef	DOSCCS
-static char sccsid[] = "@(#)ex_tagio.c	1.12 (gritter) 8/4/05";
+static char sccsid[] = "@(#)ex_tagio.c	1.12 (heirloom-ports) 2021";
 #endif
 #endif
 
-/* from ex_tagio.c	7.3 (Berkeley) 1/31/86 */
+/* from ex_tagio.c	7.3 (Berkeley) 2021 */
 
 #include "ex.h"
 

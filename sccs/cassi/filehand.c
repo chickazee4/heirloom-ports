@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from filehand.c 1.4 06/12/12
+ * from filehand.c 1.4 2021
  */
 
 /*	from OpenSolaris "filehand.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)filehand.c	1.6 (gritter) 2/26/07
+ * Sccsid @(#)filehand.c	1.6 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/cassi/filehand.c"	*/
 

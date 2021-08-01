@@ -1,7 +1,7 @@
 /*
  * Changes by Gunnar Ritter, Freiburg i. Br., Germany, November 2002.
  *
- * Sccsid @(#)colldata.h	1.5 (gritter) 5/1/04
+ * Sccsid @(#)colldata.h	1.5 (heirloom-ports) 2021
  */
 /*  UNIX(R) Regular Expresssion Library
  *

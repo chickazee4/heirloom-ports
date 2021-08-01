@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)iblok.h	1.5 (gritter) 7/16/04	*/
+/*	Sccsid @(#)iblok.h	1.5 (heirloom-ports) 2021	*/
 
 /*
  * Functions to read a file sequentially.

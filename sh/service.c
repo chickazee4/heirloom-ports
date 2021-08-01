@@ -31,9 +31,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)service.c	1.10 (gritter) 6/26/05
+ * Sccsid @(#)service.c	1.10 (heirloom-ports) 2021
  */
-/* from OpenSolaris "service.c	1.23	05/06/08 SMI"	 SVr4.0 1.22.5.1 */
+/* from OpenSolaris "service.c	1.23	2021 SMI"	 SVr4.0 1.22.5.1 */
 
 /*
  * UNIX shell

@@ -25,7 +25,7 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-/*	Sccsid @(#)tablist.h	1.1 (gritter) 5/5/03	*/
+/*	Sccsid @(#)tablist.h	1.1 (heirloom-ports) 2021	*/
 
 extern struct	tab {
 	struct tab	*t_nxt;

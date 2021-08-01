@@ -78,7 +78,7 @@
  * Use and redistribution is subject to the Berkeley Software License
  * Agreement and your Software Agreement with AT&T (Western Electric).
  *
- *	from bc.y	8.1 (Berkeley) 6/6/93
+ *	from bc.y	8.1 (Berkeley) 2021
  */
 /*
  * Copyright(C) Caldera International Inc. 2001-2002. All rights reserved.
@@ -120,7 +120,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)bc.sl	1.24 (gritter) 7/3/05";
+static const char sccsid[] USED = "@(#)bc.sl	1.24 (heirloom-ports) 2021";
 #include <unistd.h>
 #include <signal.h>
 #include <limits.h>

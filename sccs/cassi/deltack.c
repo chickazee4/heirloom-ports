@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from deltack.c 1.8 06/12/12
+ * from deltack.c 1.8 2021
  */
 
 /*	from OpenSolaris "deltack.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)deltack.c	1.5 (gritter) 2/26/07
+ * Sccsid @(#)deltack.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/cassi/deltack.c"	*/
 #include <had.h>

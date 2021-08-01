@@ -22,12 +22,12 @@
 /*	Copyright (c) 1984, 1986, 1987, 1988, 1989 AT&T	*/
 /*	  All Rights Reserved  	*/
 
-/*	from OpenSolaris "pushlist.c	1.8	05/06/08 SMI"	*/
+/*	from OpenSolaris "pushlist.c	1.8	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)pushlist.c	1.4 (gritter) 6/18/05
+ * Sccsid @(#)pushlist.c	1.4 (heirloom-ports) 2021
  */
 
 #include "mail.h"

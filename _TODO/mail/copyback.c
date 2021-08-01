@@ -22,12 +22,12 @@
 /*	Copyright (c) 1984, 1986, 1987, 1988, 1989 AT&T	*/
 /*	  All Rights Reserved  	*/
 
-/*	from OpenSolaris "copyback.c	1.10	05/06/11 SMI"	*/
+/*	from OpenSolaris "copyback.c	1.10	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)copyback.c	1.8 (gritter) 6/22/05
+ * Sccsid @(#)copyback.c	1.8 (heirloom-ports) 2021
  */
 
 /*

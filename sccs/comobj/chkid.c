@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from chkid.c 1.5 06/12/12
+ * from chkid.c 1.5 2021
  */
 
 /*	from OpenSolaris "chkid.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)chkid.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)chkid.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/chkid.c"	*/
 # include	<ctype.h>

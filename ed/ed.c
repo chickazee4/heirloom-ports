@@ -4,6 +4,7 @@
 
 /*
  * Changes by Gunnar Ritter, Freiburg i. Br., Germany, July 2003.
+ * Additional changes by chickazee4/heirloom-ports project 2021.
  */
 /*	from Unix 32V /usr/src/cmd/ed.c	*/
 /*
@@ -47,15 +48,7 @@
 #else
 #define	USED
 #endif
-#if defined (SU3)
-static const char sccsid[] USED = "@(#)ed_su3.sl	1.99 (gritter) 7/27/06";
-#elif defined (SUS)
-static const char sccsid[] USED = "@(#)ed_sus.sl	1.99 (gritter) 7/27/06";
-#elif defined (S42)
-static const char sccsid[] USED = "@(#)ed_s42.sl	1.99 (gritter) 7/27/06";
-#else	/* !SU3, !SUS, !S42 */
-static const char sccsid[] USED = "@(#)ed.sl	1.99 (gritter) 7/27/06";
-#endif	/* !SU3, !SUS, !S42 */
+static const char sccsid[] USED = "@(#)ed.sl	1.99.1 (heirloom-ports) 2021";
 
 #include <sys/types.h>
 #include <sys/stat.h>

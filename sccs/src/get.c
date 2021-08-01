@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from get.c 1.59 06/12/12
+ * from get.c 1.59 2021
  */
 
 /*	from OpenSolaris "get.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)get.c	1.8 (gritter) 2/13/07
+ * Sccsid @(#)get.c	1.8 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/get.c"	*/
 

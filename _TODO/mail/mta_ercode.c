@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "mta_ercode.c	1.7	05/06/08 SMI"	*/
+/*	from OpenSolaris "mta_ercode.c	1.7	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)mta_ercode.c	1.3 (gritter) 6/18/05
+ * Sccsid @(#)mta_ercode.c	1.3 (heirloom-ports) 2021
  */
 	 	/* SVr4.0 2.	*/
 #include "mail.h"

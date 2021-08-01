@@ -33,9 +33,9 @@
 #define	USED
 #endif
 #ifndef	UCB
-static const char sccsid[] USED = "@(#)stty.sl	1.23 (gritter) 1/22/06";
+static const char sccsid[] USED = "@(#)stty.sl	1.23 (heirloom-ports) 2021";
 #else	/* UCB */
-static const char sccsid[] USED = "@(#)/usr/ucb/stty.sl	1.23 (gritter) 1/22/06";
+static const char sccsid[] USED = "@(#)/usr/ucb/stty.sl	1.23 (heirloom-ports) 2021";
 #endif	/* UCB */
 
 #include <sys/types.h>

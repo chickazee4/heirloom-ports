@@ -28,12 +28,12 @@
  * All rights reserved.
  */
 
-/*	from OpenSolaris "skipspace.c	1.9	05/06/08 SMI"		SVr4.0 1.5		*/
+/*	from OpenSolaris "skipspace.c	1.9	2021 SMI"		SVr4.0 1.5		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)skipspace.c	1.4 (gritter) 7/3/05
+ * Sccsid @(#)skipspace.c	1.4 (heirloom-ports) 2021
  */
 /*LINTLIBRARY*/
 

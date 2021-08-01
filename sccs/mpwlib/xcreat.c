@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from xcreat.c 1.8 06/12/12
+ * from xcreat.c 1.8 2021
  */
 
 /*	from OpenSolaris "xcreat.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)xcreat.c	1.4 (gritter) 01/18/07
+ * Sccsid @(#)xcreat.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/mpwlib/xcreat.c"	*/
 # include	<defines.h>

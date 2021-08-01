@@ -28,12 +28,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "m4macs.c	6.15	05/06/08 SMI"	*/
+/*	from OpenSolaris "m4macs.c	6.15	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)m4macs.c	1.6 (gritter) 11/2/08
+ * Sccsid @(#)m4macs.c	1.6 (heirloom-ports) 2021
  */
 
 #include	<inttypes.h>

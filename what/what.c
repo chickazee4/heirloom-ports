@@ -26,7 +26,7 @@
  * Use is subject to license terms.
  */
 /*
- * from what.c 1.11 06/12/12
+ * from what.c 1.11 2021
  */
 
 /*	from OpenSolaris "what.c"	*/
@@ -34,7 +34,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)what.c	1.12 (gritter) 4/14/07
+ * Sccsid @(#)what.c	1.12 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/what.c"	*/
 
@@ -45,7 +45,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)what.sl	1.12 (gritter) 4/14/07";
+static const char sccsid[] USED = "@(#)what.sl	1.12.1 (heirloom-ports) 2021";
 
 #include <stdio.h>
 #include <stdlib.h>

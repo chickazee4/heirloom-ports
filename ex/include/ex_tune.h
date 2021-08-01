@@ -70,9 +70,9 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- *	from ex_tune.h	7.8.1 (2.11BSD) 1996/10/23
+ *	from ex_tune.h	7.8.1 (2.11BSD) 192021
  *
- *	Sccsid @(#)ex_tune.h	1.14 (gritter) 8/4/05
+ *	Sccsid @(#)ex_tune.h	1.14 (heirloom-ports) 2021
  */
 
 /*

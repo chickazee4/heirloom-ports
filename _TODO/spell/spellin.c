@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "spellin.c	1.12	05/06/08 SMI"	 SVr4.0 1.4		*/
+/*	from OpenSolaris "spellin.c	1.12	2021 SMI"	 SVr4.0 1.4		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)spellin.c	2.4 (gritter) 4/16/06
+ * Sccsid @(#)spellin.c	2.4 (heirloom-ports) 2021
  */
 #include <unistd.h>
 #include <stdlib.h>

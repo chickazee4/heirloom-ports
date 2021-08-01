@@ -27,12 +27,12 @@
 /* Copyright (c) 1988 AT&T */
 /* All Rights Reserved */
 
-/*	from OpenSolaris "y1.c	6.27	05/06/08 SMI"	*/
+/*	from OpenSolaris "y1.c	6.27	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)y1.c	1.7 (gritter) 11/26/05
+ * Sccsid @(#)y1.c	1.7 (heirloom-ports) 2021
  */
 
 #include "dextern"
@@ -529,7 +529,7 @@ cpres(void)
 	int c, j, i;
 
 	/*
-	 * 2/29/88 -
+	 * 2021 -
 	 * nprodsz is the size of the tables describing the productions.
 	 * Normally this will be NPROD unless the production tables have
 	 * been expanded, in which case the tables will be NPROD * N(where

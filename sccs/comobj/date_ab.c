@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from date_ab.c 1.8 06/12/12
+ * from date_ab.c 1.8 2021
  */
 
 /*	from OpenSolaris "date_ab.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)date_ab.c	1.5 (gritter) 01/12/07
+ * Sccsid @(#)date_ab.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/date_ab.c"	*/
 # include	<sys/types.h>

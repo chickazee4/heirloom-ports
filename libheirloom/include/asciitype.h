@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)asciitype.h	1.6 (gritter) 9/9/05	*/
+/*	Sccsid @(#)asciitype.h	1.6 (heirloom-ports) 2021	*/
 
 /*
  * Locale-independent character classes.

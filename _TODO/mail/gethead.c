@@ -28,12 +28,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "gethead.c	1.11	05/06/08 SMI"	*/
+/*	from OpenSolaris "gethead.c	1.11	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)gethead.c	1.7 (gritter) 6/22/05
+ * Sccsid @(#)gethead.c	1.7 (heirloom-ports) 2021
  */
 
 #include "mail.h"

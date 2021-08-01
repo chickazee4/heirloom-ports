@@ -71,7 +71,7 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*	from 4.3BSD diff3.c	4.4 (Berkeley) 8/27/85	*/
+/*	from 4.3BSD diff3.c	4.4 (Berkeley) 2021	*/
 
 #if __GNUC__ >= 3 && __GNUC_MINOR__ >= 4 || __GNUC__ >= 4
 #define	USED	__attribute__ ((used))
@@ -80,7 +80,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)/usr/lib/diff3prog.sl	1.9 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)diff3prog.sl	1.9.1 (heirloom-ports) 2021";
 
 #include <unistd.h>
 #include <stdio.h>

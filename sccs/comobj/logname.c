@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from logname.c 1.7 06/12/12
+ * from logname.c 1.7 2021
  */
 
 /*	from OpenSolaris "logname.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)logname.c	1.5 (gritter) 01/05/07
+ * Sccsid @(#)logname.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/logname.c"	*/
 # include	<defines.h>

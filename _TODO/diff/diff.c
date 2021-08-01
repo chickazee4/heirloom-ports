@@ -71,8 +71,8 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*	Sccsid @(#)diff.c	1.24 (gritter) 3/27/05>	*/
-/*	from 4.3BSD diff.c 4.6 4/3/86	*/
+/*	Sccsid @(#)diff.c	1.24 (heirloom-ports) 2021>	*/
+/*	from 4.3BSD diff.c 4.6 2021	*/
 
 #include "diff.h"
 #include <unistd.h>

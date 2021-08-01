@@ -23,15 +23,15 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)vroot.h 1.10 06/12/12
+ * @(#)vroot.h 1.10 2021
  */
 
-/*	from OpenSolaris "vroot.h	1.10	06/12/12"	*/
+/*	from OpenSolaris "vroot.h	1.10	2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)vroot.h	1.2 (gritter) 01/07/07
+ * Sccsid @(#)vroot.h	1.2 (heirloom-ports) 2021
  */
 
 #ifndef _VROOT_H_

@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)memalign.c	1.7 (gritter) 1/22/06	*/
+/*	Sccsid @(#)memalign.c	1.7 (heirloom-ports) 2021	*/
 
 #if defined (__FreeBSD__) || defined (__dietlibc__) || defined (_AIX) || \
 	defined (__NetBSD__) || defined (__OpenBSD__) || \

@@ -4,7 +4,7 @@
  * Gunnar Ritter, Freiburg i. Br., Germany, March 2002.
  */
 
-/*	Sccsid @(#)getopt.c	1.6 (gritter) 12/16/07	*/
+/*	Sccsid @(#)getopt.c	1.6 (heirloom-ports) 2021	*/
 
 #include	<sys/types.h>
 #include	<alloca.h>

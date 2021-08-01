@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)memalign.h	1.7 (gritter) 1/22/06	*/
+/*	Sccsid @(#)memalign.h	1.7 (heirloom-ports) 2021	*/
 
 #ifndef	LIBCOMMON_MEMALIGN_H
 #define	LIBCOMMON_MEMALIGN_H

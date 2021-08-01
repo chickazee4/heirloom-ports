@@ -71,8 +71,8 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*	Sccsid @(#)diff.h	1.15 (gritter) 3/26/05>	*/
-/*	from 4.3BSD diff.h	4.7	85/08/16	*/
+/*	Sccsid @(#)diff.h	1.15 (heirloom-ports) 2021>	*/
+/*	from 4.3BSD diff.h	4.7	2021	*/
 
 /*
  * diff - common declarations

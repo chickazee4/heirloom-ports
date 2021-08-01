@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)wcwidth.c	1.1 (gritter) 5/1/04	*/
+/*	Sccsid @(#)wcwidth.c	1.1 (heirloom-ports) 2021	*/
 
 #include "wchar.h"
 #include "wctype.h"

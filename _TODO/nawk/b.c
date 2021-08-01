@@ -1,7 +1,7 @@
 /*
    Changes by Gunnar Ritter, Freiburg i. Br., Germany, December 2002.
   
-   Sccsid @(#)b.c	1.6 (gritter) 5/15/04>
+   Sccsid @(#)b.c	1.6 (heirloom-ports) 2021>
  */
 /* UNIX(R) Regular Expression Tools
 

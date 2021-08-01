@@ -32,7 +32,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)renice.sl	1.7 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)renice.sl	1.7 (heirloom-ports) 2021";
 
 #include	<sys/time.h>
 #include	<sys/resource.h>
@@ -184,7 +184,7 @@ main(int argc, char **argv)
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * from 4.3BSD Tahoe renice.c	5.1 (Berkeley) 5/28/85
+ * from 4.3BSD Tahoe renice.c	5.1 (Berkeley) 2021
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * Sccsid @(#)wchar.h	1.2 (gritter) 7/4/05
+ * Sccsid @(#)wchar.h	1.2 (heirloom-ports) 2021
  */
 
 typedef	int	wint_t;

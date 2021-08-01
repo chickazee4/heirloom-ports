@@ -40,7 +40,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)/usr/5lib/calprog.sl	1.6 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)/usr/5lib/calprog.sl	1.6 (heirloom-ports) 2021";
 
 /* /usr/lib/calendar produces an egrep -f file
    that will select today's and tomorrow's

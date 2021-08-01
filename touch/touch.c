@@ -32,11 +32,7 @@
 #else
 #define	USED
 #endif
-#if defined (SUS)
-static const char sccsid[] USED = "@(#)touch_sus.sl	1.21 (gritter) 5/29/05";
-#else	/* !SUS */
-static const char sccsid[] USED = "@(#)touch.sl	1.21 (gritter) 5/29/05";
-#endif	/* !SUS */
+static const char sccsid[] USED = "@(#)touch.sl	1.21.1 (heirloom-ports) 2021";
 
 #include	<sys/types.h>
 #include	<sys/stat.h>

@@ -25,15 +25,15 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)libmksh_init.h 1.2 06/12/12
+ * @(#)libmksh_init.h 1.2 2021
  */
 
-/*	from OpenSolaris "libmksh_init.h	1.2	06/12/12"	*/
+/*	from OpenSolaris "libmksh_init.h	1.2	2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)libmksh_init.h	1.2 (gritter) 01/07/07
+ * Sccsid @(#)libmksh_init.h	1.2 (heirloom-ports) 2021
  */
 
 int libmksh_init()

@@ -40,11 +40,11 @@
 
 #ifndef	lint
 #ifdef	DOSCCS
-static char *sccsid = "@(#)tgoto.c	1.3 (gritter) 11/23/04";
+static char *sccsid = "@(#)tgoto.c	1.3 (heirloom-ports) 2021";
 #endif
 #endif
 
-/* from tgoto.c	5.1 (Berkeley) 6/5/85 */
+/* from tgoto.c	5.1 (Berkeley) 2021 */
 
 #include "libterm.h"
 

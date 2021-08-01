@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from dofile.c 1.12 06/12/12
+ * from dofile.c 1.12 2021
  */
 
 /*	from OpenSolaris "dofile.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)dofile.c	1.5 (gritter) 12/25/06
+ * Sccsid @(#)dofile.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/dofile.c"	*/
 # include	<defines.h>

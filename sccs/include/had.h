@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from had.h 1.4 06/12/12
+ * from had.h 1.4 2021
  */
 
 /*	from OpenSolaris "had.h"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)had.h	1.3 (gritter) 12/20/06
+ * Sccsid @(#)had.h	1.3 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:hdr/had.h"	*/
 /*

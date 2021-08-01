@@ -28,12 +28,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "sendmail.c	1.19	05/06/08 SMI"	*/
+/*	from OpenSolaris "sendmail.c	1.19	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)sendmail.c	1.10 (gritter) 5/14/06
+ * Sccsid @(#)sendmail.c	1.10 (heirloom-ports) 2021
  */
 
 #include "mail.h"

@@ -23,12 +23,12 @@
  * Use is subject to license terms.
  */
 /*
- * from had.c 1.3 06/12/12
+ * from had.c 1.3 2021
  */
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)had.c	1.3 (gritter) 12/20/06
+ * Sccsid @(#)had.c	1.3 (heirloom-ports) 2021
  */
 
 # include	<had.h>

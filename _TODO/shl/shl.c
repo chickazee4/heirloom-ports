@@ -30,7 +30,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)shl.sl	1.29 (gritter) 12/25/06";
+static const char sccsid[] USED = "@(#)shl.sl	1.29 (heirloom-ports) 2021";
 
 #if !defined (__FreeBSD__) && !defined (__hpux) && !defined (_AIX) && \
 	!defined (__NetBSD__) && !defined (__OpenBSD__) && \

@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "parse.c	1.10	05/06/08 SMI" 	 SVr4.0 2.1		*/
+/*	from OpenSolaris "parse.c	1.10	2021 SMI" 	 SVr4.0 2.1		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)parse.c	1.5 (gritter) 6/22/05
+ * Sccsid @(#)parse.c	1.5 (heirloom-ports) 2021
  */
 #include "mail.h"
 /*

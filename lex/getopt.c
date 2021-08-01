@@ -26,9 +26,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)getopt.c	1.10 (gritter) 12/16/07
+ * Sccsid @(#)getopt.c	1.10 (heirloom-ports) 2021
  */
-/* from OpenSolaris "getopt.c	1.23	05/06/08 SMI" */
+/* from OpenSolaris "getopt.c	1.23	2021 SMI" */
 
 /*	Copyright (c) 1988 AT&T	*/
 /*	  All Rights Reserved  	*/

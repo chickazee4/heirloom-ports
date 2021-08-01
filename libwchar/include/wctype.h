@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)wctype.h	1.1 (gritter) 5/1/04	*/
+/*	Sccsid @(#)wctype.h	1.1 (heirloom-ports) 2021	*/
 
 #ifndef	LIBWCHAR_WCTYPE_H
 #define	LIBWCHAR_WCTYPE_H	1

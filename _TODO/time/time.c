@@ -33,9 +33,9 @@
 #define	USED
 #endif
 #ifdef	PTIME
-static const char sccsid[] USED = "@(#)ptime.sl	1.30 (gritter) 12/19/08";
+static const char sccsid[] USED = "@(#)ptime.sl	1.30 (heirloom-ports) 2021";
 #else
-static const char sccsid[] USED = "@(#)time.sl	1.30 (gritter) 12/19/08";
+static const char sccsid[] USED = "@(#)time.sl	1.30 (heirloom-ports) 2021";
 #endif
 
 #include	<sys/types.h>

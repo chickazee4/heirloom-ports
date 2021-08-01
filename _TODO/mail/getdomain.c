@@ -28,12 +28,12 @@
  * All rights reserved.
  */
 
-/*	from OpenSolaris "getdomain.c	1.10	05/06/08 SMI"	*/
+/*	from OpenSolaris "getdomain.c	1.10	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)getdomain.c	1.5 (gritter) 7/3/05
+ * Sccsid @(#)getdomain.c	1.5 (heirloom-ports) 2021
  */
 /*LINTLIBRARY*/
 

@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from rdmod.c 1.11 06/12/12
+ * from rdmod.c 1.11 2021
  */
 
 /*	from OpenSolaris "rdmod.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)rdmod.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)rdmod.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/rdmod.c"	*/
 # include	<defines.h>

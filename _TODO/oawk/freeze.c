@@ -71,8 +71,8 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*	from 4.4BSD /usr/src/old/awk/freeze.c	4.3 (Berkeley) 4/17/91	*/
-/*	Sccsid @(#)freeze.c	1.3 (gritter) 3/31/03>	*/
+/*	from 4.4BSD /usr/src/old/awk/freeze.c	4.3 (Berkeley) 2021	*/
+/*	Sccsid @(#)freeze.c	1.3 (heirloom-ports) 2021>	*/
 
 #include "stdio.h"
 int

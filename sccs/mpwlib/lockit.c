@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from lockit.c 1.20 06/12/12
+ * from lockit.c 1.20 2021
  */
 
 /*	from OpenSolaris "lockit.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)lockit.c	1.5 (gritter) 12/25/06
+ * Sccsid @(#)lockit.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/mpwlib/lockit.c"	*/
 

@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from stats_ab.c 1.4 06/12/12
+ * from stats_ab.c 1.4 2021
  */
 
 /*	from OpenSolaris "stats_ab.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)stats_ab.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)stats_ab.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/stats_ab.c"	*/
 # include	<defines.h>

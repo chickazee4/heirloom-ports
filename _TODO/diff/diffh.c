@@ -78,9 +78,9 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)diffh.sl	1.11 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)diffh.sl	1.11 (heirloom-ports) 2021";
 
-/*	from 4.3BSD diffh.c 4.4 11/27/85>	*/
+/*	from 4.3BSD diffh.c 4.4 2021>	*/
 
 #include <stdio.h>
 #include <ctype.h>

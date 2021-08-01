@@ -28,12 +28,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "libmai.c	6.9	05/06/08 SMI"	*/
+/*	from OpenSolaris "libmai.c	6.9	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)libmai.c	1.3 (gritter) 6/18/05
+ * Sccsid @(#)libmai.c	1.3 (heirloom-ports) 2021
  */
 
 #include <locale.h>

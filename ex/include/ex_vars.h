@@ -1,4 +1,4 @@
-	/* sccs id   @(#)ex_vars.h makeoptions	1.8 (gritter) 7/1/02 */
+	/* sccs id   @(#)ex_vars.h makeoptions	1.8 (heirloom-ports) 2021 */
 #define AUTOINDENT      0
 #define AUTOPRINT       1
 #define AUTOWRITE       2

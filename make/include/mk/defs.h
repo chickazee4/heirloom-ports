@@ -25,15 +25,15 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)defs.h 1.61 06/12/12
+ * @(#)defs.h 1.61 2021
  */
 
-/*	from OpenSolaris "defs.h	1.61	06/12/12"	*/
+/*	from OpenSolaris "defs.h	1.61	2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)defs.h	1.10 (gritter) 8/7/10
+ * Sccsid @(#)defs.h	1.10 (heirloom-ports) 2021
  */
 
 /*

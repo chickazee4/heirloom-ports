@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from vc.c 1.6 06/12/12
+ * from vc.c 1.6 2021
  */
 
 /*	from OpenSolaris "vc.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)vc.c	1.4 (gritter) 3/25/07
+ * Sccsid @(#)vc.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/vc.c"	*/
 # include	<defines.h>

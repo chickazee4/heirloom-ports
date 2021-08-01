@@ -28,12 +28,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "yyless.c	6.14	05/06/08 SMI"	*/
+/*	from OpenSolaris "yyless.c	6.14	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)yyless.c	1.6 (gritter) 11/27/05
+ * Sccsid @(#)yyless.c	1.6 (heirloom-ports) 2021
  */
 
 #include <stdlib.h>

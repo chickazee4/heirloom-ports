@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "reject.c	6.10	05/06/08 SMI"	*/
+/*	from OpenSolaris "reject.c	6.10	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)reject.c	1.4 (gritter) 11/27/05
+ * Sccsid @(#)reject.c	1.4 (heirloom-ports) 2021
  */
 
 #include <stdio.h>

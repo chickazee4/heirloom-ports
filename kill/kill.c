@@ -26,7 +26,7 @@
  */
 
 /*
- * Sccsid @(#)kill.c	1.2 (gritter) 6/30/05
+ * Sccsid @(#)kill.c	1.2 (heirloom-ports) 2021
  */
 
 #include <stdio.h>

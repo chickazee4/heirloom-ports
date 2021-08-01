@@ -27,12 +27,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "main.c	1.16	05/06/08 SMI"	*/
+/*	from OpenSolaris "main.c	1.16	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)main.c	1.11 (gritter) 7/3/05
+ * Sccsid @(#)main.c	1.11 (heirloom-ports) 2021
  */
 
 #include "mail.h"

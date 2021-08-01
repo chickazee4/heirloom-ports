@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from xopen.c 1.8 06/12/12
+ * from xopen.c 1.8 2021
  */
 
 /*	from OpenSolaris "xopen.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)xopen.c	1.3 (gritter) 12/20/06
+ * Sccsid @(#)xopen.c	1.3 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/mpwlib/xopen.c"	*/
 /*

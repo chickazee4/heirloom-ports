@@ -45,11 +45,11 @@
 #define	USED
 #endif
 #if defined (SU3)
-static const char sccsid[] USED = "@(#)find_su3.sl	1.45 (gritter) 5/8/06";
+static const char sccsid[] USED = "@(#)find_su3.sl	1.45 (heirloom-ports) 2021";
 #elif defined (SUS)
-static const char sccsid[] USED = "@(#)find_sus.sl	1.45 (gritter) 5/8/06";
+static const char sccsid[] USED = "@(#)find_sus.sl	1.45 (heirloom-ports) 2021";
 #else
-static const char sccsid[] USED = "@(#)find.sl	1.45 (gritter) 5/8/06";
+static const char sccsid[] USED = "@(#)find.sl	1.45 (heirloom-ports) 2021";
 #endif
 
 #include <stdio.h>

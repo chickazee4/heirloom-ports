@@ -32,7 +32,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)whoami.sl	1.3 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)whoami.sl	1.3 (heirloom-ports) 2021";
 
 #include <stdio.h>
 #include <pwd.h>

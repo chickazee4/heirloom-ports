@@ -23,15 +23,15 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)avo_alloca.h 1.4 06/12/12
+ * @(#)avo_alloca.h 1.4 2021
  */
 
-/*	from OpenSolaris "avo_alloca.h 1.4     06/12/12"	*/
+/*	from OpenSolaris "avo_alloca.h 1.4     2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)avo_alloca.h	1.4 (gritter) 01/21/07
+ * Sccsid @(#)avo_alloca.h	1.4 (heirloom-ports) 2021
  */
 
 #ifndef _AVO_ALLOCA_H

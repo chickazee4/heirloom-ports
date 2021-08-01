@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from unget.c 1.24 06/12/12
+ * from unget.c 1.24 2021
  */
 
 /*	from OpenSolaris "unget.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)unget.c	1.6 (gritter) 01/21/07
+ * Sccsid @(#)unget.c	1.6 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/unget.c"	*/
 # include	<defines.h>

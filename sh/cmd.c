@@ -31,9 +31,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)cmd.c	1.4 (gritter) 6/15/05
+ * Sccsid @(#)cmd.c	1.4 (heirloom-ports) 2021
  */
-/* from OpenSolaris "cmd.c	1.14	05/06/08 SMI"	 SVr4.0 1.12.1.4 */
+/* from OpenSolaris "cmd.c	1.14	2021 SMI"	 SVr4.0 1.12.1.4 */
 /*
  * UNIX shell
  */

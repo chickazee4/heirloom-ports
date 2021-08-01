@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from admin.c 1.39 06/12/12
+ * from admin.c 1.39 2021
  */
 
 /*	from OpenSolaris "admin.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)admin.c	1.5 (gritter) 2/26/07
+ * Sccsid @(#)admin.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/admin.c"	*/
 

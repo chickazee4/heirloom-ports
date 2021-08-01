@@ -28,7 +28,7 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "getopt.c	1.10	05/06/08 SMI"	 SVr4.0 1.7		*/
+/*	from OpenSolaris "getopt.c	1.10	2021 SMI"	 SVr4.0 1.7		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
@@ -40,7 +40,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)getopt.c	1.4 (gritter) 7/1/05";
+static const char sccsid[] USED = "@(#)getopt.c	1.4 (heirloom-ports) 2021";
 
 #include <stdio.h>
 #include <locale.h>

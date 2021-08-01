@@ -25,15 +25,15 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)misc.h 1.4 06/12/12
+ * @(#)misc.h 1.4 2021
  */
 
-/*	from OpenSolaris "misc.h	1.4	06/12/12"	*/
+/*	from OpenSolaris "misc.h	1.4	2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)misc.h	1.2 (gritter) 01/07/07
+ * Sccsid @(#)misc.h	1.2 (heirloom-ports) 2021
  */
 
 #include <mksh/defs.h>

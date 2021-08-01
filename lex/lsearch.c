@@ -24,12 +24,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "lsearch.c	1.15	05/06/08 SMI"	*/
+/*	from OpenSolaris "lsearch.c	1.15	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)lsearch.c	1.4 (gritter) 11/26/05
+ * Sccsid @(#)lsearch.c	1.4 (heirloom-ports) 2021
  */
 
 /*	Copyright (c) 1988 AT&T	*/

@@ -3,7 +3,7 @@
  * systems. Check whether isblank was defined, and assume it is
  * not available if not.
  */
-/*	Sccsid @(#)blank.h	1.3 (gritter) 5/1/04	*/
+/*	Sccsid @(#)blank.h	1.3 (heirloom-ports) 2021	*/
 
 #ifndef	__dietlibc__
 #ifndef	LIBCOMMON_BLANK_H

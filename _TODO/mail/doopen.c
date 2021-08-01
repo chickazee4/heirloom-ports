@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "doopen.c	1.8	05/06/08 SMI" 	 SVr4.0 2.		*/
+/*	from OpenSolaris "doopen.c	1.8	2021 SMI" 	 SVr4.0 2.		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)doopen.c	1.5 (gritter) 5/14/06
+ * Sccsid @(#)doopen.c	1.5 (heirloom-ports) 2021
  */
 #include "mail.h"
 /*

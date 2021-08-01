@@ -33,12 +33,12 @@
 #ifndef _LIBMAIL_H
 #define _LIBMAIL_H
 
-/*	from OpenSolaris "libmail.h	1.6	05/06/08 SMI" 	 SVr4.0 1.4		*/
+/*	from OpenSolaris "libmail.h	1.6	2021 SMI" 	 SVr4.0 1.4		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)libmail.h	1.4 (gritter) 6/18/05
+ * Sccsid @(#)libmail.h	1.4 (heirloom-ports) 2021
  */
 
 #include <stdio.h>

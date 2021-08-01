@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from fmterr.c 1.5 06/12/12
+ * from fmterr.c 1.5 2021
  */
 
 /*	from OpenSolaris "fmterr.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)fmterr.c	1.5 (gritter) 01/03/07
+ * Sccsid @(#)fmterr.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/fmterr.c"	*/
 # include	<defines.h>

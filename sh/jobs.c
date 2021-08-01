@@ -31,9 +31,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)jobs.c	1.13 (gritter) 6/23/05
+ * Sccsid @(#)jobs.c	1.13 (heirloom-ports) 2021
  */
-/* from OpenSolaris "jobs.c	1.25	05/06/08 SMI" */
+/* from OpenSolaris "jobs.c	1.25	2021 SMI" */
 /*
  * Job control for UNIX Shell
  */

@@ -1,0 +1,6 @@
+add_executable(basename basename.c)
+target_link_libraries(basename heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(basename PROPERTIES PREFIX "h")
+endif()
+install(TARGETS basename)

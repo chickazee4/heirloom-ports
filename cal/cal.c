@@ -40,7 +40,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)cal.sl	1.12 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)cal.sl	1.12.1 (heirloom-ports) 2021";
 
 #include	<unistd.h>
 #include	<time.h>

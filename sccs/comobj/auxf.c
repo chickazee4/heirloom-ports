@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from auxf.c 1.5 06/12/12
+ * from auxf.c 1.5 2021
  */
 
 /*	from OpenSolaris "auxf.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)auxf.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)auxf.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/auxf.c"	*/
 # include	<defines.h>

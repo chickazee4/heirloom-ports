@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)sfile.c	1.9 (gritter) 6/7/04	*/
+/*	Sccsid @(#)sfile.c	1.9 (heirloom-ports) 2021	*/
 
 #ifdef	__linux__
 #undef	_FILE_OFFSET_BITS

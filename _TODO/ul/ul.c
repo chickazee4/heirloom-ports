@@ -43,7 +43,7 @@
  * SUCH DAMAGE.
  */
 
-/*	from 4.3BSD ul.c	5.1 (Berkeley) 5/31/85	*/
+/*	from 4.3BSD ul.c	5.1 (Berkeley) 2021	*/
 
 #if __GNUC__ >= 3 && __GNUC_MINOR__ >= 4 || __GNUC__ >= 4
 #define	USED	__attribute__ ((used))
@@ -52,7 +52,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)ul.sl	1.13 (gritter) 5/27/07";
+static const char sccsid[] USED = "@(#)ul.sl	1.13 (heirloom-ports) 2021";
 
 #ifndef	USE_TERMCAP
 #include <curses.h>

@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "yywrap.c	6.4	05/06/08 SMI"	*/
+/*	from OpenSolaris "yywrap.c	6.4	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)yywrap.c	1.3 (gritter) 6/18/05
+ * Sccsid @(#)yywrap.c	1.3 (heirloom-ports) 2021
  */
 
 #if defined(__cplusplus) || defined(__STDC__)

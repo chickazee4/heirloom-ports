@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from strptim.c 1.7 06/12/12
+ * from strptim.c 1.7 2021
  */
 
 /*	from OpenSolaris "strptime.c"	*/
@@ -33,13 +33,13 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)strptim.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)strptim.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/strptime.c"	*/
 #include <defines.h>
 
 /*
- * We assume that p looks like: "91/04/13 23:23:46" if val = 1
+ * We assume that p looks like: "2021 23:23:46" if val = 1
  */
 
 int
@@ -54,7 +54,7 @@ mystrptime(char *p, struct tm *t, int val)
 	 * If 'year' field is less than 70 then we actually have 
 	 * 21-st century. Add 100 to the t->tm_year because 
 	 * tm_year should be a year since 1900.
-	 * For example, the string 02/09/05 should give tm_year
+	 * For example, the string 2021 should give tm_year
 	 * equal to 102, not 2.
 	 */
 	memset(t, 0, sizeof(*t));

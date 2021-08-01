@@ -70,7 +70,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- *	@(#)config.h	1.13 (gritter) 8/4/05
+ *	@(#)config.h	1.13 (heirloom-ports) 2021
  */
 
 /*

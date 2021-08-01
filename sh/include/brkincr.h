@@ -25,10 +25,10 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)brkincr.h	1.4 (gritter) 6/15/05
+ * Sccsid @(#)brkincr.h	1.4 (heirloom-ports) 2021
  */
 
-/* from OpenSolaris "brkincr.h	1.7	05/06/08 SMI"	 SVr4.0 1.5 */
+/* from OpenSolaris "brkincr.h	1.7	2021 SMI"	 SVr4.0 1.5 */
 /*	3.0 SID #	1.1	*/
 #define BRKINCR 01000
 #define BRKMAX 04000

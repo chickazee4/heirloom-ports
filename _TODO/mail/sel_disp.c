@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "sel_disp.c	1.7	05/06/08 SMI" 	*/
+/*	from OpenSolaris "sel_disp.c	1.7	2021 SMI" 	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)sel_disp.c	1.3 (gritter) 6/18/05
+ * Sccsid @(#)sel_disp.c	1.3 (heirloom-ports) 2021
  */
 
 #include "mail.h"

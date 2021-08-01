@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from newstats.c 1.3 06/12/12
+ * from newstats.c 1.3 2021
  */
 
 /*	from OpenSolaris "newstats.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)newstats.c	1.5 (gritter) 12/25/06
+ * Sccsid @(#)newstats.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/newstats.c"	*/
 # include	<defines.h>

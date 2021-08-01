@@ -23,15 +23,15 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)args.h 1.7 06/12/12
+ * @(#)args.h 1.7 2021
  */
 
-/*	from OpenSolaris "args.h	1.7	06/12/12"	*/
+/*	from OpenSolaris "args.h	1.7	2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)args.h	1.4 (gritter) 01/23/07
+ * Sccsid @(#)args.h	1.4 (heirloom-ports) 2021
  */
 
 #ifndef _ARGS_H_

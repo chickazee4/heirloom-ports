@@ -40,11 +40,11 @@
 
 #ifndef	lint
 #ifdef	DOSCCS
-static char *sccsid = "@(#)termcap.c	1.7 (gritter) 11/23/04";
+static char *sccsid = "@(#)termcap.c	1.7 (heirloom-ports) 2021";
 #endif
 #endif
 
-/* from termcap.c	5.1 (Berkeley) 6/5/85 */
+/* from termcap.c	5.1 (Berkeley) 2021 */
 
 #if 0	/* GR */
 #define	TCBUFSIZE		1024
@@ -406,5 +406,5 @@ nextc:
 }
 
 /*
-static const char sccssl[] = "@(#)libterm.sl	1.7 (gritter) 11/23/04";
+static const char sccssl[] = "@(#)libterm.sl	1.7 (heirloom-ports) 2021";
 */

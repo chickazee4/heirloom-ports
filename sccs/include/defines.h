@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from defines.h 1.21 06/12/12
+ * from defines.h 1.21 2021
  */
 
 /*	from OpenSolaris "defines.h"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)defines.h	1.5 (gritter) 12/25/06
+ * Sccsid @(#)defines.h	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:hdr/defines.h"	*/
 # include	<sys/types.h>

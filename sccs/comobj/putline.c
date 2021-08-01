@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from putline.c 1.13 06/12/12
+ * from putline.c 1.13 2021
  */
 
 /*	from OpenSolaris "putline.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)putline.c	1.5 (gritter) 12/20/06
+ * Sccsid @(#)putline.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/putline.c"	*/
 # include	<defines.h>

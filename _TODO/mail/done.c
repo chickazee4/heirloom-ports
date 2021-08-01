@@ -27,12 +27,12 @@
 /*	Copyright (c) 1984, 1986, 1987, 1988, 1989 AT&T	*/
 /*	  All Rights Reserved  	*/
 
-/*	from OpenSolaris "done.c	1.10	05/06/08 SMI"	*/
+/*	from OpenSolaris "done.c	1.10	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)done.c	1.5 (gritter) 6/22/05
+ * Sccsid @(#)done.c	1.5 (heirloom-ports) 2021
  */
 
 #include "mail.h"

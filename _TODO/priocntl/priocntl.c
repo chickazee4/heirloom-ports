@@ -34,9 +34,9 @@
 #define	USED
 #endif
 #if defined (S42)
-static const char sccsid[] USED = "@(#)priocntl_s42.sl	1.19 (gritter) 7/23/06";
+static const char sccsid[] USED = "@(#)priocntl_s42.sl	1.19 (heirloom-ports) 2021";
 #else
-static const char sccsid[] USED = "@(#)priocntl.sl	1.19 (gritter) 7/23/06";
+static const char sccsid[] USED = "@(#)priocntl.sl	1.19 (heirloom-ports) 2021";
 #endif
 
 #include	<sys/time.h>

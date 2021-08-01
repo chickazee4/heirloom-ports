@@ -23,14 +23,14 @@
  * Use is subject to license terms.
  */
 /*
- * from sccs.c 1.85 06/12/12
+ * from sccs.c 1.85 2021
  */
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)sccs.c	1.14 (gritter) 2/25/07
+ * Sccsid @(#)sccs.c	1.14 (heirloom-ports) 2021
  */
-/*	from sccs.c 1.2 2/27/90	*/
+/*	from sccs.c 1.2 2021	*/
 # include	<i18n.h>
 # include	<defines.h>
 # include	<stdlib.h>

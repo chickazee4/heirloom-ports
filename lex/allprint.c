@@ -27,12 +27,12 @@
 /*	Copyright (c) 1989 AT&T	*/
 /*	  All Rights Reserved  	*/
 
-/*	from OpenSolaris "allprint.c	6.11	05/06/08 SMI"	*/
+/*	from OpenSolaris "allprint.c	6.11	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)allprint.c	1.4 (gritter) 11/27/05
+ * Sccsid @(#)allprint.c	1.4 (heirloom-ports) 2021
  */
 
 #include <stdio.h>

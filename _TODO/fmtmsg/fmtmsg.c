@@ -24,12 +24,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "fmtmsg.c	1.16	05/06/08 SMI"	*/
+/*	from OpenSolaris "fmtmsg.c	1.16	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)fmtmsg.c	1.3 (gritter) 6/26/05
+ * Sccsid @(#)fmtmsg.c	1.3 (heirloom-ports) 2021
  */
 
 /*	Copyright (c) 1988 AT&T	*/

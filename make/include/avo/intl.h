@@ -23,15 +23,15 @@
  * Use is subject to license terms.
  */
 /*
- * @(#)intl.h 1.19 06/12/12
+ * @(#)intl.h 1.19 2021
  */
 
-/*	from OpenSolaris "intl.h	1.19	06/12/12"	*/
+/*	from OpenSolaris "intl.h	1.19	2021"	*/
 
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)intl.h	1.3 (gritter) 01/13/07
+ * Sccsid @(#)intl.h	1.3 (heirloom-ports) 2021
  */
 
 #ifndef _AVO_INTL_H

@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from flushto.c 1.3 06/12/12
+ * from flushto.c 1.3 2021
  */
 
 /*	from OpenSolaris "flushto.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)flushto.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)flushto.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/flushto.c"	*/
 # include	<defines.h>

@@ -31,12 +31,12 @@
 #ifndef	F_FMTMSG_H
 #define	F_FMTMSG_H
 
-/*	from OpenSolaris "fmtmsg.h	1.13	05/06/08 SMI"	 SVr4.0 1.3		*/
+/*	from OpenSolaris "fmtmsg.h	1.13	2021 SMI"	 SVr4.0 1.3		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)fmtmsg.h	1.3 (gritter) 6/26/05
+ * Sccsid @(#)fmtmsg.h	1.3 (heirloom-ports) 2021
  */
 
 #ifdef	__cplusplus

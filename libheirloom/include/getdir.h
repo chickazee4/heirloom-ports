@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)getdir.h	1.4 (gritter) 10/19/03	*/
+/*	Sccsid @(#)getdir.h	1.4 (heirloom-ports) 2021	*/
 
 #include	<sys/types.h>
 

@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)CHECK.c	1.8 (gritter) 12/16/07	*/
+/*	Sccsid @(#)CHECK.c	1.8 (heirloom-ports) 2021	*/
 
 #include <stdlib.h>
 

@@ -31,9 +31,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)word.c	1.7 (gritter) 6/22/05
+ * Sccsid @(#)word.c	1.7 (heirloom-ports) 2021
  */
-/* from OpenSolaris "word.c	1.21	05/06/08 SMI"	 SVr4.0 1.11.2.2 */
+/* from OpenSolaris "word.c	1.21	2021 SMI"	 SVr4.0 1.11.2.2 */
 /*
  * UNIX shell
  */

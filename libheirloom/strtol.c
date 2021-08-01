@@ -1,4 +1,4 @@
-/*	Sccsid @(#)strtol.c	1.6 (gritter) 7/18/04	*/
+/*	Sccsid @(#)strtol.c	1.6 (heirloom-ports) 2021	*/
 
 #if defined (__hpux) || defined (_AIX) || \
 	defined (__FreeBSD__) && (__FreeBSD__) < 5

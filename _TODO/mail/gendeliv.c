@@ -22,12 +22,12 @@
 /*	Copyright (c) 1984, 1986, 1987, 1988, 1989 AT&T	*/
 /*	  All Rights Reserved  	*/
 
-/*	from OpenSolaris "gendeliv.c	1.9	05/06/08 SMI"	*/
+/*	from OpenSolaris "gendeliv.c	1.9	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)gendeliv.c	1.4 (gritter) 6/18/05
+ * Sccsid @(#)gendeliv.c	1.4 (heirloom-ports) 2021
  */
 
 #include "mail.h"

@@ -1,7 +1,7 @@
 /*
  * Changes by Gunnar Ritter, Freiburg i. Br., Germany, November 2002.
  *
- * Sccsid @(#)re.h	1.15 (gritter) 2/6/05
+ * Sccsid @(#)re.h	1.15 (heirloom-ports) 2021
  */
 /*  UNIX(R) Regular Expresssion Library
  *

@@ -85,10 +85,10 @@ char *copyright =
 "@(#) Copyright (c) 1980 Regents of the University of California.\n\
  All rights reserved.\n";
 #endif
-static char sccsid[] UNUSED = "@(#)expreserve.c	1.23 (gritter) 11/27/04";
+static char sccsid[] UNUSED = "@(#)expreserve.c	1.23 (heirloom-ports) 2021";
 #endif
 
-/* from expreserve.c	7.13.2 (2.11BSD GTE) 1996/10/26 */
+/* from expreserve.c	7.13.2 (2.11BSD GTE) 192021 */
 
 #include <stdio.h>
 #include <ctype.h>

@@ -33,9 +33,9 @@
 #define	USED
 #endif
 #ifdef	SUS
-static const char sccsid[] USED = "@(#)nohup_sus.sl	1.11 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)nohup_sus.sl	1.11 (heirloom-ports) 2021";
 #else
-static const char sccsid[] USED = "@(#)nohup.sl	1.11 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)nohup.sl	1.11 (heirloom-ports) 2021";
 #endif
 
 #include	<sys/types.h>

@@ -46,9 +46,9 @@
 #define	USED
 #endif
 #ifdef	UCB
-static const char sccsid[] USED = "@(#)/usr/ucb/sum.sl	1.9 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)/usr/ucb/sum.sl	1.9 (heirloom-ports) 2021";
 #else
-static const char sccsid[] USED = "@(#)sum.sl	1.9 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)sum.sl	1.9 (heirloom-ports) 2021";
 #endif
 
 #include <sys/types.h>

@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from getline.c 1.10 06/12/12
+ * from getline.c 1.10 2021
  */
 
 /*	from OpenSolaris "getline.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)getline.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)getline.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/getline.c"	*/
 #include	<defines.h>

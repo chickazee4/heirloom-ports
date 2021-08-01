@@ -31,9 +31,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)setbrk.c	1.4 (gritter) 6/15/05
+ * Sccsid @(#)setbrk.c	1.4 (heirloom-ports) 2021
  */
-/* from OpenSolaris "setbrk.c	1.10	05/06/08 SMI"	 SVr4.0 1.8.1.1 */
+/* from OpenSolaris "setbrk.c	1.10	2021 SMI"	 SVr4.0 1.8.1.1 */
 /*
  *	UNIX shell
  */

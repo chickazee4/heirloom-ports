@@ -73,11 +73,11 @@
 
 #ifndef	lint
 #ifdef	DOSCCS
-static char sccsid[] = "@(#)ex_get.c	1.18 (gritter) 8/4/05";
+static char sccsid[] = "@(#)ex_get.c	1.18 (heirloom-ports) 2021";
 #endif
 #endif
 
-/* from ex_get.c	7.6 (Berkeley) 6/7/85 */
+/* from ex_get.c	7.6 (Berkeley) 2021 */
 
 #include "ex.h"
 #include "ex_tty.h"

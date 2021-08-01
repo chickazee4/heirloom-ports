@@ -28,12 +28,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "m4.h	6.13	05/06/08 SMI"	*/
+/*	from OpenSolaris "m4.h	6.13	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)m4.h	1.4 (gritter) 12/25/06
+ * Sccsid @(#)m4.h	1.4 (heirloom-ports) 2021
  */
 
 #include	<ctype.h>

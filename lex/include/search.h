@@ -31,12 +31,12 @@
 #ifndef SEARCH_H
 #define	SEARCH_H
 
-/*	from OpenSolaris "search.h	1.19	05/06/08 SMI"	 SVr4.0 1.3.1.11 	*/
+/*	from OpenSolaris "search.h	1.19	2021 SMI"	 SVr4.0 1.3.1.11 	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)search.h	1.4 (gritter) 11/26/05
+ * Sccsid @(#)search.h	1.4 (heirloom-ports) 2021
  */
 
 #include <sys/types.h>

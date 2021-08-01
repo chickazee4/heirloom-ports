@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)mbstowcs.c	1.2 (gritter) 1/15/05	*/
+/*	Sccsid @(#)mbstowcs.c	1.2 (heirloom-ports) 2021	*/
 
 #include <errno.h>
 #include "wchar.h"

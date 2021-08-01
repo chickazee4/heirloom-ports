@@ -19,41 +19,21 @@
  *
  * CDDL HEADER END
  */
-
 /*
  * Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
- *
- * Sccsid @(#)main.c	1.3 (gritter) 7/2/05
  */
-
-#include "defs.h"
-#include <locale.h>
-
-int	mb_cur_max;
-
-int
-main(int argc, char **argv)
-{
-	extern int	func(int, char **);
-	extern int	sysv3;
-
-	if (sysv3)
-		putenv("SYSV3=set");
-	setlocale(LC_CTYPE, "");
-	mb_cur_max = MB_CUR_MAX;
-	return func(argc, argv);
-}
-
-struct namnod *
-findnam(const char *name)
-{
-	static struct namnod	n;
-	char	*cp;
-
-	if ((cp = getenv(name)) != NULL) {
-		n.value = cp;
-		n.namflg = N_EXPORT|N_ENVNAM;
-		return &n;
-	}
-	return NULL;
-}
+#if __GNUC__ >= 3 && __GNUC_MINOR__ >= 4 || __GNUC__ >= 4
+#define	USED	__attribute__ ((used))
+#elif defined __GNUC__
+#define	USED	__attribute__ ((unused))
+#else
+#define	USED
+#endif
+static const char id[] = "@(#)test.sl	1.6.1 (heirloom-ports) 2021";
+/* SLIST */
+/*
+defs.h: * Sccsid @(#)defs.h	1.3 (heirloom-ports) 2021
+helper.c: * Sccsid @(#)helper.c	1.2 (heirloom-ports) 2021
+main.c: * Sccsid @(#)main.c	1.3 (heirloom-ports) 2021
+test.c: * Sccsid @(#)test.c	1.9 (heirloom-ports) 2021
+*/

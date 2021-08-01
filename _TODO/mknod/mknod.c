@@ -32,7 +32,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)mknod.sl	1.9 (gritter) 12/16/07";
+static const char sccsid[] USED = "@(#)mknod.sl	1.9 (heirloom-ports) 2021";
 
 #if defined (__GLIBC__) || defined (_AIX)
 #include	<sys/sysmacros.h>

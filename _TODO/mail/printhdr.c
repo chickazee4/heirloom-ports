@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "printhdr.c	1.8	05/06/08 SMI" 	 SVr4.0 2.		*/
+/*	from OpenSolaris "printhdr.c	1.8	2021 SMI" 	 SVr4.0 2.		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)printhdr.c	1.4 (gritter) 6/22/05
+ * Sccsid @(#)printhdr.c	1.4 (heirloom-ports) 2021
  */
 
 

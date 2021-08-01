@@ -27,12 +27,12 @@
 /*	Copyright (c) 1984, 1986, 1987, 1988, 1989 AT&T	*/
 /*	  All Rights Reserved  	*/
 
-/*	from OpenSolaris "huff.c	1.9	05/06/08 SMI"	*/
+/*	from OpenSolaris "huff.c	1.9	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)huff.c	2.4 (gritter) 6/22/05
+ * Sccsid @(#)huff.c	2.4 (heirloom-ports) 2021
  */
 
 

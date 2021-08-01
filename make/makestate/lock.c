@@ -23,12 +23,12 @@
  * Use is subject to license terms.
  */
 /*
- * from lock.c 1.5 06/12/12
+ * from lock.c 1.5 2021
  */
 /*
  * Portions Copyright (c) 2007 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)lock.c	1.7 (gritter) 01/21/07
+ * Sccsid @(#)lock.c	1.7 (heirloom-ports) 2021
  */
 
 #include <stdio.h>

@@ -28,12 +28,12 @@
  * Use is subject to license terms.
  */
 
-/*	from OpenSolaris "init.c	1.14	05/06/08 SMI"	*/
+/*	from OpenSolaris "init.c	1.14	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)init.c	1.8 (gritter) 7/3/05
+ * Sccsid @(#)init.c	1.8 (heirloom-ports) 2021
  */
 
  /*

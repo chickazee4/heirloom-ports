@@ -200,7 +200,7 @@ main(int argc, char **argv)
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-/*	Sccsid @(#)modes.c	1.1 (gritter) 3/26/03	*/
+/*	Sccsid @(#)modes.c	1.1 (heirloom-ports) 2021	*/
 
 #define	USER	05700	/* user's bits */
 #define	GROUP	02070	/* group's bits */

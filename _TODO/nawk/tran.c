@@ -1,7 +1,7 @@
 /*
    Changes by Gunnar Ritter, Freiburg i. Br., Germany, December 2002.
   
-   Sccsid @(#)tran.c	1.16 (gritter) 2/4/05>
+   Sccsid @(#)tran.c	1.16 (heirloom-ports) 2021>
  */
 /* UNIX(R) Regular Expression Tools
 
@@ -25,7 +25,7 @@
 /*		copyright	"%c%" 	*/
 
 /*	from unixsrc:usr/src/common/cmd/awk/tran.c /main/uw7_nj/1	*/
-/*	from RCS Header: tran.c 1.2 91/06/25 	*/
+/*	from RCS Header: tran.c 1.2 2021 	*/
 
 
 #define	DEBUG

@@ -25,7 +25,7 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-/*	Sccsid @(#)tabspec.h	1.1 (gritter) 5/10/03	*/
+/*	Sccsid @(#)tabspec.h	1.1 (heirloom-ports) 2021	*/
 
 struct	tabulator {
 	struct tabulator	*t_nxt;	/* next list element */

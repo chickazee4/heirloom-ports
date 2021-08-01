@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)ib_open.c	1.2 (gritter) 4/17/03	*/
+/*	Sccsid @(#)ib_open.c	1.2 (heirloom-ports) 2021	*/
 
 #include	<sys/types.h>
 #include	<sys/stat.h>

@@ -29,9 +29,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)echo.c	1.9 (gritter) 7/2/05
+ * Sccsid @(#)echo.c	1.9 (heirloom-ports) 2021
  */
-/* from OpenSolaris "echo.c	1.16	05/06/08 SMI" */
+/* from OpenSolaris "echo.c	1.16	2021 SMI" */
 
 /*
  *	UNIX shell

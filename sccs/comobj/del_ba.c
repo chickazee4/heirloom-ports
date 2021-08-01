@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from del_ba.c 1.3 06/12/12
+ * from del_ba.c 1.3 2021
  */
 
 /*	from OpenSolaris "del_ba.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)del_ba.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)del_ba.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/del_ba.c"	*/
 # include	<defines.h>

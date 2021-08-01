@@ -32,17 +32,9 @@
 #else
 #define	USED
 #endif
-#if defined (S42)
-static const char sccsid[] USED = "@(#)ps_s42.sl	2.115 (gritter) 12/16/07";
-#elif defined (SUS)
-static const char sccsid[] USED = "@(#)ps_sus.sl	2.115 (gritter) 12/16/07";
-#elif defined (UCB)
-static const char sccsid[] USED = "@(#)/usr/ucb/ps.sl	2.115 (gritter) 12/16/07";
-#else
-static const char sccsid[] USED = "@(#)ps.sl	2.115 (gritter) 12/16/07";
-#endif
+static const char sccsid[] USED = "@(#)ps.sl	2.115.1 (heirloom-ports) 2021";
 
-static const char cacheid[] = "@(#)/tmp/ps_cache	2.115 (gritter) 12/16/07";
+static const char cacheid[] = "@(#)/tmp/ps_cache	2.115.1 (heirloom-ports) 2021";
 
 #if !defined (__linux__) && !defined (__sun) && !defined (__FreeBSD__) \
 	&& !defined (__DragonFly__)

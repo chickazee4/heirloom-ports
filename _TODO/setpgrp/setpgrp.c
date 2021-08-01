@@ -37,7 +37,7 @@
 #else
 #define	USED
 #endif
-static const char sccsid[] USED = "@(#)setpgrp.sl	1.11 (gritter) 5/29/05";
+static const char sccsid[] USED = "@(#)setpgrp.sl	1.11 (heirloom-ports) 2021";
 
 static char	*progname;
 static const char	cookie[] = "cookie";

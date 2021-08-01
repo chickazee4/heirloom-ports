@@ -1,4 +1,4 @@
-/*	Sccsid @(#)atoll.h	1.4 (gritter) 7/18/04	*/
+/*	Sccsid @(#)atoll.h	1.4 (heirloom-ports) 2021	*/
 
 #if defined (__hpux) || defined (_AIX) || \
 	defined (__FreeBSD__) && (__FreeBSD__) < 5

@@ -73,11 +73,11 @@
 
 #ifndef	lint
 #ifdef	DOSCCS
-static char sccsid[] = "@(#)ex_extern.c	1.6 (gritter) 11/23/04";
+static char sccsid[] = "@(#)ex_extern.c	1.6 (heirloom-ports) 2021";
 #endif
 #endif
 
-/* from ex_extern.c	7.4 (Berkeley) 6/7/85 */
+/* from ex_extern.c	7.4 (Berkeley) 2021 */
 
 /*
  * Provide defs of the global variables.

@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)_malloc.h	1.2 (gritter) 5/1/04	*/
+/*	Sccsid @(#)_malloc.h	1.2 (heirloom-ports) 2021	*/
 
 #include	<stdlib.h>
 

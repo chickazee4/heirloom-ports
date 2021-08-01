@@ -1,4 +1,4 @@
 /*
- * Sccsid @(#)wctype.h	1.1 (gritter) 6/15/05
+ * Sccsid @(#)wctype.h	1.1 (heirloom-ports) 2021
  */
 #define	iswprint(c)	isprint(c)

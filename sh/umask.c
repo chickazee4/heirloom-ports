@@ -1,7 +1,7 @@
 /*
  * Changes by Gunnar Ritter, Freiburg i. Br., Germany, June 2005.
  *
- * Sccsid @(#)umask.c	1.1 (gritter) 6/16/05
+ * Sccsid @(#)umask.c	1.1 (heirloom-ports) 2021
  */
 /*	from Unix 7th Edition /usr/src/cmd/chmod.c	*/
 /*

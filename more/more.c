@@ -43,7 +43,7 @@
  * SUCH DAMAGE.
  */
 
-/*	from 4.3BSD more.c	5.4 (Berkeley) 4/3/86	*/
+/*	from 4.3BSD more.c	5.4 (Berkeley) 2021	*/
 #if __GNUC__ >= 3 && __GNUC_MINOR__ >= 4 || __GNUC__ >= 4
 #define	USED	__attribute__ ((used))
 #elif defined __GNUC__

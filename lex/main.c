@@ -30,12 +30,12 @@
 
 /* Copyright 1976, Bell Telephone Laboratories, Inc. */
 
-/*	from OpenSolaris "main.c	6.16	05/06/08 SMI"	*/
+/*	from OpenSolaris "main.c	6.16	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)main.c	1.9 (gritter) 11/26/05
+ * Sccsid @(#)main.c	1.9 (heirloom-ports) 2021
  */
 
 #include <string.h>

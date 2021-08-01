@@ -26,12 +26,12 @@
 #ifndef	_FATAL_H
 #define	_FATAL_H
 
-/*	from OpenSolaris "fatal.h	1.9	05/06/08 SMI"	 SVr4.0 1.4.1.1 	*/
+/*	from OpenSolaris "fatal.h	1.9	2021 SMI"	 SVr4.0 1.4.1.1 	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)fatal.h	1.4 (gritter) 12/25/06
+ * Sccsid @(#)fatal.h	1.4 (heirloom-ports) 2021
  */
 
 #ifdef	__cplusplus

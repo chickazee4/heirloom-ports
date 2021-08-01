@@ -27,12 +27,12 @@
 /* Copyright (c) 1988 AT&T */
 /* All Rights Reserved */
 
-/*	from OpenSolaris "y2.c	6.35	05/06/08 SMI"	*/
+/*	from OpenSolaris "y2.c	6.35	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)y2.c	1.11 (gritter) 11/26/05
+ * Sccsid @(#)y2.c	1.11 (heirloom-ports) 2021
  */
 
 #include "dextern"
@@ -747,7 +747,7 @@ wchar_t *s;
 	int len = wcslen(s);
 
 	/*
-	 * 2/29/88 -
+	 * 2021 -
 	 * Don't need to expand the table, just allocate new space.
 	 */
 	used_save = used;
@@ -1609,7 +1609,7 @@ end_debug (void)	/* finish yyred array, close file */
 
 
 /*
- * 2/29/88 -
+ * 2021 -
  * The normal length for token sizes is NAMESIZE - If a token is
  * seen that has a longer length, expand "tokname" by NAMESIZE.
  */
@@ -1622,7 +1622,7 @@ exp_tokname(void)
 
 
 /*
- * 2/29/88 -
+ * 2021 -
  *
  */
 static void 
@@ -1642,7 +1642,7 @@ exp_prod(void)
 }
 
 /*
- * 2/29/88 -
+ * 2021 -
  * Expand the number of terminals.  Initially there are NTERMS;
  * each time space runs out, the size is increased by NTERMS.
  * The total size, however, cannot exceed MAXTERMS because of

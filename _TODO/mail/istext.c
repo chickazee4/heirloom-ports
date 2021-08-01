@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "istext.c	1.6	05/06/08 SMI" 	 SVr4.0 1.		*/
+/*	from OpenSolaris "istext.c	1.6	2021 SMI" 	 SVr4.0 1.		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)istext.c	1.6 (gritter) 7/3/05
+ * Sccsid @(#)istext.c	1.6 (heirloom-ports) 2021
  */
 #include "mail.h"
 #include <ctype.h>

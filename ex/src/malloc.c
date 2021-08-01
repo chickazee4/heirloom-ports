@@ -36,7 +36,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- *	@(#)malloc.c	1.19 (gritter) 2/20/05
+ *	@(#)malloc.c	1.19 (heirloom-ports) 2021
  */
 
 #ifdef	VMUNIX

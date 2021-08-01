@@ -28,12 +28,12 @@
  * All rights reserved.
  */
 
-/*	from OpenSolaris "xgetenv.c	1.10	05/06/08 SMI"	*/
+/*	from OpenSolaris "xgetenv.c	1.10	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)xgetenv.c	1.6 (gritter) 7/3/05
+ * Sccsid @(#)xgetenv.c	1.6 (heirloom-ports) 2021
  */
 /*LINTLIBRARY*/
 

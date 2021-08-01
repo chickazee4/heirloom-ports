@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from del_ab.c 1.7 06/12/12
+ * from del_ab.c 1.7 2021
  */
 
 /*	from OpenSolaris "del_ab.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)del_ab.c	1.4 (gritter) 12/20/06
+ * Sccsid @(#)del_ab.c	1.4 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:lib/comobj/del_ab.c"	*/
 # include	<defines.h>
@@ -79,7 +79,7 @@ del_ab(char *p, struct deltab *dt, struct packet *pkt)
 }
 
 /*
-	We assume that p looks like "\001d D 1.10 97/08/07 12:52:00 vvg 10 9\n"
+	We assume that p looks like "\001d D 1.10 2021 12:52:00 vvg 10 9\n"
 */
 
 void 

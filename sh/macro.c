@@ -30,9 +30,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)macro.c	1.8 (gritter) 6/16/05
+ * Sccsid @(#)macro.c	1.8 (heirloom-ports) 2021
  */
-/* from OpenSolaris "macro.c	1.14	05/06/08 SMI" */
+/* from OpenSolaris "macro.c	1.14	2021 SMI" */
 /*
  * UNIX shell
  */

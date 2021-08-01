@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from rmchg.c 1.19 06/12/12
+ * from rmchg.c 1.19 2021
  */
 
 /*	from OpenSolaris "rmchg.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)rmchg.c	1.6 (gritter) 2/26/07
+ * Sccsid @(#)rmchg.c	1.6 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/rmchg.c"	*/
 # include	<defines.h>

@@ -37,7 +37,7 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*	Sccsid @(#)regexpr.c	1.8 (gritter) 10/13/04	*/
+/*	Sccsid @(#)regexpr.c	1.8 (heirloom-ports) 2021	*/
 
 #include	<stdlib.h>
 #include	"regexpr.h"

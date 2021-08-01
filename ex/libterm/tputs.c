@@ -40,11 +40,11 @@
 
 #ifndef	lint
 #ifdef	DOSCCS
-static char *sccsid = "@(#)tputs.c	1.4 (gritter) 11/23/04";
+static char *sccsid = "@(#)tputs.c	1.4 (heirloom-ports) 2021";
 #endif
 #endif
 
-/* from tputs.c	5.1 (Berkeley) 6/5/85 */
+/* from tputs.c	5.1 (Berkeley) 2021 */
 
 #include <ctype.h>
 

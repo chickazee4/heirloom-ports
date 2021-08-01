@@ -27,12 +27,12 @@
 /* Copyright (c) 1988 AT&T */
 /* All Rights Reserved */
 
-/*	from OpenSolaris "y4.c	6.15	05/06/08 SMI"	*/
+/*	from OpenSolaris "y4.c	6.15	2021 SMI"	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)y4.c	1.5 (gritter) 11/26/05
+ * Sccsid @(#)y4.c	1.5 (heirloom-ports) 2021
  */
 
 #include "dextern"

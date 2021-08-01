@@ -70,9 +70,9 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- *	from ex_vis.h	7.4 (Berkeley) 5/31/85
+ *	from ex_vis.h	7.4 (Berkeley) 2021
  *
- *	Sccsid @(#)ex_vis.h	1.22 (gritter) 8/6/05
+ *	Sccsid @(#)ex_vis.h	1.22 (heirloom-ports) 2021
  */
 
 /*

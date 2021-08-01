@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "pipletr.c	1.7	05/06/08 SMI" 	*/
+/*	from OpenSolaris "pipletr.c	1.7	2021 SMI" 	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)pipletr.c	1.6 (gritter) 6/18/05
+ * Sccsid @(#)pipletr.c	1.6 (heirloom-ports) 2021
  */
 
 #include "mail.h"

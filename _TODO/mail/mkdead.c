@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "mkdead.c	1.9	05/06/08 SMI"         SVr4.0 1.6 	*/
+/*	from OpenSolaris "mkdead.c	1.9	2021 SMI"         SVr4.0 1.6 	*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)mkdead.c	1.7 (gritter) 5/14/06
+ * Sccsid @(#)mkdead.c	1.7 (heirloom-ports) 2021
  */
 
 #include "mail.h"

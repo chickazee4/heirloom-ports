@@ -1,7 +1,7 @@
 /*
    Changes by Gunnar Ritter, Freiburg i. Br., Germany, December 2002.
   
-   Sccsid @(#)main.c	1.14 (gritter) 12/19/04>
+   Sccsid @(#)main.c	1.14 (heirloom-ports) 2021>
  */
 /* UNIX(R) Regular Expression Tools
 
@@ -25,7 +25,7 @@
 /*	copyright	"%c%"	*/
 
 /*	from unixsrc:usr/src/common/cmd/awk/main.c /main/uw7_nj/2	*/
-/*	from RCS Header: main.c 1.3 91/08/12 	*/
+/*	from RCS Header: main.c 1.3 2021 	*/
 
 #define DEBUG
 #include <stdio.h>

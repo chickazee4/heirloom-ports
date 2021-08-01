@@ -22,7 +22,7 @@
 /*
  * Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)wcio.c	1.1 (gritter) 6/25/05
+ * Sccsid @(#)wcio.c	1.1 (heirloom-ports) 2021
  */
 #include <stdlib.h>
 #include <wchar.h>

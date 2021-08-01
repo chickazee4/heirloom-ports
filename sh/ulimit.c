@@ -31,9 +31,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)ulimit.c	1.10 (gritter) 6/20/05
+ * Sccsid @(#)ulimit.c	1.10 (heirloom-ports) 2021
  */
-/* from OpenSolaris "ulimit.c	1.12	05/06/08 SMI" */
+/* from OpenSolaris "ulimit.c	1.12	2021 SMI" */
 
 /*
  * ulimit builtin

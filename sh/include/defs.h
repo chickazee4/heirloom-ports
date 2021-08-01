@@ -31,13 +31,13 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)defs.h	1.21 (gritter) 7/3/05
+ * Sccsid @(#)defs.h	1.21 (heirloom-ports) 2021
  */
 
 #ifndef	_DEFS_H
 #define	_DEFS_H
 
-/* from OpenSolaris "defs.h	1.25	05/06/08 SMI" */
+/* from OpenSolaris "defs.h	1.25	2021 SMI" */
 
 #ifdef	__cplusplus
 extern "C" {

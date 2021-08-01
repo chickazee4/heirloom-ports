@@ -37,7 +37,7 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*	Sccsid @(#)regexpr.h	1.2 (gritter) 1/11/03	*/
+/*	Sccsid @(#)regexpr.h	1.2 (heirloom-ports) 2021	*/
 
 #define	NBRA	9
 

@@ -25,10 +25,10 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)sym.h	1.4 (gritter) 6/15/05
+ * Sccsid @(#)sym.h	1.4 (heirloom-ports) 2021
  */
 
-/* from OpenSolaris "sym.h	1.8	05/06/08 SMI"	 SVr4.0 1.6 */
+/* from OpenSolaris "sym.h	1.8	2021 SMI"	 SVr4.0 1.6 */
 /*
  *	UNIX shell
  */

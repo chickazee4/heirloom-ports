@@ -19,7 +19,7 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  */
-/*	Sccsid @(#)_alloca.h	1.5 (gritter) 1/22/06	*/
+/*	Sccsid @(#)_alloca.h	1.5 (heirloom-ports) 2021	*/
 
 #if defined (__FreeBSD__) || defined (__NetBSD__) || defined (__OpenBSD__) || \
 	defined (__DragonFly__) || defined (__APPLE__)

@@ -23,12 +23,12 @@
  * Use is subject to license terms.
  */
 /*
- * from i18n.h 1.2 06/12/12
+ * from i18n.h 1.2 2021
  */
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)i18n.h	1.3 (gritter) 12/20/06
+ * Sccsid @(#)i18n.h	1.3 (heirloom-ports) 2021
  */
 
 /*

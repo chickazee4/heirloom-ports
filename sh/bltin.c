@@ -31,9 +31,9 @@
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)bltin.c	1.11 (gritter) 7/3/05
+ * Sccsid @(#)bltin.c	1.11 (heirloom-ports) 2021
  */
-/* from OpenSolaris "bltin.c	1.14	05/06/08 SMI"	 SVr4.0 1.3.8.1 */
+/* from OpenSolaris "bltin.c	1.14	2021 SMI"	 SVr4.0 1.3.8.1 */
 /*
  *
  * UNIX shell

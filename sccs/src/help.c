@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from help2.c 1.10 06/12/12
+ * from help2.c 1.10 2021
  */
 
 /*	from OpenSolaris "help2.c"	*/
@@ -33,7 +33,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)help.c	1.5 (gritter) 12/21/06
+ * Sccsid @(#)help.c	1.5 (heirloom-ports) 2021
  */
 /*	from OpenSolaris "sccs:cmd/help2.c"	*/
 #include	<defines.h>

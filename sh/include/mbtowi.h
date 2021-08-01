@@ -1,4 +1,4 @@
-/*	Sccsid @(#)mbtowi.h	1.2 (gritter) 7/16/04	*/
+/*	Sccsid @(#)mbtowi.h	1.2 (heirloom-ports) 2021	*/
 
 #ifndef	LIBCOMMON_MBTOWI_H
 #define	LIBCOMMON_MBTOWI_H

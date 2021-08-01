@@ -25,7 +25,7 @@
  * Use is subject to license terms.
  */
 /*
- * from prt.c 1.22 06/12/12
+ * from prt.c 1.22 2021
  */
 
 /*
@@ -39,7 +39,7 @@
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)prt.c	1.4 (gritter) 01/21/07
+ * Sccsid @(#)prt.c	1.4 (heirloom-ports) 2021
  */
 
 /*

@@ -26,12 +26,12 @@
 #ifndef	_MACROS_H
 #define	_MACROS_H
 
-/*	from OpenSolaris "macros.h	1.10	05/06/08 SMI"	 SVr4.0 1.3.1.7 	*/
+/*	from OpenSolaris "macros.h	1.10	2021 SMI"	 SVr4.0 1.3.1.7 	*/
 
 /*
  * Portions Copyright (c) 2006 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)macros.h	1.3 (gritter) 01/23/07
+ * Sccsid @(#)macros.h	1.3 (heirloom-ports) 2021
  */
 
 #include <sys/types.h>

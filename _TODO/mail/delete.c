@@ -23,12 +23,12 @@
 /*	  All Rights Reserved  	*/
 
 
-/*	from OpenSolaris "delete.c	1.6	05/06/08 SMI" 	 SVr4.0 2.		*/
+/*	from OpenSolaris "delete.c	1.6	2021 SMI" 	 SVr4.0 2.		*/
 
 /*
  * Portions Copyright (c) 2005 Gunnar Ritter, Freiburg i. Br., Germany
  *
- * Sccsid @(#)delete.c	1.4 (gritter) 6/18/05
+ * Sccsid @(#)delete.c	1.4 (heirloom-ports) 2021
  */
 #include "mail.h"
 /*
