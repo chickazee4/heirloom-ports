@@ -8,6 +8,7 @@ currently, the following software from the heirloom project has been ported:
 * chmod (?)
 * chown (?)
 * cp/ln/mv (good)
+* cpio (build failing, disabled)
 * cut (?)
 * dd (good)
 * diff3 (?)
@@ -58,7 +59,7 @@ the following new shell scripts which easily combine the functions of other util
 * rnr (rm+mkcd+touch) - remove a directory or file and regenerate it (recreates the directory with no entries or creates a new empty file of the same filename)
 * yy (yacc+mv) - process a yacc file and clean up the output by moving the y.tab.c and y.tab.h files to the original filename and removing rodata.c
 
-the heirloom documentation tools included here have descended from the original heirloom doctools but also passed through active development at https://github.com/n-t-roff/heirloom-doctools.
+the heirloom documentation tools included here have descended from the original heirloom doctools but also passed through active development at https://github.com/n-t-roff/heirloom-doctools - the folks here have made porting significantly easier. our copy of cpio also got a few bugfixes at https://github.com/rtomj/heirloom-project.
 
 ## building
 
@@ -68,8 +69,8 @@ the heirloom documentation tools included here have descended from the original 
     # make install
 
 additional CMake options:
-* TAR_ENABLE_ZLIB - enable or disable ZLib support in heirloom tar (not essential, but useful, enabled by default)
-* TAR_ENABLE_BZ2 - enable or disable BZip2 library support in heirloom tar (again nonessential, just useful, and enabled by default)
+* ENABLE_ZLIB - enable or disable ZLib support in cpio (not essential, but useful, enabled by default)
+* ENABLE_BZ2 - enable or disable BZip2 library support in cpio (again nonessential, just useful, and enabled by default)
 * SHADOW_PASSWORDS - enable shadow support for passwords (usually necessary without PAM)
 * ENABLE_HNAMES - add an h- prefix to all main binaries so tools can be installed at the same time as their GNU, BSD, etc. equivalents (enabled by default)
 * ENABLE_ILLUMOS - build certain tools from illumos (opensolaris fork) which have improved functionality but may be larger and less conformant to the classic Unix style (disabled by default, currently only affects grep build)
@@ -85,6 +86,7 @@ required to build:
 * clang/clang++ or gcc (other C compilers may work but are untested)
 * ninja or a cmake-compatible make implementation
 * zlib and libbzip2 unless you turn those options off (see above)
+* any modern curses implementation (only tested with nCurses but others should work with minor adjustments at most)
 
 ## licensing
 the bulk of the project is licensed under the non-permissive free software (in a verrrry loose sense) CDDL, when derived directly from OpenSolaris; the Caldera Unix license (for components derived from Unix 7); or the BSD-like license used in Gunnar Ritter's original code. the cmake-based build system for the project, written in its entirety by chickazee4, is considered a separate component of the project and not inherently required to build the source code, so does not need to be licensed under the CDDL - the heirloom-ports build system (all the CMakeLists.txt files and changes in directory layout introduced by heirloom-ports, plus the extras) is therefore licensed under the MIT license. all components have license notices included in their code if not made clear elsewhere in the project.

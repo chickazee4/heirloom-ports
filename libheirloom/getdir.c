@@ -36,6 +36,10 @@
 #include	<errno.h>
 #include	<string.h>
 
+#if (defined(__APPLE__) && !defined(_POSIX_C_SOURCE))
+#define _POSIX_C_SOURCE
+#endif
+
 #if defined (__UCLIBC__)
 #include <linux/types.h>
 #include <linux/dirent.h>
