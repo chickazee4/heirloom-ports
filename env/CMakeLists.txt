@@ -1,0 +1,6 @@
+add_executable(env env.c)
+target_link_libraries(env heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(env PROPERTIES PREFIX h)
+endif()
+install(TARGETS env)

@@ -1,0 +1,6 @@
+add_executable(stty stty.c)
+target_link_libraries(stty heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(stty PROPERTIES PREFIX h)
+endif()
+install(TARGETS stty)

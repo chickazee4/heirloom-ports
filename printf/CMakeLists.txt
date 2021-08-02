@@ -1,0 +1,6 @@
+add_executable(printf printf.c)
+target_link_libraries(printf heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(printf PROPERTIES PREFIX h)
+endif()
+install(TARGETS printf)

@@ -1,0 +1,6 @@
+add_executable(tty tty.c)
+target_link_libraries(tty heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(tty PROPERTIES PREFIX h)
+endif()
+install(TARGETS tty)

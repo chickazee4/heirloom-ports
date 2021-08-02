@@ -43,6 +43,10 @@
 #include <stdarg.h>	/* For error() */
 #include <wchar.h>
 
+#ifndef YACCPAR
+#define YACCPAR "/usr/share/yacc/yaccpar"
+#endif
+
 static void mktbls(void);
 static void others(void);
 static void summary(void);
@@ -221,25 +225,18 @@ others(void)
 	int c, i, j;
 	int tmpline;
 
-	/* silly lil loop finds parser in multiple possible locations - there's gotta be a better way to do this */
 	if (parser == NULL) {
-		if (fopen("yaccpar", "r") == NULL) {
-			if (fopen("/usr/lib/yaccpar", "r") == NULL) {
-				if (fopen("/lib/yaccpar", "r") == NULL) {
-					if(fopen("/usr/share/yacc/yaccpar", "r") == NULL)
-						error("cannot find parser %s", parser);
-					else 
-						parser = "/usr/share/yacc/yaccpar";
-				}
-				else
-					parser = "/lib/yaccpar";
-			}
-			else 
-				parser = "/usr/lib/yaccpar";
+#ifdef YACCPAR
+		if (fopen(YACCPAR, "r") == NULL) {
+			error("cannot find parser %s", parser);
 		}
 		else 
-			parser = "yaccpar";
+			parser = YACCPAR;
 	}
+#else
+		error("parser %s not defined", parser);
+	}
+#endif
 
 	warray(L"yyr1", levprd, nprod);
 

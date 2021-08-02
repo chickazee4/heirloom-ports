@@ -1,0 +1,6 @@
+add_executable(id id.c)
+target_link_libraries(id heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(id PROPERTIES PREFIX h)
+endif()
+install(TARGETS id)

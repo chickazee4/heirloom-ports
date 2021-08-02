@@ -1,0 +1,5 @@
+add_executable(yes yes.c)
+if(ENABLE_HNAMES)
+    set_target_properties(yes PROPERTIES PREFIX h)
+endif()
+install(TARGETS yes)

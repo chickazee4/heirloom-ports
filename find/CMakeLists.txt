@@ -1,0 +1,6 @@
+add_executable(find find.c)
+target_link_libraries(find heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(find PROPERTIES PREFIX "h")
+endif()
+install(TARGETS find)

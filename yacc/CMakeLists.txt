@@ -17,6 +17,7 @@ set(
 
 add_library(y STATIC ${LIBY_SRC})
 add_executable(yacc ${YACC_SRC})
+target_compile_definitions(yacc PUBLIC -DYACCPAR="${USRSHAREDIR}/yacc/yaccpar")
 
 target_link_libraries(yacc y)
 
@@ -24,3 +25,4 @@ if(ENABLE_HNAMES)
     set_target_properties(yacc PROPERTIES PREFIX "h")
 endif()
 install(TARGETS yacc)
+install(FILES yaccpar DESTINATION ${USRSHAREDIR}/yacc)

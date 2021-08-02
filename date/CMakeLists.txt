@@ -1,0 +1,6 @@
+add_executable(date date.c)
+target_link_libraries(date heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(date PROPERTIES PREFIX h)
+endif()
+install(TARGETS date)

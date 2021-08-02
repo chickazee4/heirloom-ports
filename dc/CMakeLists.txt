@@ -1,0 +1,6 @@
+add_executable(dc dc.c version.c)
+target_link_libraries(dc heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(dc PROPERTIES PREFIX "h")
+endif()
+install(TARGETS dc)

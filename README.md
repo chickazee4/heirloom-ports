@@ -3,20 +3,31 @@
 this is a continuation of the old [heirloom project](http://heirloom.sourceforge.net), which provided minimal non-GNU implementations of core unix tools like make, cp, tar, sed, etc. based on the opensolaris codebase. the majority of the project seems to have been abandoned circa 2007 so much of the code has trouble compiling against modern compilers and the build system is incredibly confusing. heirloom-ports intends to continue the project and streamline the software for modern implementations by fixing code issues and porting the entire project to the CMake build system, as opposed to the ancient makefiles it was using. 
 
 currently, the following software from the heirloom project has been ported:
+* banner (good)
 * basename (good)
+* bc (good)
+* bdiff (?)
+* cal (good)
 * cat (good)
 * chmod (?)
 * chown (?)
 * cp/ln/mv (good)
-* cpio (build failing, disabled)
+* cpio (?)
 * cut (?)
+* date (good)
+* dc (good)
 * dd (good)
 * diff3 (?)
 * du (good)
 * echo* (Unix 7, good)
 * ed (?)
+* env (good)
 * ex/vi/wvi (prog semi-fail)
+* file (good)
+* find (good)
 * grep/fgrep/egrep* (4.4BSD good/illumos (egrep illumos only) ?)
+* groups (good)
+* id (good)
 * kill (?)
 * lex (?)
 * libcommon (we are now dynamically linking this since it is used in so many of the programs and have thus renamed it to `libheirloom` to avoid conflicts)
@@ -27,20 +38,27 @@ currently, the following software from the heirloom project has been ported:
 * mkdir (good)
 * more (good)
 * nice (?)
+* od (good)
+* printf (good)
 * ps (good)
 * pwd (good)
 * sccs (?)
 * sed (?)
 * sh (good)
 * sleep (good)
+* stty (good)
 * su (prog fail)
 * tar* (4.3BSD, good)
 * tee (?)
 * test (good)
 * touch (good)
+* true/false (good)
+* tty (good)
+* uname (good)
 * what (?)
 * who (prog semi-fail)
 * yacc (good)
+* yes (good)
 
 \* indicates the program has been re-ported from either 4.3BSD, 4.4BSD, OpenSolaris, illumos, or Unix 7 due to issues introduced by the original heirloom project or by its predecessors. these programs will usually have less functionality than is provided by the heirloom project or modern gnu implementations, but re-extending them in a more modern way is on the agenda. the following classic unix programs which were not in the original heirloom project, but are useful as core utilities, have also been ported:
 
@@ -79,7 +97,7 @@ additional CMake options:
 * ETCDIR - where files intended for /etc, mostly configuration files and the like, should go (this shouldn't normally be changed unless you have a non-traditional setup lacking the ordinary /etc dir)
 * USRSHAREDIR - where files intended for /usr/share, mostly public assets, should go (shouldn't normally be changed, see above)
 
-the repository also includes linux-x64 glibc/gcc binaries under the _INST folder, which are not guaranteed to work on every system.
+the repository also includes linux-x64 glibc/gcc binaries under the _INST folder, only some of which can be moved portably to other systems. it's better to install from source unless you only need utilities that don't depend on external files.
 
 required to build:
 * glibc (musl-libc support forthcoming)

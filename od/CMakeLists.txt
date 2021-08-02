@@ -1,0 +1,6 @@
+add_executable(od od.c)
+target_link_libraries(od heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(od PROPERTIES PREFIX h)
+endif()
+install(TARGETS od)

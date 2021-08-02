@@ -1,0 +1,6 @@
+add_executable(uname uname.c)
+target_link_libraries(uname heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(uname PROPERTIES PREFIX h)
+endif()
+install(TARGETS uname)

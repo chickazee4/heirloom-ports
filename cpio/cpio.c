@@ -36,6 +36,7 @@
 #include <linux/fs.h>
 #endif	/* !__UCLIBC__, !__dietlibc__ */
 #include <linux/fd.h>
+#include <sys/sysmacros.h>
 #undef	WNOHANG
 #undef	WUNTRACED
 #undef	P_ALL
