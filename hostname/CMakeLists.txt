@@ -1,0 +1,6 @@
+add_executable(hostname hostname.c)
+target_link_libraries(hostname heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(hostname PROPERTIES PREFIX "h")
+endif()
+install(TARGETS hostname)

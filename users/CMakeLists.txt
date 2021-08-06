@@ -1,0 +1,6 @@
+add_executable(users users.c)
+target_link_libraries(users heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(users PROPERTIES PREFIX h)
+endif()
+install(TARGETS users)

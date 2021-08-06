@@ -1,0 +1,6 @@
+add_executable(mesg mesg.c)
+target_link_libraries(mesg heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(mesg PROPERTIES PREFIX "h")
+endif()
+install(TARGETS mesg)

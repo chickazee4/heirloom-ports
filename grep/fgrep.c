@@ -131,7 +131,7 @@ char *file;
 		if ((f = open(file, 0)) < 0) {
 			fprintf(stderr, "fgrep: can't open %s\n", file);
 			retcode = 2;
-			return;
+			return 2;
 		}
 	}
 	else f = 0;
@@ -196,7 +196,7 @@ char *file;
 			else if (lflag) {
 				printf("%s\n", file);
 				close(f);
-				return;
+				return 0;
 			}
 			else {
 				if (nfile > 1 && hflag) printf("%s:", file);
@@ -249,7 +249,7 @@ cgotofn() {
 nword:	for(;;) {
 		c = getargc();
 		if (c==EOF)
-			return;
+			return 0;
 		if (c == '\n') {
 			if (xflag) {
 				for(;;) {

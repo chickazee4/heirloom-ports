@@ -1,0 +1,10 @@
+add_executable(expand expand.c tablist.c)
+add_executable(unexpand unexpand.c tablist.c)
+target_link_libraries(expand heirloom)
+target_link_libraries(unexpand heirloom)
+
+if(ENABLE_HNAMES)
+    set_target_properties(expand PROPERTIES PREFIX "h")
+    set_target_properties(unexpand PROPERTIES PREFIX "h")
+endif()
+install(TARGETS expand unexpand)

@@ -118,211 +118,54 @@ char	*getcwd();
 char	*getwd();
 char	*getmem();
 
-main(argc, argv)
-int	argc;
-char	*argv[];
+void
+getdir()
 {
-	char *cp;
+	register struct stat *sp;
+	int i;
 
-	if (argc < 2)
-		usage();
-
-	tfile = NULL;
-	if (!vfile) vfile = stdout;
-	usefile =  magtape;
-	argv[argc] = 0;
-	argv++;
-	for (cp = *argv++; *cp; cp++) 
-		switch(*cp) {
-
-		case 'f':
-			if (*argv == 0) {
-				fprintf(stderr,
-			"tar: tapefile must be specified with 'f' option\n");
-				usage();
-			}
-			usefile = *argv++;
-			fflag++;
-			break;
-
-		case 'c':
-			cflag++;
-			rflag++;
-			break;
-
-		case 'o':
-			oflag++;
-			break;
-
-		case 'p':
-			pflag++;
-			break;
-		
-		case 'u':
-			mktemp(tname);
-			if ((tfile = fopen(tname, "w")) == NULL) {
-				fprintf(stderr,
-				 "tar: cannot create temporary file (%s)\n",
-				 tname);
-				done(1);
-			}
-			fprintf(tfile, "!!!!!/!/!/!/!/!/!/! 000\n");
-			/*FALL THRU*/
-
-		case 'r':
-			rflag++;
-			break;
-
-		case 'v':
-			vflag++;
-			break;
-
-		case 'w':
-			wflag++;
-			break;
-
-		case 'x':
-			xflag++;
-			break;
-
-		case 't':
-			tflag++;
-			break;
-
-		case 'm':
-			mflag++;
-			break;
-
-		case '-':
-			break;
-
-		case '0':
-		case '1':
-		case '4':
-		case '5':
-		case '7':
-		case '8':
-			magtape[8] = *cp;
-			usefile = magtape;
-			break;
-
-		case 'b':
-			if (*argv == 0) {
-				fprintf(stderr,
-			"tar: blocksize must be specified with 'b' option\n");
-				usage();
-			}
-			nblock = atoi(*argv);
-			if (nblock <= 0) {
-				fprintf(stderr,
-				    "tar: invalid blocksize \"%s\"\n", *argv);
-				done(1);
-			}
-			argv++;
-			break;
-
-		case 'l':
-			prtlinkerr++;
-			break;
-
-		case 'h':
-			hflag++;
-			break;
-
-		case 'i':
-			iflag++;
-			break;
-
-		case 'B':
-			Bflag++;
-			break;
-
-		case 'F':
-			Fflag++;
-			break;
-
-		default:
-			fprintf(stderr, "tar: %c: unknown option\n", *cp);
-			usage();
-		}
-
-	if (!rflag && !xflag && !tflag)
-		usage();
-	if (rflag) {
-		if (cflag && tfile != NULL)
-			usage();
-		if (signal(SIGINT, SIG_IGN) != SIG_IGN)
-			(void) signal(SIGINT, onintr);
-		if (signal(SIGHUP, SIG_IGN) != SIG_IGN)
-			(void) signal(SIGHUP, onhup);
-		if (signal(SIGQUIT, SIG_IGN) != SIG_IGN)
-			(void) signal(SIGQUIT, onquit);
-#ifdef notdef
-		if (signal(SIGTERM, SIG_IGN) != SIG_IGN)
-			(void) signal(SIGTERM, onterm);
-#endif
-		mt = openmt(usefile, 1);
-		dorep(argv);
-		done(0);
+top:
+	readtape((char *)&dblock);
+	if (dblock.dbuf.name[0] == '\0')
+		return;
+	sp = &stbuf;
+	sscanf(dblock.dbuf.mode, "%o", &i);
+	sp->st_mode = i;
+	sscanf(dblock.dbuf.uid, "%o", &i);
+	sp->st_uid = i;
+	sscanf(dblock.dbuf.gid, "%o", &i);
+	sp->st_gid = i;
+	sscanf(dblock.dbuf.size, "%lo", &sp->st_size);
+	sscanf(dblock.dbuf.mtime, "%lo", &sp->st_mtime);
+	sscanf(dblock.dbuf.chksum, "%o", &chksum);
+	if (chksum != (i = checksum())) {
+		fprintf(stderr, "tar: directory checksum error (%d != %d)\n",
+		    chksum, i);
+		if (iflag)
+			goto top;
+		done(2);
 	}
-	mt = openmt(usefile, 0);
-	if (xflag)
-		doxtract(argv);
-	else
-		dotable(argv);
-	done(0);
+	if (tfile != NULL)
+		fprintf(tfile, "%s %s\n", dblock.dbuf.name, dblock.dbuf.mtime);
 }
 
-usage()
+void
+passtape()
 {
-	fprintf(stderr,
-"tar: usage: tar -{txru}[cvfblmhopwBi] [tapefile] [blocksize] file1 file2...\n");
-	done(1);
+	long blocks;
+	char *bufp;
+
+	if (dblock.dbuf.linkflag == '1')
+		return;
+	blocks = stbuf.st_size;
+	blocks += TBLOCK-1;
+	blocks /= TBLOCK;
+
+	while (blocks-- > 0)
+		(void) readtbuf(&bufp, TBLOCK);
 }
 
-int
-openmt(tape, writing)
-	char *tape;
-	int writing;
-{
-
-	if (strcmp(tape, "-") == 0) {
-		/*
-		 * Read from standard input or write to standard output.
-		 */
-		if (writing) {
-			if (cflag == 0) {
-				fprintf(stderr,
-			 "tar: can only create standard output archives\n");
-				done(1);
-			}
-			vfile = stderr;
-			setlinebuf(vfile);
-			mt = dup(1);
-		} else {
-			mt = dup(0);
-			Bflag++;
-		}
-	} else {
-		/*
-		 * Use file or tape on local machine.
-		 */
-		if (writing) {
-			if (cflag)
-				mt = open(tape, O_RDWR|O_CREAT|O_TRUNC, 0666);
-			else
-				mt = open(tape, O_RDWR);
-		} else
-			mt = open(tape, O_RDONLY);
-		if (mt < 0) {
-			fprintf(stderr, "tar: ");
-			perror(tape);
-			done(1);
-		}
-	}
-	return(mt);
-}
-
+void
 dorep(argv)
 	char *argv[];
 {
@@ -398,54 +241,59 @@ dorep(argv)
 	}
 }
 
+usage()
+{
+	fprintf(stderr,
+"tar: usage: tar -{txru}[cvfblmhopwBi] [tapefile] [blocksize] file1 file2...\n");
+	done(1);
+}
+
+int
+openmt(tape, writing)
+	char *tape;
+	int writing;
+{
+
+	if (strcmp(tape, "-") == 0) {
+		/*
+		 * Read from standard input or write to standard output.
+		 */
+		if (writing) {
+			if (cflag == 0) {
+				fprintf(stderr,
+			 "tar: can only create standard output archives\n");
+				done(1);
+			}
+			vfile = stderr;
+			setlinebuf(vfile);
+			mt = dup(1);
+		} else {
+			mt = dup(0);
+			Bflag++;
+		}
+	} else {
+		/*
+		 * Use file or tape on local machine.
+		 */
+		if (writing) {
+			if (cflag)
+				mt = open(tape, O_RDWR|O_CREAT|O_TRUNC, 0666);
+			else
+				mt = open(tape, O_RDWR);
+		} else
+			mt = open(tape, O_RDONLY);
+		if (mt < 0) {
+			fprintf(stderr, "tar: ");
+			perror(tape);
+			done(1);
+		}
+	}
+	return(mt);
+}
+
 endtape()
 {
 	return (dblock.dbuf.name[0] == '\0');
-}
-
-getdir()
-{
-	register struct stat *sp;
-	int i;
-
-top:
-	readtape((char *)&dblock);
-	if (dblock.dbuf.name[0] == '\0')
-		return;
-	sp = &stbuf;
-	sscanf(dblock.dbuf.mode, "%o", &i);
-	sp->st_mode = i;
-	sscanf(dblock.dbuf.uid, "%o", &i);
-	sp->st_uid = i;
-	sscanf(dblock.dbuf.gid, "%o", &i);
-	sp->st_gid = i;
-	sscanf(dblock.dbuf.size, "%lo", &sp->st_size);
-	sscanf(dblock.dbuf.mtime, "%lo", &sp->st_mtime);
-	sscanf(dblock.dbuf.chksum, "%o", &chksum);
-	if (chksum != (i = checksum())) {
-		fprintf(stderr, "tar: directory checksum error (%d != %d)\n",
-		    chksum, i);
-		if (iflag)
-			goto top;
-		done(2);
-	}
-	if (tfile != NULL)
-		fprintf(tfile, "%s %s\n", dblock.dbuf.name, dblock.dbuf.mtime);
-}
-
-passtape()
-{
-	long blocks;
-	char *bufp;
-
-	if (dblock.dbuf.linkflag == '1')
-		return;
-	blocks = stbuf.st_size;
-	blocks += TBLOCK-1;
-	blocks /= TBLOCK;
-
-	while (blocks-- > 0)
-		(void) readtbuf(&bufp, TBLOCK);
 }
 
 putfile(longname, shortname, parent)
@@ -474,14 +322,14 @@ putfile(longname, shortname, parent)
 	if (i < 0) {
 		fprintf(stderr, "tar: ");
 		perror(longname);
-		return;
+		return(1);
 	}
 	if (tfile != NULL && checkupdate(longname) == 0)
-		return;
+		return(1);
 	if (checkw('r', longname) == 0)
-		return;
+		return(1);
 	if (Fflag && checkf(shortname, stbuf.st_mode, Fflag) == 0)
-		return;
+		return(1);
 
 	switch (stbuf.st_mode & S_IFMT) {
 	case S_IFDIR:
@@ -493,7 +341,7 @@ putfile(longname, shortname, parent)
 			if ((cp - buf) >= NAMSIZ) {
 				fprintf(stderr, "tar: %s: file name too long\n",
 				    longname);
-				return;
+				return(1);
 			}
 			stbuf.st_size = 0;
 			tomodes(&stbuf);
@@ -504,7 +352,7 @@ putfile(longname, shortname, parent)
 		sprintf(newparent, "%s/%s", parent, shortname);
 		if (chdir(shortname) < 0) {
 			perror(shortname);
-			return;
+			return(1);
 		}
 		if ((dirp = opendir(".")) == NULL) {
 			fprintf(stderr, "tar: %s: directory read error\n",
@@ -513,7 +361,7 @@ putfile(longname, shortname, parent)
 				fprintf(stderr, "tar: cannot change back?: ");
 				perror(parent);
 			}
-			return;
+			return(1);
 		}
 		while ((dp = readdir(dirp)) != NULL && !term) {
 			if (dp->d_ino == 0)
@@ -540,19 +388,19 @@ putfile(longname, shortname, parent)
 		if (strlen(longname) >= NAMSIZ) {
 			fprintf(stderr, "tar: %s: file name too long\n",
 			    longname);
-			return;
+			return(1);
 		}
 		strcpy(dblock.dbuf.name, longname);
 		if (stbuf.st_size + 1 >= NAMSIZ) {
 			fprintf(stderr, "tar: %s: symbolic link too long\n",
 			    longname);
-			return;
+			return(1);
 		}
 		i = readlink(shortname, dblock.dbuf.linkname, NAMSIZ - 1);
 		if (i < 0) {
 			fprintf(stderr, "tar: can't read symbolic link ");
 			perror(longname);
-			return;
+			return(1);
 		}
 		dblock.dbuf.linkname[i] = '\0';
 		dblock.dbuf.linkflag = '2';
@@ -568,14 +416,14 @@ putfile(longname, shortname, parent)
 		if ((infile = open(shortname, 0)) < 0) {
 			fprintf(stderr, "tar: ");
 			perror(longname);
-			return;
+			return(0);
 		}
 		tomodes(&stbuf);
 		if (strlen(longname) >= NAMSIZ) {
 			fprintf(stderr, "tar: %s: file name too long\n",
 			    longname);
 			close(infile);
-			return;
+			return(1);
 		}
 		strcpy(dblock.dbuf.name, longname);
 		if (stbuf.st_nlink > 1) {
@@ -598,7 +446,7 @@ putfile(longname, shortname, parent)
 					    longname, lp->pathname);
 				lp->count--;
 				close(infile);
-				return;
+				return(0);
 			}
 			lp = (struct linkbuf *) getmem(sizeof(*lp));
 			if (lp != NULL) {
@@ -1418,4 +1266,160 @@ getmem(size)
 		freemem = 0;
 	}
 	return (p);
+}
+
+
+main(argc, argv)
+int	argc;
+char	*argv[];
+{
+	char *cp;
+
+	if (argc < 2)
+		usage();
+
+	tfile = NULL;
+	if (!vfile) vfile = stdout;
+	usefile =  magtape;
+	argv[argc] = 0;
+	argv++;
+	for (cp = *argv++; *cp; cp++) 
+		switch(*cp) {
+
+		case 'f':
+			if (*argv == 0) {
+				fprintf(stderr,
+			"tar: tapefile must be specified with 'f' option\n");
+				usage();
+			}
+			usefile = *argv++;
+			fflag++;
+			break;
+
+		case 'c':
+			cflag++;
+			rflag++;
+			break;
+
+		case 'o':
+			oflag++;
+			break;
+
+		case 'p':
+			pflag++;
+			break;
+		
+		case 'u':
+			mktemp(tname);
+			if ((tfile = fopen(tname, "w")) == NULL) {
+				fprintf(stderr,
+				 "tar: cannot create temporary file (%s)\n",
+				 tname);
+				done(1);
+			}
+			fprintf(tfile, "!!!!!/!/!/!/!/!/!/! 000\n");
+			/*FALL THRU*/
+
+		case 'r':
+			rflag++;
+			break;
+
+		case 'v':
+			vflag++;
+			break;
+
+		case 'w':
+			wflag++;
+			break;
+
+		case 'x':
+			xflag++;
+			break;
+
+		case 't':
+			tflag++;
+			break;
+
+		case 'm':
+			mflag++;
+			break;
+
+		case '-':
+			break;
+
+		case '0':
+		case '1':
+		case '4':
+		case '5':
+		case '7':
+		case '8':
+			magtape[8] = *cp;
+			usefile = magtape;
+			break;
+
+		case 'b':
+			if (*argv == 0) {
+				fprintf(stderr,
+			"tar: blocksize must be specified with 'b' option\n");
+				usage();
+			}
+			nblock = atoi(*argv);
+			if (nblock <= 0) {
+				fprintf(stderr,
+				    "tar: invalid blocksize \"%s\"\n", *argv);
+				done(1);
+			}
+			argv++;
+			break;
+
+		case 'l':
+			prtlinkerr++;
+			break;
+
+		case 'h':
+			hflag++;
+			break;
+
+		case 'i':
+			iflag++;
+			break;
+
+		case 'B':
+			Bflag++;
+			break;
+
+		case 'F':
+			Fflag++;
+			break;
+
+		default:
+			fprintf(stderr, "tar: %c: unknown option\n", *cp);
+			usage();
+		}
+
+	if (!rflag && !xflag && !tflag)
+		usage();
+	if (rflag) {
+		if (cflag && tfile != NULL)
+			usage();
+		if (signal(SIGINT, SIG_IGN) != SIG_IGN)
+			(void) signal(SIGINT, onintr);
+		if (signal(SIGHUP, SIG_IGN) != SIG_IGN)
+			(void) signal(SIGHUP, onhup);
+		if (signal(SIGQUIT, SIG_IGN) != SIG_IGN)
+			(void) signal(SIGQUIT, onquit);
+#ifdef notdef
+		if (signal(SIGTERM, SIG_IGN) != SIG_IGN)
+			(void) signal(SIGTERM, onterm);
+#endif
+		mt = openmt(usefile, 1);
+		dorep(argv);
+		done(0);
+	}
+	mt = openmt(usefile, 0);
+	if (xflag)
+		doxtract(argv);
+	else
+		dotable(argv);
+	done(0);
 }

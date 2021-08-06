@@ -1,0 +1,5 @@
+add_executable(random random.c)
+if(ENABLE_HNAMES)
+    set_target_properties(random PROPERTIES PREFIX "h")
+endif()
+install(TARGETS random)

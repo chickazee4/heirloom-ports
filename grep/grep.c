@@ -174,7 +174,7 @@ char *astr;
 
 		case '\0':
 			*ep++ = CEOF;
-			return;
+			return(0);
 
 		case '.':
 			*ep++ = CDOT;
@@ -282,7 +282,7 @@ char *file;
 						printf("%s:", file);
 					printf("%D\n", tln);
 				}
-				return;
+				return 0;
 			}
 			*p1++ = c;
 			if (p1 >= &linebuf[LBSIZE-1])
@@ -443,15 +443,15 @@ char *f;
 	long ftell();
 	nsucc = 1;
 	if (sflag)
-		return;
+		return(0);
 	if (cflag) {
 		tln++;
-		return;
+		return(0);
 	}
 	if (lflag) {
 		printf("%s\n", f);
 		fseek(stdin, 0l, 2);
-		return;
+		return(0);
 	}
 	if (nfile > 1 && hflag)
 		printf("%s:", f);

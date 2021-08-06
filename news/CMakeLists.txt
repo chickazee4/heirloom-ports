@@ -1,0 +1,7 @@
+add_executable(news news.c)
+target_link_libraries(news heirloom)
+target_compile_definitions(news PRIVATE NEWS="${NEWSDIR}")
+if(ENABLE_HNAMES)
+    set_target_properties(news PROPERTIES PREFIX "h")
+endif()
+install(TARGETS news)

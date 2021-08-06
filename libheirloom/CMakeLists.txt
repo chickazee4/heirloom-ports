@@ -1,6 +1,7 @@
 set(
     LIBHEIRLOOM_SRC
     asciitype.c
+    compat.c
     ib_alloc.c
     ib_close.c
     ib_free.c

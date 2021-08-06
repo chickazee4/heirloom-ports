@@ -1,0 +1,6 @@
+add_executable(sort sort.c)
+target_link_libraries(sort heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(sort PROPERTIES PREFIX "h")
+endif()
+install(TARGETS sort)

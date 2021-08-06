@@ -1,0 +1,6 @@
+add_executable(ul ul.c)
+target_link_libraries(ul heirloom ${CURSES_LIBRARIES} ${LIBTINFO})
+if(ENABLE_HNAMES)
+    set_target_properties(ul PROPERTIES PREFIX h)
+endif()
+install(TARGETS ul)

@@ -1,74 +1,103 @@
 # heirloom-ports
 
-this is a continuation of the old [heirloom project](http://heirloom.sourceforge.net), which provided minimal non-GNU implementations of core unix tools like make, cp, tar, sed, etc. based on the opensolaris codebase. the majority of the project seems to have been abandoned circa 2007 so much of the code has trouble compiling against modern compilers and the build system is incredibly confusing. heirloom-ports intends to continue the project and streamline the software for modern implementations by fixing code issues and porting the entire project to the CMake build system, as opposed to the ancient makefiles it was using. 
+this is a continuation of the old [heirloom project](http://heirloom.sourceforge.net), which provided minimal non-GNU implementations of core unix tools like make, cp, tar, sed, etc. based mostly on the opensolaris codebase. the majority of the project seems to have been abandoned circa 2007 so much of its code has trouble compiling against modern compilers, and its build system is incredibly confusing. heirloom-ports intends to continue the project and streamline the software for modern implementations by fixing code issues and porting the entire project to the CMake build system, as opposed to the ancient makefiles it was using. 
 
 currently, the following software from the heirloom project has been ported:
+* awk (=oawk, ?)
 * banner (good)
 * basename (good)
 * bc (good)
 * bdiff (?)
+* bfs (?)
 * cal (good)
 * cat (good)
+* checknr (good)
 * chmod (?)
 * chown (?)
+* cmp (?)
+* col (?)
+* comm (?)
 * cp/ln/mv (good)
 * cpio (?)
+* csplit (?)
 * cut (?)
 * date (good)
 * dc (good)
 * dd (good)
+* deroff (good)
+* df (good)
 * diff3 (?)
+* dircmp (good)
+* dirname (good)
 * du (good)
 * echo* (Unix 7, good)
 * ed (?)
 * env (good)
 * ex/vi/wvi (prog semi-fail)
+* expand/unexpand (good)
+* factor (good)
 * file (good)
 * find (good)
+* fmt (?)
 * grep/fgrep/egrep* (4.4BSD good/illumos (egrep illumos only) ?)
 * groups (good)
+* head (good)
+* hostname (good)
 * id (good)
-* kill (?)
-* lex (?)
+* kill (good)
+* lex (partial fail, works ok with -t flag)
 * libcommon (we are now dynamically linking this since it is used in so many of the programs and have thus renamed it to `libheirloom` to avoid conflicts)
 * libuxre
 * libwchar
+* listusers (good)
 * m4 (?)
 * make (prog fail)
+* mesg (good)
 * mkdir (good)
 * more (good)
+* news (?)
 * nice (?)
 * od (good)
 * printf (good)
 * ps (good)
 * pwd (good)
+* random* (from scratch, good)
 * sccs (?)
 * sed (?)
 * sh (good)
 * sleep (good)
+* sort (?)
 * stty (good)
 * su (prog fail)
+* tail (good)
 * tar* (4.3BSD, good)
 * tee (?)
 * test (good)
 * touch (good)
+* tr (good)
 * true/false (good)
 * tty (good)
+* ul (good)
 * uname (good)
+* users (good)
+* wc (good)
 * what (?)
 * who (prog semi-fail)
 * yacc (good)
 * yes (good)
 
-\* indicates the program has been re-ported from either 4.3BSD, 4.4BSD, OpenSolaris, illumos, or Unix 7 due to issues introduced by the original heirloom project or by its predecessors. these programs will usually have less functionality than is provided by the heirloom project or modern gnu implementations, but re-extending them in a more modern way is on the agenda. the following classic unix programs which were not in the original heirloom project, but are useful as core utilities, have also been ported:
+\* indicates the program has been re-ported from either 4.3BSD, 4.4BSD, OpenSolaris, illumos, or Unix 7, or rewritten mimicking original functionality, due to issues introduced by the original heirloom project or by its predecessors. these programs will usually have less functionality than is provided by the heirloom project or modern gnu implementations, but re-extending them in a more modern way is on the agenda. the following classic unix programs which were not in the original heirloom project, but are useful as core utilities, have also been ported:
 
 * ar - library archiver utility (4.4BSD)
+* libavl - binary tree library (OpenSolaris)
 
 the following are also slated for inclusion and currently in the process of being ported (the porting process takes longer for these since they were not at any point maintained by heirloom and have more issues and incompatibilities):
 
 * ld - linker (OpenSolaris)
-* libavl - binary tree library (OpenSolaris via Illumos)
+* libcurses - library for creating interactive terminal programs (OpenSolaris)
 * lint - C linter (4.3BSD)
+
+these newly included development programs don't (yet) have support for some of the new features included in >C99 and may fail with newer code, so using them, you may need to make some adjustments to your code. this is primarily of concern with lint, since it interfaces directly with code, but may apply to ld and ar as well.
 
 the following new shell scripts which easily combine the functions of other utilities or which simplify their usage are also optionally included if you build with the -DENABLE_EXTRAS flag (more to come):
 
@@ -96,8 +125,11 @@ additional CMake options:
 * ENABLE_PAM - enable Pluggable Authentication Modules (PAM) support in su (on by default, usually necessary on Linux systems)
 * ETCDIR - where files intended for /etc, mostly configuration files and the like, should go (this shouldn't normally be changed unless you have a non-traditional setup lacking the ordinary /etc dir)
 * USRSHAREDIR - where files intended for /usr/share, mostly public assets, should go (shouldn't normally be changed, see above)
+* NEWSDIR - where news should be placed and read from by the news program (usually /var/news)
+* TMPDIR - where temporary files should be stored by built programs (usually /var/tmp or /tmp)
+* SPELLING - set to UK, US, or BOTH based on the target locale for the spell program. if you select BOTH, the executables `spell-uk` and `spell-us` will be built. any other value will cause spell to not be built at all (as should be done if not building for English-speaking audiences).
 
-the repository also includes linux-x64 glibc/gcc binaries under the _INST folder, only some of which can be moved portably to other systems. it's better to install from source unless you only need utilities that don't depend on external files.
+the repository also includes linux-x64 glibc/gcc binaries under the _INST folder, updated with each major commit, only some of which can be moved portably to other systems. it's better to install from source unless you only need utilities that don't depend on external files.
 
 required to build:
 * glibc (musl-libc support forthcoming)
@@ -112,3 +144,10 @@ the bulk of the project is licensed under the non-permissive free software (in a
 as the project is in early development i have not added & updated authorship notices and version numbers on all of the components. as an interim measure, assume that any components marked as solely authored by gunnar ritter or solely altered by gunnar ritter may have also been changed by me, chickazee4 (contact lyndsay@vivaldi.net), and should be treated as though they mention me as an author. they should also be advanced by 1 minor version number (i.e. displayed as 1.20.0 but read as 1.20.1). permanent notices will be inserted in individual files ASAP but are not immediately plausible as i work on setting up project infrastructure.
 
 keep in mind that the BSD man page for `ar`, included here, states that it is GNU ar, but it isn't. as far as i can tell, the BSD team just copied the GNU ar man page because the BSD version worked the same way. to be clear, nothing in the project is licensed under the GNU GPL except for FindPAM.cmake, though some libraries are licensed under the LGPL. 
+
+## documented build errors & workarounds
+problem: cpio and pax builds fail with clang
+fix: build them with an alternative C compiler by setting the CMAKE_C_COMPILER variable locally in cpio/CMakeLists.txt or comment out the top-level add_subdirectory command in CMakeLists.txt (better fix pending)
+
+problem: macOS build fails
+fix: try building with gcc instead of appleclang. macOS is not currently supported and if this fails anyway there's nothing much you can do short of adding macOS functionality yourself and submitting a PR. 

@@ -1,0 +1,6 @@
+add_executable(fmt fmt.c)
+target_link_libraries(fmt heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(fmt PROPERTIES PREFIX "h")
+endif()
+install(TARGETS fmt)

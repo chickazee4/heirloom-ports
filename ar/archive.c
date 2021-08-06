@@ -271,6 +271,7 @@ put_arobj(cfp, sb)
  *	because 16-bit word addressed copies were faster?)  Anyhow, it should
  *	have been ripped out long ago.
  */
+int
 copy_ar(cfp, size)
 	CF *cfp;
 	off_t size;
@@ -281,7 +282,7 @@ copy_ar(cfp, size)
 	char buf[8*1024];
 	
 	if (!(sz = size))
-		return;
+		return 255;
 
 	from = cfp->rfd;
 	to = cfp->wfd;

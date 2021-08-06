@@ -1,0 +1,6 @@
+add_executable(head head.c)
+target_link_libraries(head heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(head PROPERTIES PREFIX "h")
+endif()
+install(TARGETS head)

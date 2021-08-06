@@ -1,0 +1,6 @@
+add_executable(factor factor.cc)
+target_link_libraries(factor heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(factor PROPERTIES PREFIX "h")
+endif()
+install(TARGETS factor)

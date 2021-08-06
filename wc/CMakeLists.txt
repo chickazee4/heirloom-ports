@@ -1,0 +1,6 @@
+add_executable(wc wc.c)
+target_link_libraries(wc heirloom)
+if(ENABLE_HNAMES)
+    set_target_properties(wc PROPERTIES PREFIX h)
+endif()
+install(TARGETS wc)
